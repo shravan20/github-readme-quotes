@@ -1,4 +1,5 @@
 # github-readme-quotes
-Dynamically quote generator for your GitHub readmes
+Dynamic quote generator for your GitHub readmes
 
 ![banner](./assets/README.png)
+
