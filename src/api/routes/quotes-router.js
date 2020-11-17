@@ -8,3 +8,5 @@ const defineRoutes = (expressApp) => {
     router.get('/', controllers.getQuote);
 
 }
+
+module.exports = defineRoutes;
