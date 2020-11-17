@@ -22,9 +22,12 @@ const getQuote = async (req, res, next) => {
     res.send(svg);
   
   } catch (error) {
+    
     res.send({
-      quote: "error",
+      name: error.name,
+      message: error.message,
     });
+  
   }
 };
 
