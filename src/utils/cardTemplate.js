@@ -13,11 +13,11 @@ const generateTemplate = (theme, data) => {
                 }
                 .container {
                 font-family: Arial, Helvetica, sans-serif;
-                padding: 20px;
+                padding: 40px 20px;
                 width: 600px;
                 background-color: #${theme.bg_color};
                 border: 1px solid rgba(0, 0, 0, 0.2);
-                border-radius: 10px;
+                border-radius: 5px;
                 }
                 .container h3 {
                 font-size: 19px;
@@ -46,7 +46,7 @@ const generateTemplate = (theme, data) => {
             </style>
             <div class="container">
                 <h3> ${data.quote} </h3>
-                <p>- ${data.author} </p>
+                <p>- ${data.author==="Unknown" ? "Anonymous" : data.author} </p>
             </div>
         </div>
     </foreignObject>
