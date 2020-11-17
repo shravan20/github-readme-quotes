@@ -16,7 +16,7 @@ const getQuote = async (req, res, next) => {
 
     let theme = themes[req.query.theme ? req.query.theme : "default"];
 
-    let svg = template.generateTemplate(theme);
+    let svg = template.generateTemplate(theme, data);
     
     res.setHeader("Content-Type", "image/svg+xml");
     res.send(svg);
