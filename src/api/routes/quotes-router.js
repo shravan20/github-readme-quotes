@@ -1,4 +1,4 @@
-const controllers = require('../controllers/index'); 
+const controllers = require('../controllers/quotes'); 
 const defineRoutes = (expressApp) => {
     const router = express.Router();
   
