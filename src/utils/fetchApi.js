@@ -10,3 +10,5 @@ const fetchCall = async ( url, options ) => {
         throw e;    
     }
 }
+
+module.exports = fetchCall;
