@@ -1,11 +1,9 @@
 const controllers = require('../controllers/quotesController'); 
-const express = require('express');
 
-const defineRoutes = (expressApp) => {
-    const router = express.Router();
+const defineRoutes = (app) => {
   
     // get a quote
-    router.get('/', controllers.getQuote);
+    app.get('/quote', controllers.getQuote);
 
 }
 
