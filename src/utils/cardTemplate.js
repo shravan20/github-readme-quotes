@@ -1,12 +1,55 @@
 const generateTemplate = (theme, data) => {
     
     return (
-    `<svg width="100%" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-        <g class="layer">
-            <title>Layer 1</title>
-            <rect fill="#${theme.bg_color}" height="103" id="svg_1" opacity="0.85" stroke="#${theme.bg_color}" stroke-width="1" width="502.00002" x="73.00001" y="30"/>
-            <text x="165" y="90" font-family="Times New Roman" font-size="35" fill="#${theme.title_color}">"${data.quote}"</text>
-        </g>
+    `
+    <svg width="600" height="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <style>
+                * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                }
+                .container {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 20px;
+                width: 600px;
+                background-color: #${theme.bg_color};
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                }
+                .container h3 {
+                font-size: 19px;
+                margin-bottom: 5px;
+                font-weight: 500;
+                font-style: oblique;
+                color: #${theme.title_color};
+                }
+                .container h3::before {
+                content: open-quote;
+                font-size: 25px;
+                }
+                .container h3::after {
+                content: close-quote;
+                vertical-align: sub;
+                font-size: 25px;
+                }
+                .container p {
+                /* float: right; */
+                /* margin-right: 20px; */
+                font-style: italic;
+                padding: 5px;
+                text-align: right;
+                color: #${theme.text_color};
+                }
+            </style>
+            <div class="container">
+                <h3> ${data.quote} </h3>
+                <p>- ${data.author} </p>
+            </div>
+        </div>
+    </foreignObject>
     </svg>`
     );
 
