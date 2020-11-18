@@ -19,6 +19,7 @@ const getQuote = async (req, res, next) => {
     template.setTheme(theme);
     template.setData(apiResponse);
     template.setAnimation(animation);
+    template.setStyle();
 
     let svg = cardTemplate.generateTemplate(template);
     
