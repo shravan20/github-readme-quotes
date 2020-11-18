@@ -19,6 +19,12 @@ const getQuote = async (req, res, next) => {
     let svg = template.generateTemplate(theme, data);
     
     res.setHeader("Content-Type", "image/svg+xml");
+    res.header(
+      "Cache-Control",
+      "no-cache,max-age=0,no-store,s-maxage=0,proxy-revalidate"
+    );
+    res.header("Pragma", "no-cache");
+    res.header("Expires", "-1");
     res.send(svg);
   
   } catch (error) {
