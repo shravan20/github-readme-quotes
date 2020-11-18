@@ -1,8 +1,6 @@
-const generateTemplate = (theme, data) => {
-    
-    return (
-    `
-    <svg width="600" height="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+const generateTemplate = (theme, data, animation) => {
+  return `
+    <svg width="700px" height="250px" fill="none" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
@@ -18,7 +16,9 @@ const generateTemplate = (theme, data) => {
                 background-color: #${theme.bg_color};
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
+                ${animation.animation};
                 }
+                ${animation.keyframes}
                 .container h3 {
                 font-size: 19px;
                 margin-bottom: 5px;
@@ -46,15 +46,15 @@ const generateTemplate = (theme, data) => {
             </style>
             <div class="container">
                 <h3> ${data.quote} </h3>
-                <p>- ${data.author==="Unknown" ? "Anonymous" : data.author} </p>
+                <p>- ${
+                  data.author === "Unknown" ? "Anonymous" : data.author
+                } </p>
             </div>
         </div>
     </foreignObject>
-    </svg>`
-    );
-
-}
+    </svg>`;
+};
 
 module.exports = {
-    generateTemplate
+  generateTemplate,
 };

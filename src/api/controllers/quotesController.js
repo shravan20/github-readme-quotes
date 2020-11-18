@@ -2,6 +2,7 @@ const themes = require("../../themes/themes");
 const template = require('../../utils/cardTemplate');
 const requestApi =require('../../utils/fetchApi');
 const url = process.env.SERVICE_URL;
+const animations = require("../../animations/animation");
 
 const getQuote = async (req, res, next) => {
   
@@ -16,7 +17,9 @@ const getQuote = async (req, res, next) => {
 
     let theme = themes[req.query.theme ? req.query.theme : "default"];
 
-    let svg = template.generateTemplate(theme, data);
+    let animation =animations[req.query.animation ? req.query.animation : "default"];
+
+    let svg = template.generateTemplate(theme, data,animation);
     
     res.setHeader("Content-Type", "image/svg+xml");
     res.header(
