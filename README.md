@@ -24,10 +24,69 @@ Use `?theme=THEME_NAME` parameter as shown below.
 ```
 <!-- Scrnshot of quote in dark theme -->
 
-### Available Themes
+#### Available Themes
 dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula
+
+**Gotham**
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=gotham)
+
+**Dark**
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark)
+
+**Light Theme**
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?)
+
 
 <!-- Scrnshot of quote in different themes -->
 
-You can explore different themes [here](./src/themes/themes.js).<b>Feel free to contribute different themes.</b>
+You can explore different themes [here](./src/themes/themes.js).
+
+
+
+<b>Feel free to contribute different themes.</b>
+
+### Animations
+You can also add animations to your templates.
+
+Use `?animation=ANIMATION` paramater as shown below
+
+```md
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&animation=grow_out_in)
+```
+<!-- Gif of quote in animation -->
+
+#### Animation 1
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&animation=grow_out_in)
+
+
+You can explore different themes [here](./src/animations/animation.js).
+
+### Layouts
+You can also change the layout of your templates.
+
+Use `?layout=LAYOUT` parameter as shown below
+
+
+```md
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&layout=socrates)
+```
+#### Layout 1 (Default)
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark)
+
+
+#### Layout 2 (Socrates)
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&layout=socrates)
+
+
+<!-- Scrnshot of quote in particular layout -->
+
+
+You can explore different themes [here](./src/layouts/layout.js).
+
+<b>Feel free to contribute different layouts.</b>
+
 
