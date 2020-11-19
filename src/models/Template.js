@@ -1,23 +1,20 @@
+class Template {
+  constructor() {
+    (this.theme = "default"), (this.animation = "default");
+  }
 
-class Template{
+  setTheme(theme) {
+    this.theme = theme;
+  }
 
-    constructor(){
-        this.theme="default",
-        this.animation="default"
-    }
+  setData(data) {
+    this.quote = data.quote;
+    this.author = data.author;
+  }
 
-    setTheme(theme){
-        this.theme=theme;
-    }
-
-    setData(data){
-        this.quote=data.quote;
-        this.author=data.author;
-    }
-
-    setAnimation(animation){
-        this.animation=animation;
-    }
+  setAnimation(animation) {
+    this.animation = animation;
+  }
 }
 
-module.exports=Template;
+module.exports = Template;
