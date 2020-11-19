@@ -15,10 +15,13 @@ const getQuote = async (req, res, next) => {
 
     let animation =animations[req.query.animation ? req.query.animation : "default"];
 
+    let layout=req.query.layout;
+
     const template=new Template();
     template.setTheme(theme);
     template.setData(apiResponse);
     template.setAnimation(animation);
+    template.setLayout(layout);
 
     let svg = cardTemplate.generateTemplate(template);
     
