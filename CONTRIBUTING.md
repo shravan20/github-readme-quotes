@@ -38,6 +38,7 @@ Please consider the following steps if you are planning to contribute a new layo
     - Style(CSS of the layout)
     - Structure(HTML of the layout)
 1. Make sure you add your layout in this format:
+<pre>
     layout_name:{
         style:()=>{
             `CSS of the Layout`
@@ -46,6 +47,7 @@ Please consider the following steps if you are planning to contribute a new layo
             `HTML of the Layout`
         }
     }
+    </pre>
 
 Check the existing [layouts](./src/layouts/layout.js) for a better understanding.
 
