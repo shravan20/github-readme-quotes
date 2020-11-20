@@ -57,7 +57,7 @@ In short, when you submit changes, your submissions are understood to be under t
 
 ## Report issues/bugs using GitHub's [issues](https://github.com/shravan20/github-readme-quotes/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/shravan20/github-readme-quotes/issues/new/choose); it's that easy!
+We use GitHub issues to track public bugs or other issues regarding the project. Report an issue by [opening a new issue](https://github.com/shravan20/github-readme-quotes/issues/new/choose); it's that easy!
 
 If the issue is a BUG make sure to follow the guidelines provided in the Bug Report.
 
@@ -78,7 +78,7 @@ You can follow the guidelines below for your Bug Report
 
 ### Feature Request
 
-For a new feature request,go to the issues section and create a feature request.
+For a new feature request,go to the [issues](https://github.com/shravan20/github-readme-quotes/issues) section and create a feature request.
 <br>
 
 You can follow the guidelines below for a new feature request:
