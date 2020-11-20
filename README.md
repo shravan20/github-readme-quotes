@@ -3,7 +3,7 @@ Dynamic quote generator for your GitHub readmes
 
 ![banner](./assets/README.png)
 
-![alt](https://img.shields.io/apm/l/vim-mode?label=license&logo=dark-green) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-success) ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github) ![Repository views](https://gpvc.arturio.dev/shravan20) [![GitHub contributors](https://img.shields.io/github/contributors/shravan20/github-readme-quotes.svg)](https://github.com/shravan20/github-readme-quotes/graphs/contributors)
+![alt](https://img.shields.io/apm/l/vim-mode?label=license&logo=dark-green) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-success) ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github) [![GitHub contributors](https://img.shields.io/github/contributors/shravan20/github-readme-quotes.svg)](https://github.com/shravan20/github-readme-quotes/graphs/contributors) ![Pull Request Counts](https://img.shields.io/bitbucket/pr/shravan20/github-readme-quotes) ![last commit](https://img.shields.io/github/last-commit/shravan20/github-readme-quotes) ![deployment-status](https://img.shields.io/website?url=https%3A%2F%2Fgithub-readme-quotes.herokuapp.com%2Fquote) ![community chat](https://img.shields.io/discord/779439447736451132?label=discord-server&style=flat-square)
 
 # Github Readme Quotes
 Copy and paste the following markdown content to display the quote.
