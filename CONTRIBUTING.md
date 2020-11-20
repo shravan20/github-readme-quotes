@@ -11,7 +11,7 @@ Your input is really important for the project.Feel free to contribute to the pr
 
 Pull requests are the best way to propose changes. We actively welcome your pull requests:
 
-1. Fork the repo and create your branch from `master`.
+1. Fork the repo and create your branch from `main`.
 1. If you've added code that should be tested, add some tests' example.
 1. Make sure your Pull requests have detailed information.
 1. Issue that pull request!
