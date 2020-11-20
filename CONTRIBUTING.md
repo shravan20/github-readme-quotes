@@ -1,20 +1,20 @@
 # Contributing to [github-readme-quotes](https://github.com/shravan20/github-readme-quotes)
 
-Your input is really important for the project.Feel free to contribute to the project whether it be:
+Your input is really important for the project. Feel free to contribute to the project whether it be:
 
-- Reporting a issue
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
+- [Reporting an issue](https://github.com/shravan20/github-readme-quotes/issues/new/choose)
+- [Discussing the current state of the code](https://github.com/shravan20/github-readme-quotes/issues/new/choose)
+- [Submitting a fix](https://github.com/shravan20/github-readme-quotes/issues/new/choose)
+- [Proposing new features](https://github.com/shravan20/github-readme-quotes/issues/new/choose)
 
 ## All Changes Happen Through Pull Requests
 
 Pull requests are the best way to propose changes. We actively welcome your pull requests:
 
 1. Fork the repo and create your branch from `main`.
-1. If you've added code that should be tested, add some tests' example.
-1. Make sure your Pull requests have detailed information.
-1. Issue that pull request!
+2. If you've added code that should be tested, add some tests' example.
+3. Make sure your Pull requests have detailed information.
+4. Issue that pull request!
 
 
 ## Themes Contribution
@@ -23,7 +23,7 @@ GitHub Readme Quotes would appreciate your contribution to new themes!
 
 All you need to do is edit [themes/themes.js](./src/themes/themes.js) file and add your theme at the end of the file.
 
-While creating the pull request make sure to add a screenshot of your theme.That would help us!!
+While creating the pull request make sure to add a screenshot of your theme. That would help us!!
 
 ## Layout Contribution
 
@@ -34,10 +34,10 @@ All you need to do is edit [layouts/layout.js](./src/layouts/layout.js) file and
 Please consider the following steps if you are planning to contribute a new layout:
 
 1. Provide a screenshot of your layout in your Pull Request.
-1. The layout has mainly two parts: 
+2. The layout has mainly two parts: 
     - Style(CSS of the layout)
     - Structure(HTML of the layout)
-1. Make sure you add your layout in this format:
+3. Make sure you add your layout in this format:
 <pre>
     layout_name:{
         style:()=>{
@@ -47,7 +47,7 @@ Please consider the following steps if you are planning to contribute a new layo
             `HTML of the Layout`
         }
     }
-    </pre>
+</pre>
 
 Check the existing [layouts](./src/layouts/layout.js) for a better understanding.
 
@@ -63,7 +63,7 @@ If the issue is a BUG make sure to follow the guidelines provided in the Bug Rep
 
 You can follow the guidelines below for your Bug Report
 
-### Bug Reports
+### Bug Reports (Template Available in the Issues): 
 
 **Great Bug Reports** tend to have:
 
