@@ -37,7 +37,7 @@ describe('utils function fetchApi()', function(){
         });
 
 
-        it('a) it should throw an error response upon failure from calling the url using fetch function API', async function() {
+        it('b) it should throw an error response upon failure from calling the url using fetch function API', async function() {
 
             let url = "https://www.quotepub.com/api/widget/?type=qotd_t";
             let options = {};
@@ -60,5 +60,5 @@ describe('utils function fetchApi()', function(){
 
         });
 
-    })
-})
+    });
+});
