@@ -78,7 +78,10 @@ You can follow the guidelines below for your Bug Report
 
 ### Feature Request
 
-For a new feature request,go to the issues section and create a feature request.You can follow the guidelines below for a new feature request:
+For a new feature request,go to the issues section and create a feature request.
+<br>
+
+You can follow the guidelines below for a new feature request:
 
 **Great Feature Requests** tend to have:
 
