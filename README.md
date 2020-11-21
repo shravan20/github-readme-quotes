@@ -48,23 +48,6 @@ You can explore different themes [here](./src/themes/themes.js).
 
 <b>Feel free to contribute different themes.</b>
 
-### Animations
-You can also add animations to your templates.
-
-Use `?animation=ANIMATION` paramater as shown below
-
-```md
-![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&animation=grow_out_in)
-```
-<!-- Gif of quote in animation -->
-
-#### Animation 1
-
-![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&animation=grow_out_in)
-
-
-You can explore different themes [here](./src/animations/animation.js).
-
 ### Layouts
 You can also change the layout of your templates.
 
@@ -85,8 +68,25 @@ Use `?layout=LAYOUT` parameter as shown below
 <!-- Scrnshot of quote in particular layout -->
 
 
-You can explore different themes [here](./src/layouts/layout.js).
+You can explore different layouts [here](./src/layouts/layout.js).
 
 <b>Feel free to contribute different layouts.</b>
+
+### Animations
+You can also add animations to your templates.
+
+Use `?animation=ANIMATION` paramater as shown below
+
+```md
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&animation=grow_out_in)
+```
+<!-- Gif of quote in animation -->
+
+#### Animation 1
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&animation=grow_out_in)
+
+
+You can explore different animations [here](./src/animations/animation.js).
 
 
