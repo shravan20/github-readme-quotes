@@ -10,14 +10,11 @@
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1"
   },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
-    "sinon": "^9.2.1"
-  },
   "scripts": {
-    "test": "mocha --colors test/unit/src/**/**.spec.js",
-    "start": "nodemon -r dotenv/config server.js"
+    "test": "",
+    "start": "nodemon -r dotenv/config server.js",
+    "prod": "NODE_ENV=PRODUCTION node -r dotenv/config server.js",
+    "dev": "NODE_ENV=DEVELOPMENT nodemon -r dotenv/config server.js"
   },
   "repository": {
     "type": "git",
