@@ -12,10 +12,12 @@ Dynamic quote generator for your GitHub readmes
 
 ---
 
+
 <p align="center">
 Note: To read an article on this project, please refer: 
-<a href = "https://dev.to/imshravan/github-profile-readme-animated-dynamic-quote-generator-4le6">GitHub Profile README : Animated Dynamic Quote Generator</a>
+<a href = "https://dev.to/imshravan/github-profile-readme-animated-dynamic-quote-generator-4le6"><i>GitHub Profile README : Animated Dynamic Quote Generator</i></a>
 </p>
+
 
 ---
 
