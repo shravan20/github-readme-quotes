@@ -3,7 +3,21 @@ Dynamic quote generator for your GitHub readmes
 
 ![banner](./assets/README.png)
 
-![alt](https://img.shields.io/apm/l/vim-mode?label=license&logo=dark-green) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-success) ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github) [![GitHub contributors](https://img.shields.io/github/contributors/shravan20/github-readme-quotes.svg)](https://github.com/shravan20/github-readme-quotes/graphs/contributors) ![Pull Request Counts](https://img.shields.io/bitbucket/pr/shravan20/github-readme-quotes) ![last commit](https://img.shields.io/github/last-commit/shravan20/github-readme-quotes) ![deployment-status](https://img.shields.io/website?url=https%3A%2F%2Fgithub-readme-quotes.herokuapp.com%2Fquote) ![community chat](https://img.shields.io/discord/779439447736451132?label=discord-server&style=flat-square)
+![alt](https://img.shields.io/apm/l/vim-mode?label=license&logo=dark-green) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-success) ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github) [![GitHub contributors](https://img.shields.io/github/contributors/shravan20/github-readme-quotes.svg)](https://github.com/shravan20/github-readme-quotes/graphs/contributors) ![Pull Request Counts](https://img.shields.io/bitbucket/pr/shravan20/github-readme-quotes) ![last commit](https://img.shields.io/github/last-commit/shravan20/github-readme-quotes) ![deployment-status](https://img.shields.io/website?url=https%3A%2F%2Fgithub-readme-quotes.herokuapp.com%2Fquote) 
+<a href="https://discord.gg/QJ8cnPHgVZ">
+  <img align="center" src="https://img.shields.io/discord/779439447736451132?label=discord-server&style=flat-square" />
+</a>
+
+<br>
+
+---
+
+<p align="center">
+Note: To read an article on this project, please refer: 
+<a href = "https://dev.to/imshravan/github-profile-readme-animated-dynamic-quote-generator-4le6">GitHub Profile README : Animated Dynamic Quote Generator</a>
+</p>
+
+---
 
 # Github Readme Quotes
 Copy and paste the following markdown content to display the quote.
@@ -12,8 +26,13 @@ Copy and paste the following markdown content to display the quote.
 ![Quote](https://github-readme-quotes.herokuapp.com/quote)
 ```
 <!-- Scrnshot of quote in default mode -->
+<p align="center">
+<img src="https://github-readme-quotes.herokuapp.com/quote"/>
+</p>
 
-### Themes
+<br><br><hr>
+
+- ### Themes
 You can display your quote in different themes without any manual customization.
 
 Use `?theme=THEME_NAME` parameter as shown below.
@@ -44,11 +63,11 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 
 You can explore different themes [here](./src/themes/themes.js).
 
-
-
 <b>Feel free to contribute different themes.</b>
 
-### Layouts
+---
+
+- ### Layouts
 You can also change the layout of your templates.
 
 Use `?layout=LAYOUT` parameter as shown below
@@ -72,7 +91,9 @@ You can explore different layouts [here](./src/layouts/layout.js).
 
 <b>Feel free to contribute different layouts.</b>
 
-### Animations
+---
+
+- ### Animations
 You can also add animations to your templates.
 
 Use `?animation=ANIMATION` paramater as shown below
@@ -89,10 +110,14 @@ Use `?animation=ANIMATION` paramater as shown below
 
 You can explore different animations [here](./src/animations/animation.js).
 
-##### <img src="https://user-images.githubusercontent.com/18126719/56791599-0868f980-683a-11e9-8a8b-134ced040c8e.png" width="30"> _Huge Shoutout to all the Star-Gazers_
+---
+
+- ##### <img src="https://user-images.githubusercontent.com/18126719/56791599-0868f980-683a-11e9-8a8b-134ced040c8e.png" width="30"> _Huge Shoutout to all the Star-Gazers_
 [![Stargazers repo roster for @shravan20/github-readme-quotes](https://reporoster.com/stars/shravan20/github-readme-quotes)](https://github.com/shravan20/github-readme-quotes/stargazers)
 
-##### <img src="https://ghost.org/images/docs/setup/fork.gif" width="30"> _Huge Shoutout to all the Forkers_
+---
+
+- ##### <img src="https://ghost.org/images/docs/setup/fork.gif" width="30"> _Huge Shoutout to all the Forkers_
 [![Forkers repo roster for @shravan20/github-readme-quotes](https://reporoster.com/forks/shravan20/github-readme-quotes)](https://github.com/shravan20/github-readme-quotes/network/members)
 
 
