@@ -27,7 +27,7 @@ Copy and paste the following markdown content to display the quote.
 ```
 <!-- Scrnshot of quote in default mode -->
 <p align="center">
-<img src="https://github-readme-quotes.herokuapp.com/quote"/>
+  <img src="https://camo.githubusercontent.com/f110f1c085d6afab0bcc0bfcba3ddf1a81113247138ba53b8f26d574805bb502/68747470733a2f2f6769746875622d726561646d652d71756f7465732e6865726f6b756170702e636f6d2f71756f74653f"/>
 </p>
 
 <br><br><hr>
