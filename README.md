@@ -89,4 +89,10 @@ Use `?animation=ANIMATION` paramater as shown below
 
 You can explore different animations [here](./src/animations/animation.js).
 
+##### _Huge Shoutout to all the Star-Gazers_
+[![Stargazers repo roster for @shravan20/github-readme-quotes](https://reporoster.com/stars/shravan20/github-readme-quotes)](https://github.com/shravan20/github-readme-quotes/stargazers)
+
+##### _Huge Shoutout to all the Forkers_
+[![Forkers repo roster for @shravan20/github-readme-quotes](https://reporoster.com/forks/shravan20/github-readme-quotes)](https://github.com/shravan20/github-readme-quotes/network/members)
+
 
