@@ -12,9 +12,10 @@ const getQuote = async (req, res, next) => {
     let apiResponse = await requestApi(url);
 
     let theme = themes[req.query.theme ? req.query.theme : "default"];
+    theme = theme ? theme: themes["default"];
 
-    let animation =animations[req.query.animation ? req.query.animation : "default"];
-
+    let animation = animations[req.query.animation ? req.query.animation : "default"];
+    
     let layout=req.query.layout;
 
     const template=new Template();
