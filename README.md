@@ -63,7 +63,7 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 
 <!-- Scrnshot of quote in different themes -->
 
-You can explore different themes [here](./src/themes/themes.js).
+You can explore different themes [here](./src/themes/README.md).
 
 <b>Feel free to contribute different themes.</b>
 
@@ -89,7 +89,7 @@ Use `?layout=LAYOUT` parameter as shown below
 <!-- Scrnshot of quote in particular layout -->
 
 
-You can explore different layouts [here](./src/layouts/layout.js).
+You can explore different layouts [here](./src/layouts/README.md).
 
 <b>Feel free to contribute different layouts.</b>
 
@@ -110,7 +110,7 @@ Use `?animation=ANIMATION` paramater as shown below
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&animation=grow_out_in)
 
 
-You can explore different animations [here](./src/animations/animation.js).
+You can explore different animations [here](./src/animations/README.md).
 
 ---
 
