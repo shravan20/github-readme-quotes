@@ -9,14 +9,20 @@ Use `?layout=LAYOUT` parameter like so :-
 ```
 ### Layouts
 
-- Default <br>
+- default <br>
   ![Quote](https://github-readme-quotes.herokuapp.com/quote)
   
-- Socrates <br>
-  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=socrates&theme=dark)
+- socrates <br>
+  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=socrates)
   
-- Churchill <br>
+- churchill <br>
   ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=churchill&theme=merko)
+  
+- samuel <br>
+  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=samuel)
+
+- zues(Note: This layout does not have theme customization.) <br>
+  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=zues)
   
 
 Wanted to add a new layout? Consider reading the [contribution guidelines](../CONTRIBUTING.md#themes-contribution) :D
