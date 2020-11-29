@@ -3,7 +3,7 @@ const controllers = require('../controllers/quotesController');
 const defineRoutes = (app) => {
   
     // get a quote
-    app.get('/quote', controllers.getQuote);
+    app.get('/quote', controllers.quoteController);
 
 }
 
