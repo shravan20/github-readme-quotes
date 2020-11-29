@@ -21,7 +21,7 @@ const layouts = {
                 margin-bottom: 5px;
                 font-weight: 500;
                 font-style: oblique;
-                color: #${template.theme.title_color};
+                color: #${template.theme.quote_color};
                 }
                 .container h3::before {
                 content: open-quote;
@@ -38,7 +38,7 @@ const layouts = {
                 font-style: italic;
                 padding: 5px;
                 text-align: right;
-                color: #${template.theme.text_color};
+                color: #${template.theme.author_color};
                 }`;
     },
     structure: (template) => {
