@@ -15,6 +15,9 @@ Use `?layout=LAYOUT` parameter like so :-
 - Socrates <br>
   ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=socrates&theme=dark)
   
+- Churchill <br>
+  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=churchill&theme=merko)
+  
 
 Wanted to add a new layout? Consider reading the [contribution guidelines](../CONTRIBUTING.md#themes-contribution) :D
 
