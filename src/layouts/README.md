@@ -21,7 +21,7 @@ Use `?layout=LAYOUT` parameter like so :-
 - samuel <br>
   ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=samuel)
 
-- zues(Note: This layout does not have theme customization.) <br>
+- zues (<b>Note</b>: This layout does not have theme customization.) <br>
   ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=zues)
   
 
