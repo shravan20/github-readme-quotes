@@ -5,13 +5,11 @@ const Template=require("../../models/Template");
 
 
 
-
-
-const getQuote= async (reqObj,res) =>{
+const getQuote= async (quoteObj) =>{
 
     try{
 
-        let {theme,animation,layout}=reqObj;
+        let {theme,animation,layout}=quoteObj;
 
         let apiResponse = await requestApi(url);
 
@@ -22,21 +20,11 @@ const getQuote= async (reqObj,res) =>{
         template.setLayout(layout);
 
         let svg = cardTemplate.generateTemplate(template);
+        return svg;
         
-        res.setHeader("Content-Type", "image/svg+xml");
-        res.header(
-        "Cache-Control",
-        "no-cache,max-age=0,no-store,s-maxage=0,proxy-revalidate"
-        );
-        res.header("Pragma", "no-cache");
-        res.header("Expires", "-1");
-        res.send(svg);
         }
     catch (error){
-        res.send({
-            name: error.name,
-             message: error.message,
-        });
+        throw error;
     }
     
 }
