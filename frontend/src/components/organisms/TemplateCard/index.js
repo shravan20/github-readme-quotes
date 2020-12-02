@@ -16,7 +16,7 @@ const TemplateCard = (props) => {
     const [isImageLoaded, setImageLoaded] = useState(false);
 
     const copyToClipboard = () => {
-        navigator.clipboard.writeText(quoteUrl).then(() => {
+        navigator.clipboard.writeText('![Quote](' + quoteUrl + ')').then(() => {
             setSnackbarMessage('Copied to Clipboard!');
             setShowSnackbar(true);
         }).catch(() => {
@@ -40,22 +40,26 @@ const TemplateCard = (props) => {
     }, [quoteUrl])
 
     return (
-        <Paper elevation={0} style={{ 'margin': '10px' }}>
+        <Paper  style={{ 'padding': '10px' }}>
             <div style={{ textAlign: 'center' }}>
-                <img src={quoteUrl}
+                <img 
+                src={quoteUrl}
                     alt="Dynamic Quote for Github Readme"
-                    onLoad={() => setImageLoaded(true)} style={{display:isImageLoaded ? '' : 'none'}} />
+                    onLoad={() => setImageLoaded(true)} style={{width: '100%', display:isImageLoaded ? '' : 'none'}} />
                 <CircularProgress color="secondary" style={{display:isImageLoaded ? 'none' : ''}}/>
             </div>
             <Grid container
                 alignContent="center"
-                spacing={3}
+                style={{margin:'20px'}}
             >
-                <Grid item xs={8}>
-                    <TextField fullWidth id="quoteUrl" value={quoteUrl}></TextField>
+                <Grid item sm={8} xs={12}>
+                    <TextField fullWidth value={'![Quote](' + quoteUrl + ')'}></TextField>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item sm={4} xs={12} style={{textAlign: 'center'}}>
                     <Button
+                    variant="contained"
+                    color="primary"
+                    disableElevation
                         onClick={() => {
                             copyToClipboard();
                         }}>Copy Text</Button>
