@@ -153,6 +153,8 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=inspirational)
 
+#### Available Categories
+motivational, fun, life, general, programming, success,
 
 
 ---
