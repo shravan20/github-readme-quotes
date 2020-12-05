@@ -21,9 +21,9 @@ Pull requests are the best way to propose changes. We actively welcome your pull
 | Sl No  | Feature Name  | Description  |
 |:-:|:-:|:-:|
 | 1 | [Colorful Themes Contribution](#themes-contribution) | Feel free to contribute to creating themes |
-| 2 | [Design Layout Contribution](#layout-contribution) | Feel free to contribute to creating themes |
-| 3 | [Quotes Based on Gist file](#layout-contribution) | Feel free to contribute to GitHub Gists |
-| 4 | [Quotes Based on Categories](#layout-contribution) | Feel free to contribute to creating themes |
+| 2 | [Design Layout Contribution](#layout-contribution) | Feel free to contribute to new design card layouts |
+| 3 | [Quotes Based on Gist file](#quote-based-on-github-gist-contribution) | Feel free to contribute to GitHub Gists |
+| 4 | [Quotes Based on Categories](#category-based-quotes) | Feel free to contribute to adding quotes to categories and new categories with quotes itself |
 
 
 ## Themes Contribution
