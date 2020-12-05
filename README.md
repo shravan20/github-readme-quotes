@@ -10,6 +10,22 @@ Dynamic quote generator for your GitHub readmes
 
 <br>
 
+### Features
+
+| Sl No  | Feature Name  | Description  |
+|:-:|:-:|:-:|
+| 1  | Dynamic Quotes  | Different quotes every time its rendered for GitHub Profile Readme  |
+| 2  | Colorful Themes  | Various colorful themes available for cards |
+| 3  | Design Layouts  | Different Layout design cards are available  |
+| 4  | Animation  | Animations available for quote cards |
+| 5  | Custom Quotes from GitHub Gists  | You can add custom quotes of your own or own choice from GitHub Gists json files |
+| 6  | Quotes based on Category  | Different category based quotes are available |
+
+
+
+
+
+
 ---
 
 
