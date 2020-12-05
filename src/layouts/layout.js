@@ -56,7 +56,7 @@ const layouts = {
                 display:inline-block;
                 font-family:Arial,Helvetica,sans-serif;
                 margin:1em;
-                max-width:35em;
+                width:600px;
                 ${template.animation.animation};
                 } 
                 ${template.animation.keyframes}
@@ -70,6 +70,7 @@ const layouts = {
                     margin:0;
                     padding:1em;
                     position:relative;
+                    font-size:15px;
                     
                 }
                  .square-brackets-quote blockquote::before {
@@ -113,8 +114,8 @@ const layouts = {
   churchill: {
     style: (template) => {
       return `#ct{
-                  height:auto 
-                  width:100px;
+                  height:auto;
+                  width:600px;
                   border:1px solid #f1c40f;
                   margin: 20px 50px 20px 10px;
                   text-align:center;
@@ -165,7 +166,7 @@ const layouts = {
                 }
                 p{
                   padding-top:0px;
-                  font-size:18px
+                  font-size:17px
                 }`;
     },
     structure: (template) => {
@@ -190,16 +191,19 @@ const layouts = {
       return `.quote {
                   display: inline-block;
                   margin: 1em;
-                  width:450px;
+                  width:600px;
                   ${template.animation.animation};
                 } 
                 ${template.animation.keyframes}
                 blockquote {
-                    border: solid 6px #${(template.theme.bg_color === "fffefe"
-                      ? "757575"
-                      : template.theme.bg_color)};
+                    border: solid 6px #${
+                      template.theme.bg_color === "fffefe"
+                        ? "757575"
+                        : template.theme.bg_color
+                    };
                     display: inline-block;
                     margin: 0;
+                    font-size:16px;
                     padding: 1em;
                     position: relative;
                 }
@@ -247,7 +251,7 @@ const layouts = {
 
         .container{
             background-color:#000;
-            width:550px;
+            width:600px;
             height:auto;
             padding:30px 20px 40px 40px;
             ${template.animation.animation};
@@ -303,7 +307,7 @@ const layouts = {
                   }
                   .quote4 .first{
                     margin-top:10px;
-                    width:95%;
+                    width:100%;
                     color: #DAB49D;
                     font-size:14px;  
                     font-family: 'Dosis', sans-serif;
