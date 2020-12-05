@@ -19,7 +19,7 @@ Dynamic quote generator for your GitHub readmes
 | 3  | [Design Layouts](#layouts)  | Different Layout design cards are available  |
 | 4  | [Animation](#animations)  | Animations available for quote cards |
 | 5  | [Custom Quotes from GitHub Gists](#custom-quotes)  | You can add custom quotes of your own or own choice from GitHub Gists json files |
-| 6  | [Quotes based on Category]()  | Different category based quotes are available |
+| 6  | [Quotes based on Category](#category-based-quotes)  | Different category based quotes are available |
 
 
 
