@@ -8,6 +8,9 @@ Dynamic quote generator for your GitHub readmes
   <img align="center" src="https://img.shields.io/discord/779439447736451132?label=discord-server&style=flat-square" />
 </a>
 
+### Featuring on <a href="https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=276934&theme=light" alt="Dynamic GitHub Profile Readme Quotes - Everlasting Poetic Touch to GitHub Profiles for everyone | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" align="center"/></a>
+
+
 <br>
 
 ##  Features
