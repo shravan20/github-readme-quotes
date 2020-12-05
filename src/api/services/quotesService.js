@@ -3,12 +3,12 @@ const url = process.env.SERVICE_URL;
 const cardTemplate = require("../../utils/generateTemplate");
 const Template = require("../../models/Template");
 const getValidUrl = require("../../utils/validateUrl");
+const quoteFromCategory = require('../../../customQuotes/category.json');
 
 const getQuote = async (quoteObj) => {
   try {
-    let { theme, animation, layout, quotesUrl } = quoteObj;
+    let { theme, animation, layout, quotesUrl, quoteCategory } = quoteObj;
     let apiResponse;
-
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
 
     if (isValidUrl) {
@@ -23,7 +23,12 @@ const getQuote = async (quoteObj) => {
       } else {
         apiResponse = await requestApi(url);
       }
-    } else {
+    }
+    else if(quoteCategory){
+      apiResponse = quoteFromCategory[quoteCategory];
+      apiResponse = apiResponse[Math.floor(Math.random() * apiResponse.length)];
+    } 
+    else {
       apiResponse = await requestApi(url);
     }
 

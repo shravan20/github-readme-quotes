@@ -1,0 +1,32 @@
+{
+  "motivational" : [ 
+   {
+    "quote":"Quote 1",
+    "author":"Me"
+   },
+   {
+    "quote":"Quote 2",
+    "author":"Not Me"
+   },
+   {
+    "quote":"Quote 3",
+    "author":"Not Me"
+   },
+   {
+    "quote":"Quote 4",
+    "author":"Not Me"
+   },
+   {
+    "quote":"Quote 5",
+    "author":"Not Me"
+   }], 
+  "inspirational" : [
+   {
+    "quote":"Hi",
+    "author":"Me"
+   },
+   {
+    "quote":"Bye",
+    "author":"Not Me"
+   }]
+}
