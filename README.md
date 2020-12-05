@@ -156,7 +156,9 @@ You can also provide a category to fetch the list of quotes based on certain cat
     ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=motivational)
     ```
 
-![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=inspirational)
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=motivational)
+
 
 <b>Feel free to contribute different quotes to different categories.</b>
 
