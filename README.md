@@ -10,6 +10,20 @@ Dynamic quote generator for your GitHub readmes
 
 <br>
 
+##  Features
+
+| Sl No  | Feature Name  | Description  |
+|:-:|:-:|:-:|
+| 1  | [Dynamic Quotes](#github-readme-quotes-1)  | Different quotes every time its rendered for GitHub Profile Readme  |
+| 2  | [Colorful Themes](#themes)  | Various colorful themes available for cards |
+| 3  | [Design Layouts](#layouts)  | Different Layout design cards are available  |
+| 4  | [Animation](#animations)  | Animations available for quote cards |
+| 5  | [Custom Quotes from GitHub Gists](#custom-quotes)  | You can add custom quotes of your own or own choice from GitHub Gists json files |
+| 6  | [Quotes based on Category](#category-based-quotes)  | Different category based quotes are available |
+
+
+
+
 ---
 
 
@@ -48,10 +62,6 @@ Use `?theme=THEME_NAME` parameter as shown below.
 #### Available Themes
 dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula
 
-**Gotham**
-
-![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=gotham)
-
 **Dark**
 
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark)
@@ -59,7 +69,6 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 **Light Theme**
 
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?)
-
 
 <!-- Scrnshot of quote in different themes -->
 
@@ -88,7 +97,6 @@ Use `?layout=LAYOUT` parameter as shown below
 
 <!-- Scrnshot of quote in particular layout -->
 
-
 You can explore different layouts [here](./src/layouts/README.md).
 
 <b>Feel free to contribute different layouts.</b>
@@ -112,6 +120,9 @@ Use `?animation=ANIMATION` paramater as shown below
 
 You can explore different animations [here](./src/animations/README.md).
 
+
+---
+
 - ### Custom Quotes
 You can also provide a file with the list of quotes and a random quote will be generated for you.
 
@@ -125,6 +136,31 @@ You can also provide a file with the list of quotes and a random quote will be g
     ```
 
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
+
+
+---
+
+- ### Category based Quotes
+You can also provide a category to fetch the list of quotes based on certain category and a random quote will be generated for you based on category you specify.
+
+#### Follow the steps to add quotes to category,
+- Add the quote you want in this [file](./customQuotes/category.json) based on the category it falls into.
+- If the category you want doesn't exist, feel free to add the category in this [file](./customQuotes/category.json) and add the quotes.
+- Use `quoteCategory=categoryName` as shown below
+  - ```
+    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=motivational)
+    ```
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=inspirational)
+
+#### Available Categories
+ - motivational
+ - fun 
+ - life
+ - general
+ - programming
+ - success..etc.
+
 
 ---
 

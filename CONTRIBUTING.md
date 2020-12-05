@@ -16,6 +16,15 @@ Pull requests are the best way to propose changes. We actively welcome your pull
 3. Make sure your Pull requests have detailed information.
 4. Issue that pull request!
 
+## Space where you contribute in the project
+
+| Sl No  | Feature Name  | Description  |
+|:-:|:-:|:-:|
+| 1 | [Colorful Themes Contribution](#themes-contribution) | Feel free to contribute to creating themes |
+| 2 | [Design Layout Contribution](#layout-contribution) | Feel free to contribute to new design card layouts |
+| 3 | [Quotes Based on Gist file](#quote-based-on-github-gist-contribution) | Feel free to contribute to GitHub Gists |
+| 4 | [Quotes Based on Categories](#category-based-quotes) | Feel free to contribute to adding quotes to categories and new categories with quotes itself |
+
 
 ## Themes Contribution
 
@@ -50,6 +59,36 @@ Please consider the following steps if you are planning to contribute a new layo
 </pre>
 
 Check the existing [layouts](./src/layouts/layout.js) for a better understanding.
+
+<br>
+
+## Quote based on GitHub Gist Contribution
+#### Follow the steps to provide your own custom quotes,
+- Use the template provided at [here](./customQuotes/quotes.json) and write your own file with multiple quotes.
+- Save the file in the repository in any (public) directory or anywhere in the internet.
+- Get the link of the file. 
+- Use `?quotesUrl=URL` as shown below
+  - ```
+    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
+    ```
+
+<br>
+
+
+## Category based Quotes
+You can also provide a category to fetch the list of quotes based on certain category and a random quote will be generated for you based on category you specify.
+
+#### Follow the steps to add quotes to category,
+- Add the quote you want in this [file](./customQuotes/category.json) based on the category it falls into.
+- If the category you want doesn't exist, feel free to add the category in this [file](./customQuotes/category.json) and add the quotes.
+- Use `quoteCategory=categoryName` as shown below
+  - ```
+    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=motivational)
+    ```
+
+<br>
+
+
 
 ## Any contributions you make will be under the MIT Software License
 
@@ -88,6 +127,7 @@ You can follow the guidelines below for a new feature request:
 - A quick idea summary
 - What & why you wanted to add the specific feature
 - Additional Context like images, links to resources to implement the feature etc etc.
+
 
 ## License
 
