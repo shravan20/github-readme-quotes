@@ -1,32 +1,194 @@
 {
-  "motivational" : [ 
-   {
-    "quote":"Quote 1",
-    "author":"Me"
-   },
-   {
-    "quote":"Quote 2",
-    "author":"Not Me"
-   },
-   {
-    "quote":"Quote 3",
-    "author":"Not Me"
-   },
-   {
-    "quote":"Quote 4",
-    "author":"Not Me"
-   },
-   {
-    "quote":"Quote 5",
-    "author":"Not Me"
-   }], 
-  "inspirational" : [
-   {
-    "quote":"Hi",
-    "author":"Me"
-   },
-   {
-    "quote":"Bye",
-    "author":"Not Me"
-   }]
+  "motivational": [
+    {
+      "quote": "The Best Way To Get Started Is To Quit Talking And Begin Doing.",
+      "author": "Walt Disney"
+    },
+    {
+      "quote": "The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.",
+      "author": "Winston Churchill"
+    },
+    {
+      "quote": "Don’t Let Yesterday Take Up Too Much Of Today.",
+      "author": "Will Rogers"
+    },
+    {
+      "quote": "You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.",
+      "author": "Unknown"
+    },
+    {
+      "quote": "It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.",
+      "author": "Vince Lombardi"
+    },
+    {
+      "quote": "If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.",
+      "author": "Steve Jobs"
+    },
+    {
+      "quote": "People Who Are Crazy Enough To Think They Can Change The World, Are The Ones Who Do.",
+      "author": "Rob Siltanen"
+    },
+    {
+      "quote": "Failure Will Never Overtake Me If My Determination To Succeed Is Strong Enough.",
+      "author": "Og Mandino"
+    },
+    {
+      "quote": "Entrepreneurs Are Great At Dealing With Uncertainty And Also Very Good At Minimizing Risk. That’s The Classic Entrepreneur.",
+      "author": "Mohnish Pabrai"
+    },
+    {
+      "quote": "We May Encounter Many Defeats But We Must Not Be Defeated.",
+      "author": "Maya Angelou"
+    },
+    {
+      "quote": "Knowing Is Not Enough; We Must Apply. Wishing Is Not Enough; We Must Do.",
+      "author": "Johann Wolfgang Von Goethe"
+    },
+    {
+      "quote": "Imagine Your Life Is Perfect In Every Respect; What Would It Look Like?",
+      "author": "Brian Tracy"
+    },
+    {
+      "quote": "Whether You Think You Can Or Think You Can’t, You’re Right.",
+      "author": "Henry Ford"
+    },
+    {
+      "quote": "Security Is Mostly A Superstition. Life Is Either A Daring Adventure Or Nothing.",
+      "author": "Helen Keller"
+    },
+    {
+      "quote": "The Man Who Has Confidence In Himself Gains The Confidence Of Others.",
+      "author": "Hasidic Proverb"
+    },
+    {
+      "quote": "The Only Limit To Our Realization Of Tomorrow Will Be Our Doubts Of Today.",
+      "author": "Franklin D. Roosevelt"
+    },
+    {
+      "quote": "Creativity Is Intelligence Having Fun.",
+      "author": "Albert Einstein"
+    },
+    {
+      "quote": "What You Lack In Talent Can Be Made Up With Desire, Hustle And Giving 110% All The Time.",
+      "author": "Don Zimmer"
+    },
+    {
+      "quote": "Do What You Can With All You Have, Wherever You Are.",
+      "author": "Theodore Roosevelt"
+    },
+    {
+      "quote": "Develop An ‘Attitude Of Gratitude’. Say Thank You To Everyone You Meet For Everything They Do For You.",
+      "author": "Brian Tracy"
+    },
+    {
+      "quote": "You Are Never Too Old To Set Another Goal Or To Dream A New Dream.",
+      "author": "C.S. Lewis"
+    },
+    {
+      "quote": "To See What Is Right And Not Do It Is A Lack Of Courage.",
+      "author": "Confucius"
+    },
+    {
+      "quote": "Reading Is To The Mind, As Exercise Is To The Body.",
+      "author": "Brian Tracy"
+    },
+    {
+      "quote": "For Every Reason It’s Not Possible, There Are Hundreds Of People Who Have Faced The Same Circumstances And Succeeded.",
+      "author": "Jack Canfield"
+    },
+    {
+      "quote": "Things Work Out Best For Those Who Make The Best Of How Things Work Out.",
+      "author": "John Wooden"
+    },
+    {
+      "quote": "A Room Without Books Is Like A Body Without A Soul.",
+      "author": "Marcus Tullius Cicero"
+    }
+  ],
+  "fun": [
+    {
+      "quote": "Forgive your enemies, but never forget their names.",
+      "author": "John F. Kennedy"
+    },
+    {
+      "quote": "The road to success is always under construction.",
+      "author": "Lily Tomlin"
+    },
+    {
+      "quote": "I’m in shape. Round is a shape.",
+      "author": "George Carlin"
+    },
+    {
+      "quote": "Never have more children than you have car windows.",
+      "author": "Erma Bombeck"
+    },
+    {
+      "quote": "If you can’t live without me, why aren’t you dead already?",
+      "author": "Cynthia Heimel"
+    },
+    {
+      "quote": "He who laughs last didn’t get the joke.",
+      "author": "Charles de Gaulle"
+    },
+    {
+      "quote": "My favourite machine at the gym is the vending machine.",
+      "author": "Caroline Rhea"
+    },
+    {
+      "quote": "If a book about failures doesn’t sell, is it a success?",
+      "author": "Jerry Seinfeld"
+    },
+    {
+      "quote": "If you’re too open-minded; your brains will fall out.",
+      "author": "Lawrence Ferlinghetti"
+    },
+    {
+      "quote": "Never miss a good chance to shut up.",
+      "author": "Will Rogers"
+    },
+    {
+      "quote": "I don’t hate you. I just don’t like that you exist",
+      "author": "Gena Showalter"
+    },
+    {
+      "quote": "Don’t gobblefunk around with words.",
+      "author": "Roald Dahl"
+    },
+    {
+      "quote": "A penny saved is a penny earned.",
+      "author": "Benjamin Franklin"
+    },
+    {
+      "quote": "The funniest people are the saddest ones.",
+      "author": "Confucius"
+    },
+    {
+      "quote": "Why is there so much month left at the end of the money?",
+      "author": "John Barrymore"
+    },
+    {
+      "quote": "I came from a real tough neighbourhood. Once a guy pulled a knife on me. I knew he wasn’t a professional, the knife had butter on it.",
+      "author": "Rodney Dangerfield"
+    },
+    {
+      "quote": "A word to the wise ain’t necessary, it’s the stupid ones who need advice.",
+      "author": "Bill Cosby"
+    },
+    {
+      "quote": "Always go to other people’s funerals, otherwise, they won’t come to yours.",
+      "author": "Yogi Berra"
+    },
+    {
+      "quote": "Women are wiser than men because they know less and understand more.",
+      "author": "James Thurber"
+    },
+    {
+      "quote": "I’d rather have 1% of the effort of 100 men than 100% of my own effort.",
+      "author": "J. Paul Getty"
+    },
+    {
+      "quote": "Hooray! Hooray! The end of the world has been postponed!",
+      "author": "Hergé"
+    }
+  ]
 }
