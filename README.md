@@ -126,6 +126,14 @@ You can explore different animations [here](./src/animations/README.md).
 - ### Custom Quotes
 You can also provide a file with the list of quotes and a random quote will be generated for you.
 
+#### Follow the steps to provide your own custom quotes,
+- Use the template provided at [here](./customQuotes/quotes.json) and write your own file with multiple quotes.
+- Save the file in the repository in any (public) directory or anywhere in the internet.
+- Get the link of the file. 
+- Use `?quotesUrl=URL` as shown below
+  - ```
+    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
+    ```
 
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
 
@@ -146,7 +154,12 @@ You can also provide a category to fetch the list of quotes based on certain cat
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=inspirational)
 
 #### Available Categories
-motivational, fun, life, general, programming, success,
+ - motivational
+ - fun 
+ - life
+ - general
+ - programming
+ - success..etc.
 
 
 ---
