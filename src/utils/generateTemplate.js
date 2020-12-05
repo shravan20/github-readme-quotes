@@ -1,4 +1,4 @@
-const getTemplate = require("../common/getTemplate");
+const getTemplate=require('../common/getTemplate');
 
 const generateTemplate = (template) => {
   return getTemplate(template);
