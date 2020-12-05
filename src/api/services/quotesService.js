@@ -16,10 +16,7 @@ const getQuote = async (quoteObj) => {
       apiResponse = await requestApi(customQuotesUrl);
 
       if (apiResponse.length > 0) {
-        apiResponse =
-          apiResponse[
-            Math.floor(Math.random() * Math.floor(apiResponse.length))
-          ];
+        apiResponse = apiResponse[Math.floor(Math.random() * Math.floor(apiResponse.length))];
         if (!apiResponse.quote && !apiResponse.author) {
           apiResponse = await requestApi(url);
         }
