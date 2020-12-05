@@ -14,9 +14,11 @@ const quoteController = async (req, res, next) => {
      let layout=layouts[req.query.layout] ? layouts[req.query.layout] 
                     : layouts["default"];
 
-     let quotesUrl = req.query.quotesUrl || ''; 
+     let quotesUrl = req.query.quotesUrl || '';
+     
+     let quoteCategory = req.query.quoteCategory || '';
 
-     let quoteObject={theme,animation,layout,quotesUrl}
+     let quoteObject={theme,animation,layout,quotesUrl,quoteCategory}
 
      let svgResponse = await quoteService.getQuote(quoteObject);
 
