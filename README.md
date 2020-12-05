@@ -131,8 +131,8 @@ You can also provide a file with the list of quotes and a random quote will be g
 - Save the file in the repository in any (public) directory or anywhere in the internet.
 - Get the link of the file. 
 - Use `?quotesUrl=URL` as shown below
-  - ```
-    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
+   ```
+   ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
     ```
 
 ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
@@ -143,16 +143,6 @@ You can also provide a file with the list of quotes and a random quote will be g
 - ### Category based Quotes
 You can also provide a category to fetch the list of quotes based on certain category and a random quote will be generated for you based on category you specify.
 
-#### Follow the steps to add quotes to category,
-- Add the quote you want in this [file](./customQuotes/category.json) based on the category it falls into.
-- If the category you want doesn't exist, feel free to add the category in this [file](./customQuotes/category.json) and add the quotes.
-- Use `quoteCategory=categoryName` as shown below
-  - ```
-    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=motivational)
-    ```
-
-![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=inspirational)
-
 #### Available Categories
  - motivational
  - fun 
@@ -160,6 +150,20 @@ You can also provide a category to fetch the list of quotes based on certain cat
  - general
  - programming
  - success..etc.
+
+   - Use `quoteCategory=categoryName` as shown below
+   ```
+    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=motivational)
+    ```
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=inspirational)
+
+<b>Feel free to contribute different quotes to different categories.</b>
+
+#### Follow the steps to add quotes to category,
+- Add the quote you want in this [file](./customQuotes/category.json) based on the category it falls into.
+- If the category you want doesn't exist, feel free to add the category in this [file](./customQuotes/category.json) and add the quotes.
+
 
 
 ---
