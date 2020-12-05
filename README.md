@@ -10,9 +10,7 @@ Dynamic quote generator for your GitHub readmes
 
 <br>
 
-<h2 align="center">
-  Features
-</h2>
+##  Features
 
 | Sl No  | Feature Name  | Description  |
 |:-:|:-:|:-:|
