@@ -245,7 +245,7 @@ const layouts = {
   
           .container{
               background-color:#000;
-              width:600px;
+              width:550px;
               height:auto;
               padding:30px 20px 40px 40px;
               ${template.animation.animation};
