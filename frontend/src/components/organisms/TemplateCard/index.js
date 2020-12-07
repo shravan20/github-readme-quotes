@@ -22,8 +22,8 @@ const TemplateCard = (props) => {
 
     const template = new Template();
     const data = {
-        quote: 'The quick brown fox jumps over the lazy dog',
-        author: 'Microsoft'
+        quote: 'Github quotes for README',
+        author: 'Open Source'
     }
     template.setTheme(mainThemes[props.theme]);
     template.setData(data);
