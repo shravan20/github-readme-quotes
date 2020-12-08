@@ -13,7 +13,7 @@ Dynamic quote generator for your GitHub readmes
 
 <br>
 
-### Use [User Interface](http://github-readme-quotes.herokuapp.com/), to view designed quotes and copy link and paste it directly
+### Use [User Interface](https://github-readme-quotes.herokuapp.com/), to view designed quotes and copy link and paste it directly
 
 <img src="./assets/uiScreen.gif" width=100% align="center"/>
 
