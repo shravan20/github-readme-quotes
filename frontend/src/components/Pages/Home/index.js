@@ -4,18 +4,12 @@ import TemplateCard from '../../organisms/TemplateCard';
 import { themes, animations, layouts } from '../../../config/cardTemplate';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import translate from '@vitalets/google-translate-api';
 
 const Home = () => {
 
     const [theme, setTheme] = useState(themes[0]);
     const [animation, setAnimation] = useState(animations[0]);
     const [layout, setLayout] = useState(layouts[0]);
-
-    translate("Hello, how are you?", { to: 'en' })
-        .then(res => {
-            console.log(res.text)
-        });
 
     return (
         <React.Fragment>
