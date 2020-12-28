@@ -64,6 +64,7 @@ const layouts = {
                     ? "ccc"
                     : template.theme.bg_color
                 };
+                      background: #fff;
                       display:inline-block;
                       margin:0;
                       padding:1em;
@@ -113,14 +114,19 @@ const layouts = {
             return `#ct{
                     height:auto;
                     width:600px;
-                    border:1px solid #f1c40f;
                     margin: 20px 50px 20px 10px;
                     text-align:center;
                     position:relative;
                     color:#${template.theme.quote_color};
                     padding:15px;
-                    background:#${template.theme.bg_color};
-                     ${template.animation.animation};
+                                      
+                   background: radial-gradient(circle at top left, transparent 15px, #${template.theme.bg_color} 0) top left,
+                   radial-gradient(circle at top right, transparent 15px, #${template.theme.bg_color} 0) top right,
+                   radial-gradient(circle at bottom right, transparent 15px, #${template.theme.bg_color} 0) bottom right,
+                   radial-gradient(circle at bottom left, transparent 15px, #${template.theme.bg_color} 0) bottom left;
+                   ${template.animation.animation};
+                    background-size: 51% 51%;
+                    background-repeat: no-repeat;
                   }
                   ${template.animation.keyframes}
                   span{
@@ -144,22 +150,54 @@ const layouts = {
                   #left_top{
                     top:-16px;
                     left:-16px;
+                    background: transparent;
                     border-color:transparent transparent #f1c40f transparent;
                   }
                   #right_top{
                     top:-16px;
                     right:-16px;
+                    background: transparent;
                     border-color:transparent transparent transparent #f1c40f;
                   }
                   #left_bottom{
                     bottom:-16px;
                     left:-16px;
+                    background: transparent;
                     border-color:transparent #f1c40f transparent transparent ;
                   }
                   #right_bottom{
                     bottom:-16px;
                     right:-16px;
+                    background: transparent;
                     border-color:#f1c40f transparent transparent transparent;
+                  }
+                  #borderLeft {
+                    border-left: 1px solid #f1c40f;
+                    position: absolute;
+                    top: 15px;
+                    bottom: 15px;
+                    left:-1px;
+                  }
+                  #borderTop {
+                    border-top: 1px solid #f1c40f;
+                    position: absolute;
+                    right: 15px;
+                    left: 15px;
+                    top: -1px;
+                  }
+                  #borderRight {
+                    border-right: 1px solid #f1c40f;
+                    position: absolute;
+                    top: 15px;
+                    bottom: 15px;
+                    right: -1px;
+                  }
+                  #borderBottom {
+                    border-bottom: 1px solid #f1c40f;
+                    position: absolute;
+                    right: 15px;
+                    left: 15px;
+                    bottom: -1px;
                   }
                   p{
                     padding-top:0px;
@@ -172,6 +210,10 @@ const layouts = {
                     <div class="corner" id="left_bottom"></div>
                     <div class="corner" id="right_top"></div>
                     <div class="corner" id="right_bottom"></div>
+                    <div id="borderLeft"></div>
+                    <div id="borderRight"></div>
+                    <div id="borderBottom"></div>
+                    <div id="borderTop"></div>
                     <span>${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
@@ -200,6 +242,9 @@ const layouts = {
                       margin: 0;
                       font-size:16px;
                       padding: 1em;
+                      background: #fff;
+                      -webkit-mask-image: radial-gradient(circle 0 at 0 0, transparent 0, transparent, black);
+                      mask-image: radial-gradient(circle 0 at 0 0, transparent 0, transparent, black);
                       position: relative;
                   }
                   blockquote::before {
