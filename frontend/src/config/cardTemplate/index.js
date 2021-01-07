@@ -44,3 +44,4 @@ export const themes = ['default',
     'kacho_ga'];
 export const animations = ['default', 'grow_out_in'];
 export const layouts = ['default', 'samuel', 'churchill', 'socrates', 'zues'];
+export const fonts = ['default', 'Gabrielle', 'Redressed'];
