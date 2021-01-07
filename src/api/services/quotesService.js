@@ -7,10 +7,9 @@ const quoteFromCategory = require('../../../customQuotes/category.json');
 
 const getQuote = async (quoteObj) => {
   try {
-    let { theme, animation, layout, quotesUrl, quoteCategory } = quoteObj;
+    let { theme, animation, layout, quotesUrl, quoteCategory, font } = quoteObj;
     let apiResponse;
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
-
     if (isValidUrl) {
       //url from params is valid, proceed to verfiy the data
       apiResponse = await requestApi(customQuotesUrl);
@@ -35,6 +34,7 @@ const getQuote = async (quoteObj) => {
     const template = new Template();
     template.setTheme(theme);
     template.setData(apiResponse);
+    template.setFont(font);
     template.setAnimation(animation);
     template.setLayout(layout);
 
