@@ -13,6 +13,7 @@ import Template from "../../../util/template/Template";
 import mainLayouts from "../../../util/layouts";
 import mainAnimations from "../../../util/animation";
 import mainThemes from "../../../util/themes";
+import mainFonts from "../../../util/fonts";
 
 const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
@@ -26,6 +27,7 @@ const TemplateCard = (props) => {
   };
   template.setTheme(mainThemes[props.theme]);
   template.setData(data);
+  template.setFont(mainFonts[props.font]);
   template.setAnimation(mainAnimations[props.animation]);
   template.setLayout(mainLayouts[props.layout]);
 
@@ -49,7 +51,7 @@ const TemplateCard = (props) => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `https://github-readme-quotes.herokuapp.com/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}`;
+  const quoteUrl = `https://github-readme-quotes.herokuapp.com/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;

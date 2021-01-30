@@ -7,7 +7,7 @@ const layouts = {
                   box-sizing: border-box;
                   }
                   .container {
-                  font-family: Arial, Helvetica, sans-serif;
+                  font-family:customFont, Arial, Helvetica, sans-serif;
                   padding: 40px 20px;
                   width: 600px;
                   background-color: #${template.theme.bg_color};
@@ -53,7 +53,7 @@ const layouts = {
         style: (template) => {
             return `.square-brackets-quote {
                   display:inline-block;
-                  font-family:Arial,Helvetica,sans-serif;
+                  font-family:customFont,Arial,Helvetica,sans-serif;
                   margin:1em;
                   width:600px;
                   ${template.animation.animation};
@@ -116,6 +116,7 @@ const layouts = {
                     width:600px;
                     margin: 20px 50px 20px 10px;
                     text-align:center;
+                    font-family:customFont,Arial,Helvetica,sans-serif;
                     position:relative;
                     color:#${template.theme.quote_color};
                     padding:15px;
@@ -230,6 +231,7 @@ const layouts = {
                     display: inline-block;
                     margin: 1em;
                     width:600px;
+                    font-family:customFont,Arial,Helvetica,sans-serif;
                     ${template.animation.animation};
                   } 
                   ${template.animation.keyframes}
@@ -293,6 +295,7 @@ const layouts = {
               width:550px;
               height:auto;
               padding:30px 20px 40px 40px;
+              font-family:customFont,Arial,Helvetica,sans-serif;
               ${template.animation.animation};
           }
           ${template.animation.keyframes}
@@ -313,7 +316,6 @@ const layouts = {
                     .quote4::before, .quote4::after{
                       position:absolute;
                       font-size:105px;
-                      font-family: 'Dosis', sans-serif;
                       background:#000;
                       display:block;
                       height:30px;
@@ -349,22 +351,18 @@ const layouts = {
                       width:100%;
                       color: #DAB49D;
                       font-size:14px;  
-                      font-family: 'Dosis', sans-serif;
                       text-transform:uppercase;
                       letter-spacing:1px;
                     }
                     .quote4 .txt{
                       color:#F3E9DC;
-                      font-size:16px;
-                      font-family: 'Roboto Slab', serif;  
-                      
+                      font-size:16px; 
                     }
   
                     .quote4 .from{
                       text-align:center;
                       margin-top:15px;
                       font-size:13px;
-                      font-family: 'Exo', sans-serif;
                       color: #5E3023;
                     }
   
