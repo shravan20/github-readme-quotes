@@ -24,6 +24,7 @@ Pull requests are the best way to propose changes. We actively welcome your pull
 | 2 | [Design Layout Contribution](#layout-contribution) | Feel free to contribute to new design card layouts |
 | 3 | [Quotes Based on Gist file](#quote-based-on-github-gist-contribution) | Feel free to contribute to GitHub Gists |
 | 4 | [Quotes Based on Categories](#category-based-quotes) | Feel free to contribute to adding quotes to categories and new categories with quotes itself |
+| 5 | [Custom Fonts for Quotes](#custom-fonts) | Feel free to contribute to adding custom fonts |
 
 
 ## Themes Contribution
@@ -88,6 +89,36 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 <br>
 
+
+## Custom Fonts
+You can provide fonts data to show the quotes in the font. 
+
+#### Follow the steps to add custom fonts for the quotes,
+##### Server
+- Select the font from [Google fonts](https://fonts.google.com)
+- Get the CSS link of the font
+  - Example https://fonts.googleapis.com/css2?family=Redressed
+- Generate BASE 64 font data from using any tool of your choice, or using [this](https://amio.github.io/embedded-google-fonts/) tool
+-  Add the font you want in this [file](./src/fonts/fonts.js) in the following pattern, 
+   - `FONT_NAME:{
+    fontFamily: 'family', 
+    src: 'BASE_64 FONT DATA'
+  }`
+  
+- Use `font=FONT_NAME` as shown below
+  - ```
+    ![Quote](https://github-readme-quotes.herokuapp.com/quote?font=FONT_NAME)
+    ```
+##### Frontend
+
+-  Add the font you want in this [file](./frontend/src/util/fonts/index.js) in the following pattern, 
+   - `FONT_NAME:{
+    fontFamily: 'family', 
+    src: 'BASE_64 FONT DATA'
+  }`
+- Add the FONT_NAME in the `fonts` array in the [file](./frontend/src/config/cardTemplate/index.js)
+
+<br>
 
 
 ## Any contributions you make will be under the MIT Software License

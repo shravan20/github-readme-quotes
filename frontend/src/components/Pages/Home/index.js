@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import TemplateCard from '../../organisms/TemplateCard';
-import { themes, animations, layouts } from '../../../config/cardTemplate';
+import { themes, animations, layouts, fonts } from '../../../config/cardTemplate';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
@@ -10,6 +10,7 @@ const Home = () => {
     const [theme, setTheme] = useState(themes[0]);
     const [animation, setAnimation] = useState(animations[0]);
     const [layout, setLayout] = useState(layouts[0]);
+    const [font, setFont] = useState(fonts[0]);
 
     return (
         <React.Fragment>
@@ -21,7 +22,7 @@ const Home = () => {
                 spacing={3}
             >
 
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid item xs={12} sm={6} lg={3}>
                     <Autocomplete
                         id="theme"
                         options={themes}
@@ -34,7 +35,7 @@ const Home = () => {
                         renderInput={(params) => <TextField {...params} label="Theme" variant="outlined" />}
                     />
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid item xs={12} sm={6} lg={3}>
                     <Autocomplete
                         id="layout"
                         options={layouts}
@@ -47,7 +48,7 @@ const Home = () => {
                         renderInput={(params) => <TextField {...params} label="Layout" variant="outlined" />}
                     />
                 </Grid>
-                <Grid item xs={12} sm={12} md={4}>
+                <Grid item xs={12} sm={6} lg={3}>
                     <Autocomplete
                         id="animation"
                         options={animations}
@@ -62,21 +63,34 @@ const Home = () => {
 
                 </Grid>
 
+                <Grid item xs={12} sm={6} lg={3}>
+                    <Autocomplete
+                        id="font"
+                        options={fonts}
+                        value={font}
+                        style={{ width: 300 }}
+                        onChange={(_event, newValue) => {
+                            if (newValue != null)
+                                setFont(newValue)
+                        }}
+                        renderInput={(params) => <TextField {...params} label="Font" variant="outlined" />}
+                    />
+                </Grid>
+
             </Grid>
 
             <Grid container spacing={4}>
                 <Grid item xs={12}>
-                    <TemplateCard theme={theme} animation={animation} layout={layout} />
+                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} />
                 </Grid>
                 <Grid item xs={12}>
                     <Typography align="center">Other layouts</Typography>
-                    {console.log("All Layouts ", layouts)}
                 </Grid>
                 {
                     layouts.filter((item) => item !== layout).map((restLayout) => {
                         return (
                             <Grid key={restLayout} item xs={12} sm={12} md={6}>
-                                <TemplateCard theme={theme} animation={animation} layout={restLayout} />
+                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} />
                             </Grid>
                         )
                     })

@@ -2,6 +2,7 @@ const themes = require("../../themes/themes");
 const animations = require("../../animations/animation");
 const layouts=require("../../layouts/layout");
 const quoteService=require("../services/quotesService");
+const fonts=require("../../fonts/fonts");
 
 const quoteController = async (req, res, next) => {
   
@@ -18,7 +19,9 @@ const quoteController = async (req, res, next) => {
      
      let quoteCategory = req.query.quoteCategory || '';
 
-     let quoteObject={theme,animation,layout,quotesUrl,quoteCategory}
+     let font = fonts[req.query.font] ? fonts[req.query.font] : fonts['default'];
+
+     let quoteObject={theme,animation,layout,quotesUrl,quoteCategory,font}
 
      let svgResponse = await quoteService.getQuote(quoteObject);
 

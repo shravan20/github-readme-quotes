@@ -29,6 +29,10 @@ class Template {
     this.structure = structure(this);
   }
 
+  setFont(font){
+    this.font = font;
+  }
+
   calculateHeight(length) {
     let lines;
     if (this.layout !== layouts["zues"]) {

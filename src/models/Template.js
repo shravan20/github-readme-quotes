@@ -29,6 +29,10 @@ class Template {
   setStructure(structure) {
     this.structure = structure(this);
   }
+  
+  setFont(font){
+    this.font = font;
+  }
 
   calculateHeight(length) {
     let lines;
