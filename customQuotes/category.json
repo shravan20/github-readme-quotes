@@ -141,6 +141,10 @@
     {
       "quote": "Go confidently in the direction of your dreams! Live the life you've imagined.",
       "author": "Henry David Thoreau"
+    },
+    {
+      "quote": "Love is the strongest force the world possesses.",
+      "author": "Mahatma Gandhi"
     }
   ],
   "success": [
@@ -203,6 +207,14 @@
     {
       "quote": "Always bear in mind that your own resolution to success is more important than any other one thing.",
       "author": "Abraham Lincoln"
+    },
+    {
+      "quote": "Work hard in silence. Success be your noise.",
+      "author": "Frank Ocean"
+    },
+    {
+      "quote": "Successful people don't fear failure but understand that it's necessary to learn and grow from.",
+      "author": "Robert Kiyosaki"
     }
   ],
   "motivational": [
@@ -309,6 +321,14 @@
     {
       "quote": "A Room Without Books Is Like A Body Without A Soul.",
       "author": "Marcus Tullius Cicero"
+    },
+    {
+      "quote": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+      "author": "Mahatma Gandhi"
+    },
+    {
+      "quote": "Education is the most powerful weapon we can use to change the world.",
+      "author": "Nelson Mandela"
     }
   ],
   "fun": [
@@ -395,6 +415,10 @@
     {
       "quote": "Hooray! Hooray! The end of the world has been postponed!",
       "author": "Hergé"
+    },
+    {
+      "quote": "Imagination is more important than knowledge.",
+      "author": "Albert Einstein"
     }
   ],
   "programming": [
@@ -489,6 +513,48 @@
     {
       "quote": "Programming isn't about what you know; it's about what you can figure out.",
       "author": "Chris Pine"
+    }
+  ],
+  "dream": [
+    {
+      "quote": "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world.",
+      "author": "Harriet Tubman"
+    },
+    {
+      "quote": "All our dreams can come true, if we have the courage to pursue them.",
+      "author": "Walt Disney"
+    },
+    {
+      "quote": "Follow your dreams, believe in yourself and don’t give up.",
+      "author": "Rachel Corrie"
+    },
+    {
+      "quote": "We all have dreams. But in order to make dreams come into reality, it takes an awful lot of determination, dedication, self-discipline, and effort.",
+      "author": "Jesse Owens"
+    },
+    {
+      "quote": "I like the dreams of the future better than the history of the past.",
+      "author": "Thomas Jefferson"
+    },
+    {
+      "quote": "There is only one thing that makes a dream impossible to achieve: the fear of failure.",
+      "author": "Paulo Coelho"
+    },
+    {
+      "quote": "You have to dream before your dreams can come true.",
+      "author": "A. P. J. Abdul Kalam"
+    },
+    {
+      "quote": "Dreams are the touchstones of our characters.",
+      "author": "Henry David Thoreau"
+    },
+    {
+      "quote": "Dream no small dreams for they have no power to move the hearts of men.",
+      "author": "Johann Wolfgang von Goethe"
+    },
+    {
+      "quote": "It takes a lot of courage to show your dreams to someone else.",
+      "author": "Erma Bombeck"
     }
   ]
 }
