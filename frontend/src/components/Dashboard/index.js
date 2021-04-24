@@ -47,7 +47,7 @@ function Dashboard(props) {
                     <AppBar>
                         <Toolbar className = {classes.root}>
                             <Typography variant="h6" className = {classes.title}>{dashConstants.APP_NAME}</Typography>
-                            <IconButton className = {classes.themeIcon}  onClick = {handleThemeChange} >{<img src={isDark ? LightIcon : MoonIcon}/>}</IconButton>
+                            <IconButton className = {classes.themeIcon}  onClick = {handleThemeChange} >{<img alt="Theme Icon" src={isDark ? LightIcon : MoonIcon}/>}</IconButton>
                         </Toolbar>
                     </AppBar>
                     </ElevationScroll>
