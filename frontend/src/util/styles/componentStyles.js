@@ -6,7 +6,8 @@ export const getAppBarStyles = makeStyles((theme) => ({
     },
     themeIcon:{
         backgroundColor:"transparent !important",
-        border:"none",
-        boxShadow:"1px solid #fff"
+        height:"38px",
+        width:"38px",
+        boxShadow:"0px 0px 0.5px 0.5px #6e7681"
     }
   }));
