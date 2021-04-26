@@ -4,7 +4,7 @@ import TemplateCard from '../../organisms/TemplateCard';
 import { themes, animations, layouts, fonts } from '../../../config/cardTemplate';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-
+import ContributorsCard from '../../ContributorsCard/ContributorCard'
 const Home = () => {
 
     const [theme, setTheme] = useState(themes[0]);
@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <React.Fragment>
             <Typography variant='h5' align='center' component='h2' style={{ margin: '20px' }}>Make your own personalised style for the Quotes</Typography>
-
+            
             <Grid
                 container
                 alignItems="center"
@@ -96,7 +96,7 @@ const Home = () => {
                     })
                 }
             </Grid>
-
+            <ContributorsCard  />
         </React.Fragment>
     )
 }
