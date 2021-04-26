@@ -6,6 +6,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
+import {contributorsUrl} from "../Constants/urlConfig"
 
 const useStyles = makeStyles({
   root: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles({
 const ContributorsCard = () => {
   const [listOfContributors,setListOfContributors] = useState([]);
   useEffect(()=>{
-      fetch("https://api.github.com/repos/shravan20/github-readme-quotes/contributors?")
+      fetch(contributorsUrl)
       .then((res)=>res.json())
       .then((data)=>{
         setListOfContributors(data);
