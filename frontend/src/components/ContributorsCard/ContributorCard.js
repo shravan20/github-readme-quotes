@@ -78,7 +78,7 @@ const ContributorsCard = () => {
           </div>
         </CardContent>
         <CardActions>
-          <a style={{textDecoration:"none"}} target="_blank" href="https://github.com/shravan20/github-readme-quotes/graphs/contributors">
+          <a style={{textDecoration:"none"}}  href="https://github.com/shravan20/github-readme-quotes/graphs/contributors">
           <Button variant="contained" color="primary" size="small">More Details Here</Button>
           </a>
         </CardActions>
