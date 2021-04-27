@@ -62,7 +62,7 @@ const TemplateCard = (props) => {
   }, [quoteUrl]);
 
   return (
-    <Paper style={{ padding: "10px" }}>
+    <Paper style={{ padding: "10px" ,width: "100%", height: "100%"}}>
       <div style={{ textAlign: "center" }}>
         <img
           src={url}
