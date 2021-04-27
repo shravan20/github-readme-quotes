@@ -88,9 +88,6 @@ const Home = () => {
                 </Grid>
                 {
                     layouts.filter((item) => item !== layout).map((restLayout) => {
-                        {console.log('====================================');
-                        console.log(restLayout);
-                        console.log('====================================');}
                         return (
                             <Grid key={restLayout} item xs={12} sm={12} md={6}>
                                 <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} />
