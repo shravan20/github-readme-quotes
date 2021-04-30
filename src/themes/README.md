@@ -29,7 +29,7 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `calm` ![calm][calm] | `flag-india` ![flag-india][flag-india] | `omni` ![omni][omni] |
 | `react` ![react][react] | `jolly` ![jolly][jolly] | `maroongold` ![maroongold][maroongold] |
 | `yeblu` ![yeblu][yeblu] | `blueberry` ![blueberry][blueberry] | `slateorange` ![slateorange][slateorange] |
-| `kacho_ga` ![kacho_ga][kacho_ga] |  |  |
+| `kacho_ga` ![kacho_ga][kacho_ga] | `soft-green` ![soft-green][soft-green] |  |
 
 
 
@@ -78,6 +78,7 @@ Use `?theme=THEME_NAME` parameter like so :-
 [blueberry]: https://github-readme-quotes.herokuapp.com/quote?theme=blueberry
 [slateorange]: https://github-readme-quotes.herokuapp.com/quote?theme=slateorange
 [kacho_ga]: https://github-readme-quotes.herokuapp.com/quote?theme=kacho_ga
+[soft-green]: https://github-readme-quotes.herokuapp.com/quote?theme=soft-green
 
 
 Wanted to add a new theme? Consider reading the [contribution guidelines](../CONTRIBUTING.md#themes-contribution) :D
