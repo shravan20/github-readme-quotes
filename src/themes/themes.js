@@ -218,6 +218,11 @@ const themes = {
       quote_color: "bf4a3f",
       author_color: "d9c8a9",
       bg_color: "402b23"
+    },
+    "soft-green": {
+      quote_color: "00dc4d",
+      author_color: "cecece",
+      bg_color: "222428"
     }
   };
   
