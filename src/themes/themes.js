@@ -204,12 +204,12 @@ const themes = {
       author_color: "ffffff",
       bg_color: "002046",
     },
-    "blueberry_light": {
+    "blueberry-light": {
       quote_color: "82aaff",
       author_color: "81a9fe",
       bg_color: "fffeff"
     },
-    "blueberry_dark": {
+    "blueberry-dark": {
       quote_color: "82aaff",
       author_color: "27e8a7",
       bg_color: "242938"
