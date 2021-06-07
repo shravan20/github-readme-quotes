@@ -39,9 +39,12 @@ export const themes = ['default',
     'jolly',
     'maroongold',
     'yeblu',
-    'blueberry',
+    'blueberry-light',
+    'blueberry-dark',
     'slateorange',
-    'kacho_ga'];
+    'kacho_ga',
+    'blood',
+    'blood-dark'];
 export const animations = ['default', 'grow_out_in'];
 export const layouts = ['default', 'samuel', 'churchill', 'socrates', 'zues'];
 export const fonts = ['default', 'Gabrielle', 'Redressed'];

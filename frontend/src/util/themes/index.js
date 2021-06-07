@@ -204,7 +204,12 @@ const themes = {
       author_color: "ffffff",
       bg_color: "002046",
     },
-    "blueberry": {
+    "blueberry-light": {
+      quote_color: "82aaff",
+      author_color: "81a9fe",
+      bg_color: "fffeff"
+    },
+    "blueberry-dark": {
       quote_color: "82aaff",
       author_color: "27e8a7",
       bg_color: "242938"
@@ -223,6 +228,16 @@ const themes = {
       quote_color: "00dc4d",
       author_color: "cecece",
       bg_color: "222428"
+    },
+    "blood": {
+      quote_color: "ff6060",
+      author_color: "367391",
+      bg_color: "fffefe"
+    },
+    "blood-dark": {
+      quote_color: "fe5f5f",
+      author_color: "357290",
+      bg_color: "142b37"
     }
   };
   
