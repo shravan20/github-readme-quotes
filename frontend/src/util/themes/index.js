@@ -206,7 +206,7 @@ const themes = {
     },
     "blueberry-light": {
       quote_color: "82aaff",
-      author_color: "81a9fe",
+      author_color: "27e7a6",
       bg_color: "fffeff"
     },
     "blueberry-dark": {
