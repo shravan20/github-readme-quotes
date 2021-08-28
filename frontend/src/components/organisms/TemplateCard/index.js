@@ -35,6 +35,7 @@ const TemplateCard = (props) => {
   const url = URL.createObjectURL(file);
 
   const copyToClipboard = () => {
+    if(navigator.clipboard)
     navigator.clipboard
       .writeText("![Quote](" + quoteUrl + ")")
       .then(() => {
