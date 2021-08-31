@@ -238,6 +238,16 @@ const themes = {
       quote_color: "fe5f5f",
       author_color: "357290",
       bg_color: "142b37"
+    },
+    "blue-gray":{
+      quote_color: "9fafca",
+      author_color: "9fafca",
+      bg_color: "0e387a"
+    },
+    "trie-brown":{
+      quote_color: "30110d",
+      author_color: "722620",
+      bg_color: "f2bc94"
     }
   };
   
