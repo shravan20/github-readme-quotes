@@ -248,6 +248,11 @@ const themes = {
       quote_color: "30110d",
       author_color: "722620",
       bg_color: "f2bc94"
+    },
+    "medusa":{
+      quote_color: "353535",
+      author_color: "353535",
+      bg_color: "B3E0D6"
     }
   };
   
