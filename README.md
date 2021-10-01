@@ -112,6 +112,31 @@ You can explore different layouts [here](./src/layouts/README.md).
 
 ---
 
+- ### Fonts
+You can also add fonts to your templates.
+
+Use `?font=FONT_NAME` parameter as shown below
+
+```md
+![Quote](https://github-readme-quotes.herokuapp.com/quote?font=Redressed)
+```
+
+#### Font 1 (Default)
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark)
+
+#### Font 2 (Redressed)
+
+![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark&font=Redressed)
+
+<!-- Scrnshot of quote in different fonts -->
+
+You can explore different fonts [here](./src/fonts/README.md).
+
+<b>Feel free to contribute different fonts.</b>
+
+---
+
 - ### Animations
 You can also add animations to your templates.
 
