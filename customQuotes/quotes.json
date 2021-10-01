@@ -10,5 +10,9 @@
     {
         "quote":"First solve the problem. Then write the code",
         "author":"John Johnson"
+    },
+    {
+        "quote":"It is harder to read code than to write it",
+        "author":"Joel Spolsky"
     }
 ]
