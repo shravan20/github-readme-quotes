@@ -81,6 +81,6 @@ Use `?theme=THEME_NAME` parameter like so :-
 [soft-green]: https://github-readme-quotes.herokuapp.com/quote?theme=soft-green
 
 
-Wanted to add a new theme? Consider reading the [contribution guidelines](../CONTRIBUTING.md#themes-contribution) :D
+Wanted to add a new theme? Consider reading the [contribution guidelines](../../CONTRIBUTING.md#themes-contribution) :D
 
 You can add your new themes [here](./themes.js).
