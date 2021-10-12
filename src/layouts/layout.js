@@ -61,30 +61,30 @@ const layouts = {
                 } 
                 ${template.animation.keyframes}
                 .square-brackets-quote blockquote {
-                    border:solid 1em #${
-                      template.theme.bg_color === "fffefe"
-                        ? "ccc"
-                        : template.theme.bg_color
-                    };
-                    background: #fff;
+                    background: #${template.theme.bg_color};
+                    color: #${template.theme.quote_color};
                     display:inline-block;
                     margin:0;
-                    padding:1em;
+                    padding:2em;
                     position:relative;
                     font-size:15px;
                     
                 }
                  .square-brackets-quote blockquote::before {
-                    background-color: #fff;
-                    bottom: -1em;
-                    content: "";
-                    left: 2em;
+                    --border: #${template.theme.author_color};
                     position: absolute;
-                    right: 2em;
-                    top: -1em;
+                    content: "";
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    background-image: linear-gradient(var(--border), var(--border)), linear-gradient(var(--border), var(--border)), linear-gradient(var(--border), var(--border)), linear-gradient(var(--border), var(--border)), linear-gradient(var(--border), var(--border)), linear-gradient(var(--border), var(--border));
+                    background-repeat: no-repeat;
+                    background-size: 3em 1em, 1em 100%, 3em 1em, 3em 1em, 1em 100%, 3em 1em;
+                    background-position: left bottom, left top, left top, right bottom, right top, right top;
                     }
                 .square-brackets-quote cite {
-                    color:#757575;
+                    color: #${template.theme.author_color};
                     display: block;
                     font-size:small;
                     font-style: normal;
