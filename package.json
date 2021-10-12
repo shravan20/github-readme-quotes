@@ -10,6 +10,9 @@
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1"
   },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
   "scripts": {
     "test": "",
     "start": "nodemon -r dotenv/config server.js",
