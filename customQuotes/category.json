@@ -573,6 +573,10 @@
     {
       "quote": "Talk is cheap. Show me the code.",
       "author": "Linus Torvalds"
+    },
+    {
+      "quote": "Don’t comment bad code – rewrite it.",
+      "author": "Brian Kernighan"
     }
   ],
   "dream": [
