@@ -83,6 +83,10 @@
     {
       "quote": "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.",
       "author": "Henry Ford"
+    },
+    {
+      "quote": "an Error Doesn't Become A Mistake Until You Refuse to Correct It.",
+      "author": "John F. Kennedy"
     }
   ],
   "life": [
@@ -249,8 +253,8 @@
       "author": "Bette Midler"
     },
     {
-        "quote": "Success makes so many people hate you. I wish it wasn't that way. It would be wonderful to enjoy success without seeing envy in the eyes of those around you.",
-        "author": "Marilyn Monroe"
+      "quote": "Success makes so many people hate you. I wish it wasn't that way. It would be wonderful to enjoy success without seeing envy in the eyes of those around you.",
+      "author": "Marilyn Monroe"
     },
     {
       "quote": "If A is a success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut.",
@@ -565,6 +569,14 @@
     {
       "quote": "Programming isn't about what you know; it's about what you can figure out.",
       "author": "Chris Pine"
+    },
+    {
+      "quote": "Talk is cheap. Show me the code.",
+      "author": "Linus Torvalds"
+    },
+    {
+      "quote": "Don’t comment bad code – rewrite it.",
+      "author": "Brian Kernighan"
     }
   ],
   "dream": [
@@ -607,6 +619,32 @@
     {
       "quote": "It takes a lot of courage to show your dreams to someone else.",
       "author": "Erma Bombeck"
+    }
+  ],
+  "failure": [
+    {
+      "quote": "Failure is an opportunity to begin again, this time more intelligently.",
+      "author": "Henry Ford"
+    },
+    {
+      "quote": "One of the most common causes of failure is the habit of quitting when one is overtaken by temporary defeat.",
+      "author": "Napoleon Hill"
+    },
+    {
+      "quote": "Failure cannot cope with persistence.",
+      "author": "Napoleon Hill"
+    },
+    {
+      "quote": "To stumble twice against the same stone is a proverbial disgrace.",
+      "author": "Cicero"
+    },
+    {
+      "quote": "Failing to prepare is preparing to fail.",
+      "author": "John Wooden"
+    },
+    {
+      "quote": "Failure is an event, not a person.",
+      "author": "Napoleon Hill"
     }
   ]
 }
