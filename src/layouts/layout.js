@@ -10,7 +10,7 @@ const layouts = {
                 font-family:customFont,Arial,Helvetica,sans-serif;
                 padding: 40px 20px;
                 width: 600px;
-                background-color: #${template.theme.bg_color};
+                background: ${template.theme.bg_color};
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
                 ${template.animation.animation};
@@ -21,7 +21,7 @@ const layouts = {
                 margin-bottom: 5px;
                 font-weight: 500;
                 font-style: oblique;
-                color: #${template.theme.quote_color};
+                color: ${template.theme.quote_color};
                 }
                 .container h3::before {
                 content: open-quote;
@@ -38,7 +38,7 @@ const layouts = {
                 font-style: italic;
                 padding: 5px;
                 text-align: right;
-                color: #${template.theme.author_color};
+                color: ${template.theme.author_color};
                 }`;
     },
     structure: (template) => {
@@ -61,8 +61,8 @@ const layouts = {
                 } 
                 ${template.animation.keyframes}
                 .square-brackets-quote blockquote {
-                    background: #${template.theme.bg_color};
-                    color: #${template.theme.quote_color};
+                    background: ${template.theme.bg_color};
+                    color: ${template.theme.quote_color};
                     display:inline-block;
                     margin:0;
                     padding:2em;
@@ -71,7 +71,7 @@ const layouts = {
                     
                 }
                  .square-brackets-quote blockquote::before {
-                    --border: #${template.theme.author_color};
+                    --border: ${template.theme.author_color};
                     position: absolute;
                     content: "";
                     top: 0;
@@ -84,7 +84,7 @@ const layouts = {
                     background-position: left bottom, left top, left top, right bottom, right top, right top;
                     }
                 .square-brackets-quote cite {
-                    color: #${template.theme.author_color};
+                    color: ${template.theme.author_color};
                     display: block;
                     font-size:small;
                     font-style: normal;
@@ -114,180 +114,186 @@ const layouts = {
   },
   churchill: {
     style: (template) => {
-      return `#ct{
-                  height:auto;
-                  width:600px;
-                  margin: 20px 50px 20px 10px;
-                  text-align:center;
-                  position:relative;
-                  font-family:customFont,Arial,Helvetica,sans-serif;
-                  color:#${template.theme.quote_color};
-                  padding:15px;
-                                  
-                  background: radial-gradient(circle at top left, transparent 15px, #${template.theme.bg_color} 0) top left,
-                      radial-gradient(circle at top right, transparent 15px, #${template.theme.bg_color} 0) top right,
-                      radial-gradient(circle at bottom right, transparent 15px, #${template.theme.bg_color} 0) bottom right,
-                      radial-gradient(circle at bottom left, transparent 15px, #${template.theme.bg_color} 0) bottom left;
-                  ${template.animation.animation};
-                  background-size: 51% 51%;
-                  background-repeat: no-repeat;
-                }
-                ${template.animation.keyframes}
-                span{
-                    background:#${template.theme.bg_color};
-                  color:#${template.theme.author_color};
-                  padding:0 10px;
-                  font-size:20px;
-                  position:relative; 
-                  top:-28px;
-                }
-                .corner{
-                  height:30px;
-                  width:30px;
-                  border-radius:50%;
-                  border:1px solid #fff;
-                  transform:rotate(-45deg);  
-                  position:absolute;
-                  background:#fff;
-                }
+      return `* {
+                box-sizing: border-box;
+              }
 
-                #left_top{
-                  top:-16px;
-                  left:-16px;
-                  background: transparent;
-                  border-color:transparent transparent #f1c40f transparent;
-                }
-                #right_top{
-                  top:-16px;
-                  right:-16px;
-                  background: transparent;
-                  border-color:transparent transparent transparent #f1c40f;
-                }
-                #left_bottom{
-                  bottom:-16px;
-                  left:-16px;
-                  background: transparent;
-                  border-color:transparent #f1c40f transparent transparent ;
-                }
-                #right_bottom{
-                  bottom:-16px;
-                  right:-16px;
-                  background: transparent;
-                  border-color:#f1c40f transparent transparent transparent;
-                }
-                #borderLeft {
-                  border-left: 1px solid #f1c40f;
+              .main-container {
+                position: relative;
+                width: 600px;
+                margin: 20px 50px 20px 10px;
+                display: inline-block;
+                text-align: center;
+                font-family:customFont,Arial,Helvetica,sans-serif;
+                color: var(--color);
+
+                --color: ${template.theme.quote_color};
+                --author-color: ${template.theme.author_color};
+                --border-color: ${template.theme.author_color};
+                --border-size: 2px;
+                --bg-color: ${template.theme.bg_color};
+                --circle-size: 15px;
+                ${template.animation.animation};
+              }
+              ${template.animation.keyframes}
+              .title-container {
                   position: absolute;
-                  top: 15px;
-                  bottom: 15px;
-                  left:-1px;
-                }
-                #borderTop {
-                  border-top: 1px solid #f1c40f;
-                  position: absolute;
-                  right: 15px;
-                  left: 15px;
-                  top: -1px;
-                }
-                #borderRight {
-                  border-right: 1px solid #f1c40f;
-                  position: absolute;
-                  top: 15px;
-                  bottom: 15px;
-                  right: -1px;
-                }
-                #borderBottom {
-                  border-bottom: 1px solid #f1c40f;
-                  position: absolute;
-                  right: 15px;
-                  left: 15px;
-                  bottom: -1px;
-                }
-                p{
-                  padding-top:0px;
-                  font-size:17px
-                }`;
+                  width: 100%;
+                  top: -12px;
+                  z-index: 1;
+              }
+
+              .title-container span {
+                  background: var(--bg-color);
+                  background-size: 600px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  color: var(--author-color);
+                  padding: 2px 10px;
+                  font-size: 20px;
+              }
+
+              p {
+                padding: 15px;
+                font-size: 17px;
+                color: var(--color);
+              }
+
+              .quote-container {
+                padding: 10px;
+
+                border: var(--border-size) solid var(--border-color);
+                background:
+                radial-gradient(circle at right top, transparent 0px, var(--border-color) 0 calc(var(--circle-size) + var(--border-size)), transparent calc(var(--circle-size) + var(--border-size) + 1px)) right top / 51% 51%,
+                radial-gradient(circle at left top, transparent 0px, var(--border-color) 0 calc(var(--circle-size) + var(--border-size)), transparent calc(var(--circle-size) + var(--border-size) + 1px)) left top / 51% 51%,
+                radial-gradient(circle at right bottom, transparent 0px, var(--border-color) 0 calc(var(--circle-size) + var(--border-size)), transparent calc(var(--circle-size) + var(--border-size) + 1px)) right bottom / 51% 51%,
+                radial-gradient(circle at left bottom, transparent 0px, var(--border-color) 0 calc(var(--circle-size) + var(--border-size)), transparent calc(var(--circle-size) + var(--border-size) + 1px)) left bottom / 51% 51%,
+                var(--bg-color);
+                background-repeat: no-repeat;
+                background-clip: border-box;
+                background-origin: border-box;
+
+                mask: radial-gradient(
+                  circle at right top,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) right top / 51% 51%,
+                radial-gradient(
+                  circle at left top,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) left top / 51% 51%,
+                radial-gradient(
+                  circle at right bottom,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) right bottom / 51% 51%,
+                radial-gradient(
+                  circle at left bottom,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) left bottom / 51% 51%;
+
+                -webkit-mask: radial-gradient(
+                  circle at right top,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) right top / 51% 51%,
+                radial-gradient(
+                  circle at left top,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) left top / 51% 51%,
+                radial-gradient(
+                  circle at right bottom,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) right bottom / 51% 51%,
+                radial-gradient(
+                  circle at left bottom,
+                  transparent var(--circle-size),
+                  var(--border-color) calc(var(--circle-size) + 1px)
+                ) left bottom / 51% 51%;
+                mask-repeat: no-repeat;
+                -webkit-mask-repeat: no-repeat;
+              }`;
     },
     structure: (template) => {
-      return `<div id="ct">
-                  <div class="corner" id="left_top"></div>
-                  <div class="corner" id="left_bottom"></div>
-                  <div class="corner" id="right_top"></div>
-                  <div class="corner" id="right_bottom"></div>
-                  <div id="borderLeft"></div>
-                  <div id="borderRight"></div>
-                  <div id="borderBottom"></div>
-                  <div id="borderTop"></div>
-                  <span>${template.author === "Unknown"
-                    ? "Anonymous"
-                    : template.author
-              }</span>
+      return `<div class="main-container">
+                <div class="title-container">
+                  <span>${
+                    template.author === "Unknown"
+                      ? "Anonymous"
+                      : template.author
+                    }</span>
+                </div>
+                <div class="quote-container">
                   <blockquote>
-                    <p><i>${template.quote}</i></p>
+                    <p><i>
+                        ${template.quote}
+                      </i></p>
                   </blockquote>
-                </div>`;
+                </div>
+              </div>`;
         },
   },
   samuel: {
     style: (template) => {
-      return `.quote {
-                  display: inline-block;
-                  margin: 1em;
-                  width:600px;
-                  font-family:customFont,Arial,Helvetica,sans-serif;
-                  ${template.animation.animation};
-                } 
-                ${template.animation.keyframes}
-                blockquote {
-                    border: solid 6px #${
-                      template.theme.bg_color === "fffefe"
-                        ? "757575"
-                        : template.theme.bg_color
-                    };
-                    display: inline-block;
-                    margin: 0;
-                    font-size:16px;
-                    padding: 1em;
-                    background: #fff;
-                    -webkit-mask-image: radial-gradient(circle 0 at 0 0, transparent 0, transparent, black);
-                    mask-image: radial-gradient(circle 0 at 0 0, transparent 0, transparent, black);
-                    position: relative;
-                }
-                blockquote::before {
-                      background-color: #fff;
-                      bottom: -10%;
-                      content: "";
-                      left: 0;
-                      position: absolute;
-                      right: 0;
-                      top: -10%;
-                      transform: rotate(-15deg) skew(5deg);
-                    }
-                    cite {
-                      display: block;
-                      font-style: italic;
-                      text-align: right;
-                    }
-                      cite::before {
-                        content: "- ";
-                      }
-                    * {
-                      position: relative;
-                      z-index: 1;
-                    }
-                  
-                `;
+      return `.main {
+                position: relative;
+                display: inline-block;
+                margin: 1em;
+                width:600px;
+                font-family:customFont,Arial,Helvetica,sans-serif;
+                position: relative;
+                ${template.animation.animation};
+              }
+              ${template.animation.keyframes}
+              .quote {
+                background: ${template.theme.bg_color};
+                font-size:16px;
+              }
+              .quote::before {
+                content: "";
+                position: absolute;
+                top: -6px;
+                left: -6px;
+                z-index: -1;
+                width: calc(100% + 12px);
+                height: calc(100% + 12px);
+                background: ${template.theme.author_color};
+                --border-size: 6px;
+                clip-path: polygon(0% 0%, 96% 0, 97% var(--border-size), calc(100% - var(--border-size)) var(--border-size), calc(100% - var(--border-size)) 18%, 100% 25%, 100% 100%, 87% 100%, 0 100%, 0 75%, var(--border-size) 82%, var(--border-size) calc(100% - var(--border-size)), 3% calc(100% - var(--border-size)), 4% 100%, 60% 100%, 63% calc(100% - var(--border-size)), calc(100% - var(--border-size)) calc(100% - var(--border-size)), calc(100% - var(--border-size)) 52%, 100% 50%, 100% 14%, 100% 0, 40% 0, 37% var(--border-size), var(--border-size) var(--border-size), var(--border-size) 48%, 0 50%);
+              }
+              blockquote {
+                margin: 0;
+                font-size:16px;
+                padding: 1em;
+                color: ${template.theme.quote_color};
+              }
+              cite {
+                display: block;
+                font-style: italic;
+                text-align: right;
+                color: ${template.theme.author_color};
+              }
+              cite::before {
+                content: "- ";
+              }
+              `;
     },
     structure: (template) => {
-      return `<div class="quote">
-                  <blockquote>
-                    <p>${template.quote}</p>
-                    <cite>${
-                      template.author === "Unknown"
-                        ? "Anonymous"
-                        : template.author
+      return `<div class="main">
+                  <div class="quote">
+                    <blockquote>
+                      <p>${template.quote}</p>
+                      <cite>${
+                        template.author === "Unknown"
+                          ? "Anonymous"
+                          : template.author
                     }</cite>
-                  </blockquote>
+                    </blockquote>
+                  </div>
                 </div>`;
     },
   },
@@ -296,7 +302,7 @@ const layouts = {
       return `
 
         .container{
-            background-color:#000;
+            background:#000;
             width:550px;
             height:auto;
             padding:30px 20px 40px 40px;
@@ -306,7 +312,7 @@ const layouts = {
         ${template.animation.keyframes}
         
               .quote4{
-                background-color:#000;
+                background:#000;
                     color:#fff;
                     width:450px;
                     text-align:justify;
