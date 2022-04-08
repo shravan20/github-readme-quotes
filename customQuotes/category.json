@@ -575,6 +575,10 @@
       "author": "Linus Torvalds"
     },
     {
+      "quote": "If you think good architecture is expensive, try bad architecture.",
+      "author": "Brian Foote"
+    },
+    {
       "quote": "Don’t comment bad code – rewrite it.",
       "author": "Brian Kernighan"
     }
