@@ -37,7 +37,7 @@ Dynamic quote generator for your GitHub readmes
 
 
 <p align="center">
-Note: To read an article on this project, please refer: 
+Note: To read an article on this project, please refer:
 <a href = "https://dev.to/imshravan/github-profile-readme-animated-dynamic-quote-generator-4le6"><i>GitHub Profile README : Animated Dynamic Quote Generator</i></a>
 </p>
 
@@ -163,7 +163,7 @@ You can also provide a file with the list of quotes and a random quote will be g
 #### Follow the steps to provide your own custom quotes,
 - Use the template provided at [here](./customQuotes/quotes.json) and write your own file with multiple quotes.
 - Save the file in the repository in any (public) directory or anywhere in the internet.
-- Get the link of the file. 
+- Get the link of the file.
 - Use `?quotesUrl=URL` as shown below
    ```
    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
@@ -179,7 +179,7 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 #### Available Categories
  - motivational
- - fun 
+ - fun
  - life
  - general
  - programming
@@ -204,6 +204,13 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 ---
 
+## Swagger Docs
+
+To view Swagger docs, run `npm start` and open ![localhost:3002/api-docs](localhost:3002/api-docs).
+
+
+---
+
 - ##### <img src="https://user-images.githubusercontent.com/18126719/56791599-0868f980-683a-11e9-8a8b-134ced040c8e.png" width="30"> _Huge Shoutout to all the Star-Gazers_
 [![Stargazers repo roster for @shravan20/github-readme-quotes](https://reporoster.com/stars/shravan20/github-readme-quotes)](https://github.com/shravan20/github-readme-quotes/stargazers)
 
@@ -211,5 +218,3 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 - ##### <img src="https://ghost.org/images/docs/setup/fork.gif" width="30"> _Huge Shoutout to all the Forkers_
 [![Forkers repo roster for @shravan20/github-readme-quotes](https://reporoster.com/forks/shravan20/github-readme-quotes)](https://github.com/shravan20/github-readme-quotes/network/members)
-
-
