@@ -206,7 +206,10 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 ## Swagger Docs
 
-To view Swagger docs, run `npm start` and open https://localhost:3002/api-docs.
+To view Swagger docs, run `npm start` and open ![localhost:3002/api-docs](localhost:3002/api-docs).
+
+
+---
 
 - ##### <img src="https://user-images.githubusercontent.com/18126719/56791599-0868f980-683a-11e9-8a8b-134ced040c8e.png" width="30"> _Huge Shoutout to all the Star-Gazers_
 [![Stargazers repo roster for @shravan20/github-readme-quotes](https://reporoster.com/stars/shravan20/github-readme-quotes)](https://github.com/shravan20/github-readme-quotes/stargazers)
