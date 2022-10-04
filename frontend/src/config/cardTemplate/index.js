@@ -47,4 +47,9 @@ export const themes = ['default',
     'blood-dark'];
 export const animations = ['default', 'grow_out_in'];
 export const layouts = ['default', 'samuel', 'churchill', 'socrates', 'zues'];
-export const fonts = ['default', 'Gabrielle', 'Redressed'];
+export const fonts = [
+  'default',
+  'Gabrielle',
+  'Redressed',
+  'Calligraffitti',
+];
