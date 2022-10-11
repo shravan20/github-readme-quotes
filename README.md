@@ -1,6 +1,21 @@
 # github-readme-quotes
 Dynamic quote generator for your GitHub readmes
 
+
+---
+<p align="center">
+<img style="display: block; margin: 0 auto"  src ="https://scontent.fblr8-1.fna.fbcdn.net/v/t1.18169-9/13938461_1048436118542826_374155179839745959_n.png?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=S63BqnatZL0AX_TozVA&_nc_ht=scontent.fblr8-1.fna&oh=00_AT-DEuOp_IkyETPr7Ut2jiN4kge4NleECanyu5TSd0sgyg&oe=63624190" width="200" height="200"/>
+</p>
+  Are you considering supporting the project by donating? Please DO NOT!!
+Instead, Help People by giving monetary funds to overcome specific social, cultural, or economic hurdles individuals face in their daily lives.
+<br><br>
+
+<p align="center">
+ <b><i> Inspired by <a href="https://github.com/anuraghazra"> @anuraghazra </a> </i></b>
+</p>
+
+---
+
 ![banner](./assets/README.png)
 
 ![alt](https://img.shields.io/apm/l/vim-mode?label=license&logo=dark-green) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-success) ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github) [![GitHub contributors](https://img.shields.io/github/contributors/shravan20/github-readme-quotes.svg)](https://github.com/shravan20/github-readme-quotes/graphs/contributors) ![Pull Request Counts](https://img.shields.io/bitbucket/pr/shravan20/github-readme-quotes) ![last commit](https://img.shields.io/github/last-commit/shravan20/github-readme-quotes) ![deployment-status](https://img.shields.io/website?url=https%3A%2F%2Fgithub-readme-quotes.herokuapp.com%2Fquote) [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/shravan20/github-readme-quotes/)
