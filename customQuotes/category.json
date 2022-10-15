@@ -417,6 +417,7 @@
     {
       "quote": "Some people don't like change, but you need to embrace change if the alternative is disaster.",
       "author": "Elon Musk"
+    },
     {
       "quote": "You need to overcome the tug of people against you as you reach for high goals.",
       "author": "George S. Patton"
@@ -723,5 +724,27 @@
       "quote": "Gamers have so much freedom. you can go anywhere you want.",
       "author": "Jenova Chen"
     },
+  ],
+  "birthday": [
+    {
+      "quote": "The only thing better than singing is more singing.",
+      "author": "Ella Fitzgerald"
+    },
+    {
+      "quote": "Your children need your presence more than your presents.",
+      "author": "Jesse Jackson"
+    },
+    {
+      "quote": "Our birthdays are feathers in the broad wing of time.",
+      "author": "Jean Paul"
+    },
+    {
+      "quote": "You don't get older, you get better.",
+      "author": "Shirley Bassey"
+    },
+    {
+      "quote": "Don't just count your years, make your years count.",
+      "author": "George Meredith"
+    }
   ]
 }
