@@ -3,7 +3,7 @@ const animations = require("../../animations/animation");
 const layouts=require("../../layouts/layout");
 const quoteService=require("../services/quotesService");
 const fonts=require("../../fonts/fonts");
-
+const languages=require("../../language/language")
 const quoteController = async (req, res, next) => {
   
   try {
@@ -20,8 +20,10 @@ const quoteController = async (req, res, next) => {
      let quoteCategory = req.query.quoteCategory || '';
 
      let font = fonts[req.query.font] ? fonts[req.query.font] : fonts['default'];
+     
+     let language = languages[req.query.language] ? languages[req.query.language]:'en' ;
 
-     let quoteObject={theme,animation,layout,quotesUrl,quoteCategory,font}
+     let quoteObject={theme,animation,layout,quotesUrl,quoteCategory,font,language}
 
      let svgResponse = await quoteService.getQuote(quoteObject);
 
