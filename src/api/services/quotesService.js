@@ -4,10 +4,13 @@ const cardTemplate = require("../../utils/generateTemplate");
 const Template = require("../../models/Template");
 const getValidUrl = require("../../utils/validateUrl");
 const quoteFromCategory = require('../../../customQuotes/category.json');
+const { translate } = require('free-translate');
 
 const getQuote = async (quoteObj) => {
   try {
-    let { theme, animation, layout, quotesUrl, quoteCategory, font } = quoteObj;
+    let { theme, animation, layout, quotesUrl, quoteCategory, font , language = 'en' } = quoteObj;
+    //User input for their language preference shall be taken and passed as language codes(ISO 639-1 Code) url :- https://www.loc.gov/standards/iso639-2/php/code_list.php ,
+     //by default it is kept english with language code = 'en'
     let apiResponse;
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
     if (isValidUrl) {
@@ -26,6 +29,7 @@ const getQuote = async (quoteObj) => {
     else if(quoteCategory){
       apiResponse = quoteFromCategory[quoteCategory];
       apiResponse = apiResponse[Math.floor(Math.random() * apiResponse.length)];
+      apiResponse.quote = await translate(apiResponse.quote, { from: 'en', to: language });
     } 
     else {
       apiResponse = await requestApi(url);
