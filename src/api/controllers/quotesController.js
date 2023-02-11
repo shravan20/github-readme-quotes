@@ -1,4 +1,4 @@
-const themes = require("../../themes/themes");
+const themes = require("../../../util/themes/themes");
 const animations = require("../../animations/animation");
 const layouts=require("../../layouts/layout");
 const quoteService=require("../services/quotesService");

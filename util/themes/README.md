@@ -83,4 +83,4 @@ Use `?theme=THEME_NAME` parameter like so :-
 
 Wanted to add a new theme? Consider reading the [contribution guidelines](../../CONTRIBUTING.md#themes-contribution) :D
 
-You can add your new themes [here](./themes.js).
+You can add your new themes [here](themes.js).

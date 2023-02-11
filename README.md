@@ -96,7 +96,7 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 
 <!-- Scrnshot of quote in different themes -->
 
-You can explore different themes [here](./src/themes/README.md).
+You can explore different themes [here](util/themes/README.md).
 
 <b>Feel free to contribute different themes.</b>
 
