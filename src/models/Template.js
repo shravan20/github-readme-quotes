@@ -8,7 +8,6 @@ class Template {
   }
 
   setData(data) {
-    console.log(123123 + data)
     this.quote = data.quote;
     this.author = data.author;
   }
