@@ -31,7 +31,7 @@ Pull requests are the best way to propose changes. We actively welcome your pull
 
 GitHub Readme Quotes would appreciate your contribution to new themes!
 
-All you need to do is edit [themes/themes.js](./src/themes/themes.js) file and add your theme at the end of the file.
+All you need to do is edit [themes/themes.js](util/themes/themes.js) file and add your theme at the end of the file.
 
 While creating the pull request make sure to add a screenshot of your theme. That would help us!!
 
