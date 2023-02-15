@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "",
-    "start": "NODE_ENV=PRODUCTION node -r dotenv/config server.js",
+    "start": "sh server_bootup.sh",
     "start-dev": "nodemon -r dotenv/config server.js",
     "prod": "NODE_ENV=PRODUCTION node -r dotenv/config server.js",
     "dev": "NODE_ENV=DEVELOPMENT nodemon -r dotenv/config server.js"
