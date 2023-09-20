@@ -1,10 +1,29 @@
-# github-readme-quotes
-Dynamic quote generator for your GitHub readmes
 
+<p align="center">
+  <img align="center" width="20%" src="assets/uiScreen.gif" alt="logo"/>
+  <h5 align="center">github-readme-quotes: Dynamic quote generator for your GitHub readmes</h5>
+</p>
+
+---
+
+```
+- Project Status: Discontinued Deployment, Ongoing Code Improvement, Feature Development, and Maintenance
+
+- Project Deployment Status: This project's deployment is discontinued.
+However, continuous efforts are being made to improve the codebase, develop new features,
+and maintain the existing functionality.
+
+- Self-Hosting and Contributions: If you wish to host the project on your own,
+you can fork the repository and deploy it according to your needs.
+Feel free to reach out to me if you require any assistance or have inquiries
+about the project. Your contributions and involvement in the project are welcome.
+```
 
 ---
 <p align="center">
-<img style="display: block; margin: 0 auto"  src ="https://scontent.fblr8-1.fna.fbcdn.net/v/t1.18169-9/13938461_1048436118542826_374155179839745959_n.png?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=S63BqnatZL0AX_TozVA&_nc_ht=scontent.fblr8-1.fna&oh=00_AT-DEuOp_IkyETPr7Ut2jiN4kge4NleECanyu5TSd0sgyg&oe=63624190" width="200" height="200"/>
+<a href="https://secure.actblue.com/contribute/page/saveanimals-home?refcode=homepage&recurring=true&amount=25">
+<img style="display: block; margin: 0 auto"  src ="https://saveanimalsfacingextinction.org/wp-content/themes/wideeyecreative/images/safe-logo-2016.svg" width="200" height="200"/>
+</a>
 </p>
   Are you considering supporting the project by donating? Please DO NOT!!
 Instead, Help People by giving monetary funds to overcome specific social, cultural, or economic hurdles individuals face in their daily lives.
