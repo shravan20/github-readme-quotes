@@ -1,6 +1,23 @@
-# github-readme-quotes
-Dynamic quote generator for your GitHub readmes
 
+<p align="center">
+  <img align="center" width="20%" src="assets/uiScreen.gif" alt="logo"/>
+  <h5 align="center">github-readme-quotes: Dynamic quote generator for your GitHub readmes</h5>
+</p>
+
+---
+
+```
+- Project Status: Discontinued Deployment, Ongoing Code Improvement, Feature Development, and Maintenance
+
+- Project Deployment Status: This project's deployment is discontinued.
+However, continuous efforts are being made to improve the codebase, develop new features,
+and maintain the existing functionality.
+
+- Self-Hosting and Contributions: If you wish to host the project on your own,
+you can fork the repository and deploy it according to your needs.
+Feel free to reach out to me if you require any assistance or have inquiries
+about the project. Your contributions and involvement in the project are welcome.
+```
 
 ---
 <p align="center">
