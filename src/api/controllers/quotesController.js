@@ -36,7 +36,7 @@ const quoteController = async (req, res, next) => {
      res.send(svgResponse);
 
   } catch (error) {
-    
+    console.log(error);
     res.send({
       name: error.name,
       message: error.message,

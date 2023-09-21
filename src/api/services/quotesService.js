@@ -11,6 +11,7 @@ const getQuote = async (quoteObj) => {
     let { theme, animation, layout, quotesUrl, quoteCategory, font } = quoteObj;
     let apiResponse;
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
+    let isCustomQuote = false;
 
     if (isValidUrl) {
       //url from params is valid, proceed to verfiy the data
@@ -20,22 +21,24 @@ const getQuote = async (quoteObj) => {
         apiResponse = apiResponse[Math.floor(Math.random() * Math.floor(apiResponse.length))];
         if (!apiResponse.quote && !apiResponse.author) {
           apiResponse = await requestApi(url);
+        } else {
+          isCustomQuote = true;
         }
       } else {
         apiResponse = await requestApi(url);
       }
     }
-    else if(quoteCategory){
+    else if (quoteCategory) {
       apiResponse = quoteFromCategory[quoteCategory];
       apiResponse = apiResponse[Math.floor(Math.random() * apiResponse.length)];
-    } 
+    }
     else {
       apiResponse = await requestApi(url);
     }
 
     const template = new Template();
     template.setTheme(theme);
-    template.setData(apiResponse[Math.floor(Math.random() * apiResponse.length)]);
+    template.setData(isCustomQuote ? apiResponse : apiResponse[Math.floor(Math.random() * apiResponse.length)]);
     template.setFont(font);
     template.setAnimation(animation);
     template.setLayout(layout);
