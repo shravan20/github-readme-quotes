@@ -9,13 +9,10 @@
 ```
 - Project Status: Discontinued Deployment, Ongoing Code Improvement, Feature Development, and Maintenance
 
-- Project Deployment Status: This project's deployment is discontinued.
-However, continuous efforts are being made to improve the codebase, develop new features,
-and maintain the existing functionality.
+- Project Deployment Status: I have moved it from Heroku to custom cloud now. Please access the content from `http://34.168.217.81:3004/quote`
 
-- Self-Hosting and Contributions: If you wish to host the project on your own,
-you can fork the repository and deploy it according to your needs.
-Feel free to reach out to me if you require any assistance or have inquiries
+- Self-Hosting and Contributions: If you wish to host the project on your own, you can fork the repository and
+deploy it according to your needs. Feel free to reach out to me if you require any assistance or have inquiries
 about the project. Your contributions and involvement in the project are welcome.
 ```
 
