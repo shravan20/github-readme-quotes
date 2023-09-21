@@ -1,7 +1,7 @@
 
 <p align="center">
   <img align="center" width="20%" src="assets/uiScreen.gif" alt="logo"/>
-  <h5 align="center">github-readme-quotes: Dynamic quote generator for your GitHub readmes</h5>
+  <h2 align="center">Github Readme Quotes: Dynamic quote generator for your GitHub readmes</h2>
 </p>
 
 ![banner](./assets/README.png)
