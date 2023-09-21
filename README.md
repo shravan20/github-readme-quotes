@@ -4,43 +4,44 @@
   <h5 align="center">github-readme-quotes: Dynamic quote generator for your GitHub readmes</h5>
 </p>
 
----
+![banner](./assets/README.png)
 
-```
-- Project Status: Discontinued Deployment, Ongoing Code Improvement, Feature Development, and Maintenance
-
-- Project Deployment Status: I have moved it from Heroku to custom cloud now. Please access the content from `http://34.168.217.81:3004/quote`
-
-- Self-Hosting and Contributions: If you wish to host the project on your own, you can fork the repository and
-deploy it according to your needs. Feel free to reach out to me if you require any assistance or have inquiries
-about the project. Your contributions and involvement in the project are welcome.
-```
-
----
-<p align="center">
-<a href="https://secure.actblue.com/contribute/page/saveanimals-home?refcode=homepage&recurring=true&amount=25">
-<img style="display: block; margin: 0 auto"  src ="https://saveanimalsfacingextinction.org/wp-content/themes/wideeyecreative/images/safe-logo-2016.svg" width="200" height="200"/>
+![alt](https://img.shields.io/badge/license-MIT-green?logo=dark-green) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-success) ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github) [![GitHub contributors](https://img.shields.io/github/contributors/shravan20/github-readme-quotes.svg)](https://github.com/shravan20/github-readme-quotes/graphs/contributors) ![Pull Request Counts](https://img.shields.io/bitbucket/pr/shravan20/github-readme-quotes) ![last commit](https://img.shields.io/github/last-commit/shravan20/github-readme-quotes) ![deployment-status](https://img.shields.io/website?url=https%3A%2F%2Fgithub-readme-quotes.herokuapp.com%2Fquote) [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/shravan20/github-readme-quotes/)
+<a href="https://discord.gg/QJ8cnPHgVZ">
+  <img align="center" src="https://img.shields.io/discord/779439447736451132?label=discord-server&style=flat-square" />
 </a>
-</p>
-  Are you considering supporting the project by donating? Please DO NOT!!
-Instead, Help People by giving monetary funds to overcome specific social, cultural, or economic hurdles individuals face in their daily lives.
+
 <br><br>
+
+```
+- Project Status: Migrated to Custom Cloud, Ongoing Code Improvement, Feature Development, and Maintenance
+
+- Project Deployment Status: I have moved it from Heroku to custom cloud now.
+Please access the content from `http://34.168.217.81:3004/quote`
+
+- Self-Hosting and Contributions: If you wish to host the project on your own,
+you can fork the repository and deploy it according to your needs. Feel free to reach
+out to me if you require any assistance or have inquiries about the project.
+Your contributions and involvement in the project are welcome.
+```
+
+---
+
+<p align="center">
+  <h1 align="center"> 
+    Featuring on <a href="https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=276934&theme=light" alt="Dynamic GitHub Profile Readme Quotes - Everlasting Poetic Touch to GitHub Profiles for everyone | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" align="center"/></a>
+  </h1>
+</p>
+
+<p align="center">
+  <a href='https://ko-fi.com/V7V1PFDPE' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+</p>
 
 <p align="center">
  <b><i> Inspired by <a href="https://github.com/anuraghazra"> @anuraghazra </a> </i></b>
 </p>
 
 ---
-
-![banner](./assets/README.png)
-
-![alt](https://img.shields.io/apm/l/vim-mode?label=license&logo=dark-green) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-success) ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github) [![GitHub contributors](https://img.shields.io/github/contributors/shravan20/github-readme-quotes.svg)](https://github.com/shravan20/github-readme-quotes/graphs/contributors) ![Pull Request Counts](https://img.shields.io/bitbucket/pr/shravan20/github-readme-quotes) ![last commit](https://img.shields.io/github/last-commit/shravan20/github-readme-quotes) ![deployment-status](https://img.shields.io/website?url=https%3A%2F%2Fgithub-readme-quotes.herokuapp.com%2Fquote) [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/shravan20/github-readme-quotes/)
-<a href="https://discord.gg/QJ8cnPHgVZ">
-  <img align="center" src="https://img.shields.io/discord/779439447736451132?label=discord-server&style=flat-square" />
-</a>
-
-### Featuring on <a href="https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=276934&theme=light" alt="Dynamic GitHub Profile Readme Quotes - Everlasting Poetic Touch to GitHub Profiles for everyone | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" align="center"/></a>
-
 
 <br>
 
