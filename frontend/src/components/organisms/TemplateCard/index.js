@@ -8,12 +8,14 @@ import {
   Slide,
   CircularProgress,
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import getTemplate from "../../../util/template/getTemplate";
 import Template from "../../../util/template/Template";
 import mainLayouts from "../../../util/layouts";
 import mainAnimations from "../../../util/animation";
 import mainThemes from "../../../util/themes";
 import mainFonts from "../../../util/fonts";
+import animations from "../../../util/animation";
 
 const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
@@ -35,22 +37,30 @@ const TemplateCard = (props) => {
   const url = URL.createObjectURL(file);
 
   const copyToClipboard = () => {
-    if(navigator.clipboard)
-    navigator.clipboard
-      .writeText("![Quote](" + quoteUrl + ")")
-      .then(() => {
-        setSnackbarMessage("Copied to Clipboard!");
-        setShowSnackbar(true);
-      })
-      .catch(() => {
-        setSnackbarMessage("Unable to copy");
-        setShowSnackbar(true);
-      });
+    if (navigator.clipboard)
+      navigator.clipboard
+        .writeText("![Quote](" + quoteUrl + ")")
+        .then(() => {
+          setSnackbarMessage("Copied to Clipboard!");
+          setShowSnackbar(true);
+        })
+        .catch(() => {
+          setSnackbarMessage("Unable to copy");
+          setShowSnackbar(true);
+        });
   };
 
   const handleSnackbarClose = () => {
     setShowSnackbar(false);
   };
+
+  const useStyles = makeStyles((theme) => ({
+    textFieldWithAnimation: {
+      animation: animations["slide-text"].animation,
+    },
+  }));
+
+  const classes = useStyles();
 
   const quoteUrl = `https://github-readme-quotes.herokuapp.com/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}`;
 
@@ -63,7 +73,7 @@ const TemplateCard = (props) => {
   }, [quoteUrl]);
 
   return (
-    <Paper style={{ padding: "10px" ,width: "100%", height: "100%"}}>
+    <Paper style={{ padding: "10px", width: "100%", height: "100%" }}>
       <div style={{ textAlign: "center" }}>
         <img
           src={url}
@@ -78,7 +88,11 @@ const TemplateCard = (props) => {
       </div>
       <Grid container alignContent="center" style={{ margin: "20px" }}>
         <Grid item sm={8} xs={12}>
-          <TextField fullWidth value={"![Quote](" + quoteUrl + ")"}></TextField>
+          <TextField
+            fullWidth
+            value={"![Quote](" + quoteUrl + ")"}
+            className={classes.textFieldWithAnimation}
+          ></TextField>
         </Grid>
         <Grid item sm={4} xs={12} style={{ textAlign: "center" }}>
           <Button
