@@ -19,6 +19,7 @@ const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [isImageLoaded, setImageLoaded] = useState(false);
+  const originUrl = window.location.origin;
 
   const template = new Template();
   const data = {
@@ -52,7 +53,7 @@ const TemplateCard = (props) => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `https://github-readme-quotes.herokuapp.com/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}`;
+  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;
