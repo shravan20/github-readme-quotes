@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Container from '@material-ui/core/Container';
 import { IconButton, Paper } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { dashConstants } from '../../config/constants';
 import { LightTheme, DarkTheme } from '../../util/themes/GlobalThemes';
 import { getAppBarStyles } from '../../util/styles/componentStyles';
@@ -33,8 +33,8 @@ function ElevationScroll(props) {
 function Dashboard(props) {
     const [isDark, setIsDark] = useState(false);
     const theme = isDark
-        ? createMuiTheme(DarkTheme)
-        : createMuiTheme(LightTheme);
+        ? createTheme(DarkTheme)
+        : createTheme(LightTheme);
     const classes = getAppBarStyles();
 
     function handleThemeChange() {
