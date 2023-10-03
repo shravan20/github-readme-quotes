@@ -13,10 +13,11 @@
     "swagger-ui-express": "^4.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22"
   },
   "scripts": {
     "test": "",
+    "build": "cd frontend && npm install && npm run build && cd .. && npm install",
     "start": "cd frontend && npm install && npm run build && cd .. && npm install && npm run prod",
     "start-dev": "nodemon -r dotenv/config server.js",
     "prod": "NODE_ENV=PRODUCTION node -r dotenv/config server.js",

@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <React.Fragment>
-            <Typography variant='h5' align='center' component='h2' style={{ margin: '20px' }}>Make your own personalised style for the Quotes</Typography>
+            <Typography variant='h5' align='center' component='h2' style={{ margin: '20px', padding: '25px' }}>Make your own personalised style for the Quotes</Typography>
             
             <Grid
                 container
@@ -80,7 +80,7 @@ const Home = () => {
             </Grid>
 
             <Grid container spacing={4}>
-                <Grid item xs={12}>
+                <Grid item xs={12} style={{ margin: '20px' }}>
                     <TemplateCard theme={theme} animation={animation} layout={layout} font={font} />
                 </Grid>
                 <Grid item xs={12}>
