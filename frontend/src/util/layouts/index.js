@@ -10,7 +10,7 @@ const layouts = {
                   font-family:customFont, Arial, Helvetica, sans-serif;
                   padding: 40px 20px;
                   width: 600px;
-                  background-color: #${template.theme.bg_color};
+                  background-color: ${template.theme.bg_color};
                   border: 1px solid rgba(0, 0, 0, 0.2);
                   border-radius: 5px;
                   ${template.animation.animation};

@@ -11,7 +11,8 @@ const Home = () => {
     const [animation, setAnimation] = useState(animations[0]);
     const [layout, setLayout] = useState(layouts[0]);
     const [font, setFont] = useState(fonts[0]);
-    const [fontColor, setFontColor] = useState(colorValues[0]);
+    const [fontColor, setFontColor] = useState("black");
+    const [bgColor, setBgColor] = useState("white");
 
     return (
         <React.Fragment>
@@ -91,12 +92,25 @@ const Home = () => {
                         renderInput={(params) => <TextField {...params} label="Font color" placeholder="Select a color" variant="outlined" />}
                     />
                 </Grid>
+                <Grid item xs={12} sm={6} lg={3}>
+                    <Autocomplete
+                        id="bg-color"
+                        options={colorValues}
+                        value={bgColor}
+                        style={{ width: 300 }}
+                        onChange={(_event, newValue) => {
+                            if (newValue != null)
+                              setBgColor(newValue)
+                        }}
+                        renderInput={(params) => <TextField {...params} label="Background color" placeholder="Select a color" variant="outlined" />}
+                    />
+                </Grid>
 
             </Grid>
 
             <Grid container spacing={4}>
                 <Grid item xs={12} style={{ margin: '20px' }}>
-                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} />
+                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} />
                 </Grid>
                 <Grid item xs={12}>
                     <Typography align="center">Other layouts</Typography>

@@ -31,6 +31,9 @@ const TemplateCard = (props) => {
   if (props.fontColor) {
     theme.quote_color = props.fontColor;
   }
+  if (props.bgColor) {
+    theme.bg_color = props.bgColor;
+  }
 
   template.setTheme(theme);
   template.setData(data);
