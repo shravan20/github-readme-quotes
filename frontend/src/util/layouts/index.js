@@ -21,7 +21,7 @@ const layouts = {
                   margin-bottom: 5px;
                   font-weight: 500;
                   font-style: oblique;
-                  color: #${template.theme.quote_color};
+                  color: ${template.theme.quote_color};
                   }
                   .container h3::before {
                   content: open-quote;
@@ -38,7 +38,7 @@ const layouts = {
                   font-style: italic;
                   padding: 5px;
                   text-align: right;
-                  color: #${template.theme.author_color};
+                  color: ${template.theme.author_color};
                   }`;
         },
         structure: (template) => {
@@ -60,7 +60,7 @@ const layouts = {
                   } 
                   ${template.animation.keyframes}
                   .square-brackets-quote blockquote {
-                      border:solid 1em #${template.theme.bg_color === "fffefe"
+                      border:solid 1em ${template.theme.bg_color === "fffefe"
                     ? "ccc"
                     : template.theme.bg_color
                 };
@@ -118,21 +118,21 @@ const layouts = {
                     text-align:center;
                     font-family:customFont,Arial,Helvetica,sans-serif;
                     position:relative;
-                    color:#${template.theme.quote_color};
+                    color:${template.theme.quote_color};
                     padding:15px;
                                       
-                   background: radial-gradient(circle at top left, transparent 15px, #${template.theme.bg_color} 0) top left,
-                   radial-gradient(circle at top right, transparent 15px, #${template.theme.bg_color} 0) top right,
-                   radial-gradient(circle at bottom right, transparent 15px, #${template.theme.bg_color} 0) bottom right,
-                   radial-gradient(circle at bottom left, transparent 15px, #${template.theme.bg_color} 0) bottom left;
+                   background: radial-gradient(circle at top left, transparent 15px, ${template.theme.bg_color} 0) top left,
+                   radial-gradient(circle at top right, transparent 15px, ${template.theme.bg_color} 0) top right,
+                   radial-gradient(circle at bottom right, transparent 15px, ${template.theme.bg_color} 0) bottom right,
+                   radial-gradient(circle at bottom left, transparent 15px, ${template.theme.bg_color} 0) bottom left;
                    ${template.animation.animation};
                     background-size: 51% 51%;
                     background-repeat: no-repeat;
                   }
                   ${template.animation.keyframes}
                   span{
-                      background:#${template.theme.bg_color};
-                    color:#${template.theme.author_color};
+                      background:${template.theme.bg_color};
+                    color:${template.theme.author_color};
                     padding:0 10px;
                     font-size:20px;
                     position:relative; 
@@ -236,7 +236,7 @@ const layouts = {
                   } 
                   ${template.animation.keyframes}
                   blockquote {
-                      border: solid 6px #${template.theme.bg_color === "fffefe"
+                      border: solid 6px ${template.theme.bg_color === "fffefe"
                     ? "757575"
                     : template.theme.bg_color
                 };
@@ -291,7 +291,7 @@ const layouts = {
             return `
   
           .container{
-              background-color:#000;
+              background-color: ${template.theme.bg_color};
               width:550px;
               height:auto;
               padding:30px 20px 40px 40px;
@@ -301,7 +301,7 @@ const layouts = {
           ${template.animation.keyframes}
           
                 .quote4{
-                  background-color:#000;
+                  background-color: ${template.theme.bg_color};
                       color:#fff;
                       width:450px;
                       text-align:justify;
@@ -316,7 +316,7 @@ const layouts = {
                     .quote4::before, .quote4::after{
                       position:absolute;
                       font-size:105px;
-                      background:#000;
+                      background: ${template.theme.bg_color};
                       display:block;
                       height:30px;
                       width:45px;

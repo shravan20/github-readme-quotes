@@ -11,8 +11,8 @@ const Home = () => {
     const [animation, setAnimation] = useState(animations[0]);
     const [layout, setLayout] = useState(layouts[0]);
     const [font, setFont] = useState(fonts[0]);
-    const [fontColor, setFontColor] = useState("black");
-    const [bgColor, setBgColor] = useState("white");
+    const [fontColor, setFontColor] = useState("white");
+    const [bgColor, setBgColor] = useState("black");
 
     return (
         <React.Fragment>

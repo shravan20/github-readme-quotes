@@ -13,6 +13,10 @@ const quoteController = async (req, res, next) => {
      if (fontColor) {
       theme.quote_color = fontColor;
      }
+     const bgColor = req.query.bgColor;
+     if (bgColor) {
+      theme.bg_color = bgColor;
+     }
 
      let animation = animations[req.query.animation] ? animations[req.query.animation] 
                     : animations["default"];
