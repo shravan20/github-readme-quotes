@@ -13,7 +13,7 @@ import { getAppBarStyles } from '../../util/styles/componentStyles';
 import MoonIcon from '../../assets/moon.svg';
 import LightIcon from '../../assets/sun.svg';
 import Home from '../Pages/Home';
-
+import DiscordButton from './discord';
 function ElevationScroll(props) {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -54,6 +54,7 @@ function Dashboard(props) {
                                 >
                                     {dashConstants.APP_NAME}
                                 </Typography>
+                                <DiscordButton />
                                 <IconButton>
                                     <a
                                         href='https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes'
