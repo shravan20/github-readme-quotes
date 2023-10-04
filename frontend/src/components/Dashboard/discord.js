@@ -20,14 +20,13 @@ const DiscordButton = () => {
             }}
             onClick={handleDiscordButtonClick}
         >
-            Join us on
             <img
                 src={DiscordLogo}
                 alt="Discord Logo"
                 style={{
                     marginRight: '10px',
-                    width: '60px',
-                    height: '20px',
+                    width: '70px',
+                    height: '30px',
                 }}
             />
         </button>
