@@ -10,7 +10,7 @@ const layouts = {
                   font-family:customFont, Arial, Helvetica, sans-serif;
                   padding: 40px 20px;
                   width: 600px;
-                  background-color: #${template.theme.bg_color};
+                  background-color: ${template.theme.bg_color};
                   border: 1px solid rgba(0, 0, 0, 0.2);
                   border-radius: 5px;
                   ${template.animation.animation};
@@ -21,7 +21,7 @@ const layouts = {
                   margin-bottom: 5px;
                   font-weight: 500;
                   font-style: oblique;
-                  color: #${template.theme.quote_color};
+                  color: ${template.theme.quote_color};
                   }
                   .container h3::before {
                   content: open-quote;
@@ -38,13 +38,13 @@ const layouts = {
                   font-style: italic;
                   padding: 5px;
                   text-align: right;
-                  color: #${template.theme.author_color};
+                  color: ${template.theme.author_color};
                   }`;
         },
         structure: (template) => {
             return `<div class="container">
-                  <h3> ${template.quote} </h3>
-                  <p>- ${template.author === "Unknown" ? "Anonymous" : template.author
+                  <h3 style="color: ${template.theme.quote_color}"> ${template.quote} </h3>
+                  <p style="color: ${template.theme.quote_color}">- ${template.author === "Unknown" ? "Anonymous" : template.author
                 } </p>
               </div>`;
         },
@@ -60,7 +60,7 @@ const layouts = {
                   } 
                   ${template.animation.keyframes}
                   .square-brackets-quote blockquote {
-                      border:solid 1em #${template.theme.bg_color === "fffefe"
+                      border:solid 1em ${template.theme.bg_color === "fffefe"
                     ? "ccc"
                     : template.theme.bg_color
                 };
@@ -82,7 +82,7 @@ const layouts = {
                       top: -1em;
                       }
                   .square-brackets-quote cite {
-                      color:#757575;
+                      color: ${template.theme.quote_color};
                       display: block;
                       font-size:small;
                       font-style: normal;
@@ -100,7 +100,7 @@ const layouts = {
         structure: (template) => {
             return `<div class="square-brackets-quote">
                           <blockquote>
-                              <p>${template.quote}</p>
+                              <p style="color: ${template.theme.quote_color}">${template.quote}</p>
                               <cite>${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
@@ -118,21 +118,21 @@ const layouts = {
                     text-align:center;
                     font-family:customFont,Arial,Helvetica,sans-serif;
                     position:relative;
-                    color:#${template.theme.quote_color};
+                    color:${template.theme.quote_color};
                     padding:15px;
                                       
-                   background: radial-gradient(circle at top left, transparent 15px, #${template.theme.bg_color} 0) top left,
-                   radial-gradient(circle at top right, transparent 15px, #${template.theme.bg_color} 0) top right,
-                   radial-gradient(circle at bottom right, transparent 15px, #${template.theme.bg_color} 0) bottom right,
-                   radial-gradient(circle at bottom left, transparent 15px, #${template.theme.bg_color} 0) bottom left;
+                   background: radial-gradient(circle at top left, transparent 15px, ${template.theme.bg_color} 0) top left,
+                   radial-gradient(circle at top right, transparent 15px, ${template.theme.bg_color} 0) top right,
+                   radial-gradient(circle at bottom right, transparent 15px, ${template.theme.bg_color} 0) bottom right,
+                   radial-gradient(circle at bottom left, transparent 15px, ${template.theme.bg_color} 0) bottom left;
                    ${template.animation.animation};
                     background-size: 51% 51%;
                     background-repeat: no-repeat;
                   }
                   ${template.animation.keyframes}
                   span{
-                      background:#${template.theme.bg_color};
-                    color:#${template.theme.author_color};
+                      background:${template.theme.bg_color};
+                    color:${template.theme.author_color};
                     padding:0 10px;
                     font-size:20px;
                     position:relative; 
@@ -215,12 +215,12 @@ const layouts = {
                     <div id="borderRight"></div>
                     <div id="borderBottom"></div>
                     <div id="borderTop"></div>
-                    <span>${template.author === "Unknown"
+                    <span style="color: ${template.theme.quote_color}">${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</span>
                     <blockquote>
-                      <p><i>${template.quote}</i></p>
+                      <p style="color: ${template.theme.quote_color}"><i>${template.quote}</i></p>
                     </blockquote>
                   </div>`;
         },
@@ -236,7 +236,7 @@ const layouts = {
                   } 
                   ${template.animation.keyframes}
                   blockquote {
-                      border: solid 6px #${template.theme.bg_color === "fffefe"
+                      border: solid 6px ${template.theme.bg_color === "fffefe"
                     ? "757575"
                     : template.theme.bg_color
                 };
@@ -277,8 +277,8 @@ const layouts = {
         structure: (template) => {
             return `<div class="quote">
                     <blockquote>
-                      <p>${template.quote}</p>
-                      <cite>${template.author === "Unknown"
+                      <p style="color: ${template.theme.quote_color}">${template.quote}</p>
+                      <cite style="color: ${template.theme.quote_color}">${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</cite>
@@ -291,7 +291,7 @@ const layouts = {
             return `
   
           .container{
-              background-color:#000;
+              background-color: ${template.theme.bg_color};
               width:550px;
               height:auto;
               padding:30px 20px 40px 40px;
@@ -301,7 +301,7 @@ const layouts = {
           ${template.animation.keyframes}
           
                 .quote4{
-                  background-color:#000;
+                  background-color: ${template.theme.bg_color};
                       color:#fff;
                       width:450px;
                       text-align:justify;
@@ -316,7 +316,7 @@ const layouts = {
                     .quote4::before, .quote4::after{
                       position:absolute;
                       font-size:105px;
-                      background:#000;
+                      background: ${template.theme.bg_color};
                       display:block;
                       height:30px;
                       width:45px;
@@ -392,8 +392,8 @@ const layouts = {
           <div class="container">
               <div class="quote4">
                     <div class="border"></div>
-                    <div class="txt">${template.quote}</div>
-                    <div class="from">${template.author === "Unknown"
+                    <div class="txt" style="color: ${template.theme.quote_color}">${template.quote}</div>
+                    <div class="from" style="color: ${template.theme.quote_color}">${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</div>
