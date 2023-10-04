@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import TemplateCard from '../../organisms/TemplateCard';
-import { themes, animations, layouts, fonts } from '../../../config/cardTemplate';
+import { themes, animations, layouts, fonts, colorValues } from '../../../config/cardTemplate';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import ContributorsCard from '../../ContributorsCard/ContributorCard'
@@ -11,6 +11,7 @@ const Home = () => {
     const [animation, setAnimation] = useState(animations[0]);
     const [layout, setLayout] = useState(layouts[0]);
     const [font, setFont] = useState(fonts[0]);
+    const [fontColor, setFontColor] = useState(colorValues[0]);
 
     return (
         <React.Fragment>
@@ -77,11 +78,25 @@ const Home = () => {
                     />
                 </Grid>
 
+                <Grid item xs={12} sm={6} lg={3}>
+                    <Autocomplete
+                        id="font-color"
+                        options={colorValues}
+                        value={fontColor}
+                        style={{ width: 300 }}
+                        onChange={(_event, newValue) => {
+                            if (newValue != null)
+                              setFontColor(newValue)
+                        }}
+                        renderInput={(params) => <TextField {...params} label="Font color" placeholder="Select a color" variant="outlined" />}
+                    />
+                </Grid>
+
             </Grid>
 
             <Grid container spacing={4}>
                 <Grid item xs={12} style={{ margin: '20px' }}>
-                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} />
+                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} />
                 </Grid>
                 <Grid item xs={12}>
                     <Typography align="center">Other layouts</Typography>
@@ -90,7 +105,7 @@ const Home = () => {
                     layouts.filter((item) => item !== layout).map((restLayout) => {
                         return (
                             <Grid key={restLayout} item xs={12} sm={12} md={6}>
-                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} />
+                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} />
                             </Grid>
                         )
                     })

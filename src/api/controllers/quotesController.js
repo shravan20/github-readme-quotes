@@ -9,6 +9,11 @@ const quoteController = async (req, res, next) => {
   try {
      let theme = themes[req.query.theme] ? themes[req.query.theme] : themes["default"];
 
+     const fontColor = req.query.fontColor;
+     if (fontColor) {
+      theme.quote_color = fontColor;
+     }
+
      let animation = animations[req.query.animation] ? animations[req.query.animation] 
                     : animations["default"];
     

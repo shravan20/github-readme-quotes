@@ -26,12 +26,17 @@ const TemplateCard = (props) => {
     quote: "This is going to be the Github quote for your README",
     author: "Open Source",
   };
-  template.setTheme(mainThemes[props.theme]);
+
+  const theme = mainThemes[props.theme];
+  if (props.fontColor) {
+    theme.quote_color = props.fontColor;
+  }
+
+  template.setTheme(theme);
   template.setData(data);
   template.setFont(mainFonts[props.font]);
   template.setAnimation(mainAnimations[props.animation]);
   template.setLayout(mainLayouts[props.layout]);
-
   const file = new Blob([getTemplate(template)], { type: "image/svg+xml" });
   const url = URL.createObjectURL(file);
 
@@ -53,7 +58,7 @@ const TemplateCard = (props) => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}`;
+  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&fontColor=${props.fontColor}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;
