@@ -44,7 +44,7 @@ const layouts = {
         structure: (template) => {
             return `<div class="container">
                   <h3 style="color: ${template.theme.quote_color}"> ${template.quote} </h3>
-                  <p>- ${template.author === "Unknown" ? "Anonymous" : template.author
+                  <p style="color: ${template.theme.quote_color}">- ${template.author === "Unknown" ? "Anonymous" : template.author
                 } </p>
               </div>`;
         },
@@ -82,7 +82,7 @@ const layouts = {
                       top: -1em;
                       }
                   .square-brackets-quote cite {
-                      color:#757575;
+                      color: ${template.theme.quote_color};
                       display: block;
                       font-size:small;
                       font-style: normal;
@@ -215,7 +215,7 @@ const layouts = {
                     <div id="borderRight"></div>
                     <div id="borderBottom"></div>
                     <div id="borderTop"></div>
-                    <span>${template.author === "Unknown"
+                    <span style="color: ${template.theme.quote_color}">${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</span>
@@ -278,7 +278,7 @@ const layouts = {
             return `<div class="quote">
                     <blockquote>
                       <p style="color: ${template.theme.quote_color}">${template.quote}</p>
-                      <cite>${template.author === "Unknown"
+                      <cite style="color: ${template.theme.quote_color}">${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</cite>
@@ -393,7 +393,7 @@ const layouts = {
               <div class="quote4">
                     <div class="border"></div>
                     <div class="txt" style="color: ${template.theme.quote_color}">${template.quote}</div>
-                    <div class="from">${template.author === "Unknown"
+                    <div class="from" style="color: ${template.theme.quote_color}">${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</div>
