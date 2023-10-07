@@ -11,7 +11,7 @@ const DiscordButton = () => {
     return (
         <button
             style={{
-                backgroundColor: 'black',
+                backgroundColor: 'white',
                 color: 'white',
                 padding: '10px 20px',
                 borderRadius: '5px',
@@ -24,9 +24,9 @@ const DiscordButton = () => {
                 src={DiscordLogo}
                 alt="Discord Logo"
                 style={{
-                    marginRight: '10px',
-                    width: '70px',
-                    height: '30px',
+                    marginRight: '5px',
+                    width: '95px',
+                    height: '28px',
                 }}
             />
         </button>
