@@ -788,5 +788,27 @@
       "quote": "A bank is a place that will lend you money if you can prove that you don’t need it.",
       "author": "Bob Hope"
     }
-  ]
-}
+  ],
+
+  "Travel": [
+    {
+      "quote": "Jobs fill your pockets, adventures fill your soul.",
+      "author": "Jamie Lyn Beatty"
+    },
+    {
+      "quote": "Its the not the Destination, It's the journey.",
+      "author": "Ralph Waldo Emerson"
+    },
+    {
+      "quote": "Take only memories, leave only footprints.",
+      "author": "Chief Seattle"
+    },
+    {
+      "quote": "The journey of a thousand miles begins with one step.",
+      "author": "Lao Tzu"
+    },
+    {
+      "quote": "A journey is best measured in friends, not in miles. ",
+      "author": "Tim Cahill"
+    }
+  ]}
