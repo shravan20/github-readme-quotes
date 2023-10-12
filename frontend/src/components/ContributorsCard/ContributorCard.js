@@ -30,16 +30,27 @@ const useStyles = makeStyles({
 
 const ContributorsCard = () => {
   const [listOfContributors,setListOfContributors] = useState([]);
+  const fetchData = async()=>{
+    try{
+      const response = await fetch(contributorsUrl);
+      const data = await response.json();
+      setListOfContributors(data);
+    }
+    catch(error){
+      console.log('Error fetching contributors:', error)
+    }
+  }
   useEffect(()=>{
-      fetch(contributorsUrl)
-      .then((res)=>res.json())
-      .then((data)=>{
-        setListOfContributors(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching contributors:', error);
-      });
-  },[]);
+      // fetch(contributorsUrl)
+      // .then((res)=>res.json())
+      // .then((data)=>{
+      //   setListOfContributors(data);
+      // })
+      // .catch((error) => {
+      //   console.error('Error fetching contributors:', error);
+      // });
+      fetchData();
+  },[fetchData]);
 
   const classes = useStyles();
   return (
@@ -55,7 +66,7 @@ const ContributorsCard = () => {
         <CardContent>
           A Special Thanks To All The Contributors!
           <Typography variant="h5" component="h2">
-            We are grateful{" "}
+            We are gratefulto{" "}
             <span role="img" aria-label="sheep">
               ❤️
             </span>
