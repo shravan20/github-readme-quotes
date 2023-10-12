@@ -66,7 +66,7 @@ const ContributorsCard = () => {
         <CardContent>
           A Special Thanks To All The Contributors!
           <Typography variant="h5" component="h2">
-            We are gratefulto{" "}
+            We are grateful{" "}
             <span role="img" aria-label="sheep">
               ❤️
             </span>
