@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -29,28 +29,23 @@ const useStyles = makeStyles({
 });
 
 const ContributorsCard = () => {
+
+const [Error, setError] = useState(null);
   const [listOfContributors,setListOfContributors] = useState([]);
-  const fetchData = async()=>{
-    try{
+  const fetchData = useCallback(async () => {
+    try {
       const response = await fetch(contributorsUrl);
       const data = await response.json();
       setListOfContributors(data);
+    } catch (Error) {
+      setError('Error fetching contributors. Please try again.');
+      console.error('Error fetching contributors:', Error);
     }
-    catch(error){
-      console.log('Error fetching contributors:', error)
-    }
-  }
-  useEffect(()=>{
-      // fetch(contributorsUrl)
-      // .then((res)=>res.json())
-      // .then((data)=>{
-      //   setListOfContributors(data);
-      // })
-      // .catch((error) => {
-      //   console.error('Error fetching contributors:', error);
-      // });
-      fetchData();
-  },[fetchData]);
+  }, [setListOfContributors]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const classes = useStyles();
   return (
@@ -79,12 +74,12 @@ const ContributorsCard = () => {
 
           <div style={{display:'flex',alignItems:'center'}}>
 
-          {
+          {Error ?   (<div className="error-message">{Error}</div>):(
               listOfContributors.slice(0,Math.min(listOfContributors.length,7)).map((contributor)=>{
                   return(
                     <Avatar key={contributor.id} style={{marginRight:'5px', marginLeft:'5px'}} alt={contributor.login} src={contributor.avatar_url} />
                   )
-              })
+              }))
           }
           </div>
         </CardContent>
