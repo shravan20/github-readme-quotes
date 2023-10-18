@@ -236,7 +236,6 @@ const layouts = {
                   } 
                   ${template.animation.keyframes}
                   blockquote {
-                      width:100%
                       border: solid 6px ${template.theme.bg_color === "fffefe"
                     ? "757575"
                     : template.theme.bg_color
