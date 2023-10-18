@@ -9,7 +9,7 @@ const layouts = {
                   .container {
                   font-family:customFont, Arial, Helvetica, sans-serif;
                   padding: 40px 20px;
-                  width: 600px;
+                  min-width: 600px;
                   background-color: ${template.theme.bg_color};
                   border: 1px solid rgba(0, 0, 0, 0.2);
                   border-radius: 5px;
@@ -55,7 +55,7 @@ const layouts = {
                   display:inline-block;
                   font-family:customFont,Arial,Helvetica,sans-serif;
                   margin:1em;
-                  width:600px;
+                  min-width:600px;
                   ${template.animation.animation};
                   } 
                   ${template.animation.keyframes}
@@ -113,8 +113,8 @@ const layouts = {
         style: (template) => {
             return `#ct{
                     height:auto;
-                    width:600px;
-                    margin: 20px 50px 20px 10px;
+                    min-width:600px;
+                    margin: 20px;
                     text-align:center;
                     font-family:customFont,Arial,Helvetica,sans-serif;
                     position:relative;
@@ -230,12 +230,13 @@ const layouts = {
             return `.quote {
                     display: inline-block;
                     margin: 1em;
-                    width:600px;
+                    min-width:600px;
                     font-family:customFont,Arial,Helvetica,sans-serif;
                     ${template.animation.animation};
                   } 
                   ${template.animation.keyframes}
                   blockquote {
+                      width:100%
                       border: solid 6px ${template.theme.bg_color === "fffefe"
                     ? "757575"
                     : template.theme.bg_color
