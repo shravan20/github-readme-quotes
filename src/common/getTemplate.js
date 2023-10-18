@@ -1,6 +1,6 @@
 const getTemplate = (template) => {
   return `
-    <svg width="700px" height="${parseInt(
+    <svg width="600px" height="${parseInt(
       template.height
     )}px" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
