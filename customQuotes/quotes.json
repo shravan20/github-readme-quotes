@@ -43,4 +43,8 @@
         "quote":"It's not a bug it's a feature",
         "author":"Unknown"
     }
+    ,{
+        "quote":"Of course, bad code can be cleaned up. But it’s very expensive.",
+        "author":"Robert C. Martin"
+    }
 ]
