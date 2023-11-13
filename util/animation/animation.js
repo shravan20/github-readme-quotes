@@ -1,4 +1,5 @@
 const animations = {
+
     default:{
         animation:"",
         keyframes:""
@@ -19,4 +20,4 @@ const animations = {
     },
 };
 
-module.exports=animations;
+module.exports = animations;
