@@ -43,18 +43,18 @@ const TemplateCard = (props) => {
   const file = new Blob([getTemplate(template)], { type: "image/svg+xml" });
   const url = URL.createObjectURL(file);
 
-  const copyToClipboard = () => {
-    if(navigator.clipboard)
-    navigator.clipboard
-      .writeText("![Quote](" + quoteUrl + ")")
-      .then(() => {
+  const copyToClipboard = async () => {
+    try{
+      if(navigator.clipboard){
+        await navigator.clipboard.writeText("![Quote](" + quoteUrl + ")");
         setSnackbarMessage("Copied to Clipboard!");
         setShowSnackbar(true);
-      })
-      .catch(() => {
+      }
+    }
+    catch(error){
         setSnackbarMessage("Unable to copy");
         setShowSnackbar(true);
-      });
+      };
   };
 
   const handleSnackbarClose = () => {
