@@ -9,7 +9,7 @@ const layouts = {
                 .container {
                 font-family:customFont,Arial,Helvetica,sans-serif;
                 padding: 40px 20px;
-                width: 600px;
+                min-width: 600px;
                 background: ${template.theme.bg_color};
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
@@ -56,7 +56,7 @@ const layouts = {
                 display:inline-block;
                 font-family:customFont,Arial,Helvetica,sans-serif;
                 margin:1em;
-                width:600px;
+                min-width:600px;
                 ${template.animation.animation};
                 } 
                 ${template.animation.keyframes}
@@ -120,8 +120,8 @@ const layouts = {
 
               .main-container {
                 position: relative;
-                width: 600px;
-                margin: 20px 50px 20px 10px;
+                min-width: 600px;
+                margin: 20px;
                 display: inline-block;
                 text-align: center;
                 font-family:customFont,Arial,Helvetica,sans-serif;
@@ -243,7 +243,7 @@ const layouts = {
                 position: relative;
                 display: inline-block;
                 margin: 1em;
-                width:600px;
+                min-width:600px;
                 font-family:customFont,Arial,Helvetica,sans-serif;
                 position: relative;
                 ${template.animation.animation};
