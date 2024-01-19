@@ -65,7 +65,7 @@ function Dashboard(props) {
                                             src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=276934&theme=light'
                                             alt='Dynamic GitHub Profile Readme Quotes - Everlasting Poetic Touch to GitHub Profiles for everyone | Product Hunt'
                                             style={{
-                                                width: ' 250px',
+                                                width: '250px',
                                                 height: '54px',
                                             }}
                                             width='250'
