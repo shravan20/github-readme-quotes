@@ -6,14 +6,14 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
-import {contributorsUrl} from "../Constants/urlConfig"
+import { contributorsUrl } from "../Constants/urlConfig";
 
 const useStyles = makeStyles({
   root: {
     // minWidth: 275,
     maxWidth: 400,
     padding: 10,
-    margin: 10
+    margin: 10,
   },
   bullet: {
     display: "inline-block",
@@ -29,24 +29,25 @@ const useStyles = makeStyles({
 });
 
 const ContributorsCard = () => {
-  const [listOfContributors,setListOfContributors] = useState([]);
-  useEffect(()=>{
-      fetch(contributorsUrl)
-      .then((res)=>res.json())
-      .then((data)=>{
-        setListOfContributors(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching contributors:', error);
-      });
-  },[]);
+  const [listOfContributors, setListOfContributors] = useState([]);
+  useEffect(async () => {
+    try {
+      const res = await fetch(contributorsUrl);
+
+      const data = res.json();
+
+      setListOfContributors(data);
+    } catch (error) {
+      console.error("Error fetching contributors:", error);
+    }
+  }, []);
 
   const classes = useStyles();
   return (
     <div
       style={{
         display: "flex",
-        margin:"10px",
+        margin: "10px",
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -63,23 +64,31 @@ const ContributorsCard = () => {
           <Typography className={classes.pos} color="textSecondary">
             To our {listOfContributors.length} contributors for helping in
             <br />
-            bringing this project to life            
+            bringing this project to life
           </Typography>
-
-          <div style={{display:'flex',alignItems:'center'}}>
-
-          {
-              listOfContributors.slice(0,Math.min(listOfContributors.length,7)).map((contributor)=>{
-                  return(
-                    <Avatar key={contributor.id} style={{marginRight:'5px', marginLeft:'5px'}} alt={contributor.login} src={contributor.avatar_url} />
-                  )
-              })
-          }
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {listOfContributors
+              .slice(0, Math.min(listOfContributors.length, 7))
+              .map((contributor) => {
+                return (
+                  <Avatar
+                    key={contributor.id}
+                    style={{ marginRight: "5px", marginLeft: "5px" }}
+                    alt={contributor.login}
+                    src={contributor.avatar_url}
+                  />
+                );
+              })}
           </div>
         </CardContent>
         <CardActions>
-          <a style={{textDecoration:"none"}}  href="https://github.com/shravan20/github-readme-quotes/graphs/contributors">
-          <Button variant="contained" color="primary" size="small">More Details Here</Button>
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://github.com/shravan20/github-readme-quotes/graphs/contributors"
+          >
+            <Button variant="contained" color="primary" size="small">
+              More Details Here
+            </Button>
           </a>
         </CardActions>
       </Card>
