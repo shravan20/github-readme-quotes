@@ -17,7 +17,7 @@
       "dest": "server.js"
     },
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "frontend/build/$1"
     }
   ]
