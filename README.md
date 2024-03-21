@@ -198,6 +198,8 @@ You can also provide a file with the list of quotes and a random quote will be g
 - Use `?quotesUrl=URL` as shown below
 
    ```
+
+
    ![Quote](https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
     ```
 
@@ -211,16 +213,17 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 #### Available Categories
 
-- motivational
-- fun
-- life
-- general
-- programming
-- success..etc.
+|            |            |            |            |
+|------------|------------|------------|------------|
+| general    | life       | success    | motivational|
+| fun        | programming| dream      | failure    |
+| gaming     | birthday   | Humorous   | Travel     |
 
-  - Use `quoteCategory=categoryName` as shown below
+- Use `quoteCategory=categoryName` as shown below
 
    ```
+
+
     ![Quote](https://github-readme-quotes-bay.vercel.app/quote?quoteCategory=motivational)
     ```
 
