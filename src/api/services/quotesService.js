@@ -36,7 +36,6 @@ const getQuote = async (quoteObj) => {
     else {
       apiResponse = await requestApi(url);
     }
-    console.log(apiResponse)
 
     const template = new Template();
     template.setTheme(theme);
