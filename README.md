@@ -28,7 +28,7 @@ Your contributions and involvement in the project are welcome.
 
 <div>
     <img align="center" src="assets/ThankYouVercel.png" alt="Shoutout to Vercel">
-    <p align="center">Big shoutout to Vercel for their amazing hosting service! [@vercel](https://github.com/vercel)</p>
+    <p align="center">Big shoutout to Vercel for their amazing hosting service! <a href="https://github.com/vercel"> @vercel </a></p>
 </div>
 
 <p align="center">
