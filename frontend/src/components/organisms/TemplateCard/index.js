@@ -19,7 +19,7 @@ const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [isImageLoaded, setImageLoaded] = useState(false);
-  const originUrl = process.env.NODE_ENV === "PRODUCTION" ? serverUrl : "https://localhost:3004"; // Note: PORT 3004 since in server is served via that port. Frontend independently served on port 3000
+  const originUrl = process.env.NODE_ENV !== "PRODUCTION" ? serverUrl : "https://localhost:3004"; // Note: PORT 3004 since in server is served via that port. Frontend independently served on port 3000
 
   const template = new Template();
   const data = {
