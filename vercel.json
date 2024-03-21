@@ -7,7 +7,7 @@
       "config": { "includeFiles": ["dist/**"] }
     },
     {
-      "src": "frontend/**",
+      "src": "frontend/package.json",
       "use": "@vercel/static-build"
     }
   ],
