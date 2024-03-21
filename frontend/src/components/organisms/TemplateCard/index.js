@@ -14,7 +14,7 @@ import mainLayouts from "../../../util/layouts";
 import mainAnimations from "../../../util/animation";
 import mainThemes from "../../../util/themes";
 import mainFonts from "../../../util/fonts";
-import serverUrl from "../../Constants/urlConfig";
+import { serverUrl } from "../../Constants/urlConfig";
 const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
