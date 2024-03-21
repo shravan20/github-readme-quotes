@@ -13,17 +13,16 @@
 
 <br><br>
 
-```
-- Project Status: Migrated to Custom Cloud, Ongoing Code Improvement, Feature Development, and Maintenance
+## Current status
 
-- Project Deployment Status: I have moved it from Heroku to custom cloud now.
-Please access the content from `http://34.168.217.81:3004/quote`
+- [x] Project Status: Migrated to Vercel Cloud
 
-- Self-Hosting and Contributions: If you wish to host the project on your own,
+- [x] Project Deployment Status: I have moved it from Heroku to Vercel Cloud now. Please access the content from UI on **[https://github-readme-quotes-returns.vercel.app](https://github-readme-quotes-returns.vercel.app)** and utility on **[https://github-readme-quotes-bay.vercel.app/quote](https://github-readme-quotes-bay.vercel.app/quote)**
+
+- [x] Self-Hosting and Contributions: If you wish to host the project on your own,
 you can fork the repository and deploy it according to your needs. Feel free to reach
 out to me if you require any assistance or have inquiries about the project.
 Your contributions and involvement in the project are welcome.
-```
 
 ---
 
@@ -45,7 +44,7 @@ Your contributions and involvement in the project are welcome.
 
 <br>
 
-### Use [User Interface](https://https://github-readme-quotes-bay.vercel.app/), to view designed quotes and copy link and paste it directly
+### Use [User Interface](https://github-readme-quotes-bay.vercel.app/), to view designed quotes and copy link and paste it directly
 
 <img src="./assets/uiScreen.gif" width=100% align="center"/>
 
@@ -76,11 +75,11 @@ Note: To read an article on this project, please refer:
 Copy and paste the following markdown content to display the quote.
 
 ```md
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote)
 ```
 <!-- Scrnshot of quote in default mode -->
 <p align="center">
-  <img src="https://camo.githubusercontent.com/f110f1c085d6afab0bcc0bfcba3ddf1a81113247138ba53b8f26d574805bb502/68747470733a2f2f6769746875622d726561646d652d71756f7465732e6865726f6b756170702e636f6d2f71756f74653f"/>
+  <img src="https://github-readme-quotes-bay.vercel.app/quote"/>
 </p>
 
 <br><hr>
@@ -92,7 +91,7 @@ You can display your quote in different themes without any manual customization.
 Use `?theme=THEME_NAME` parameter as shown below.
 
 ```md
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
 ```
 <!-- Scrnshot of quote in dark theme -->
 
@@ -102,11 +101,11 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 
 **Dark**
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
 
 **Light Theme**
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?)
 
 <!-- Scrnshot of quote in different themes -->
 
@@ -123,16 +122,16 @@ You can also change the layout of your templates.
 Use `?layout=LAYOUT` parameter as shown below
 
 ```md
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark&layout=socrates)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&layout=socrates)
 ```
 
 #### Layout 1 (Default)
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
 
 #### Layout 2 (Socrates)
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark&layout=socrates)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&layout=socrates)
 
 <!-- Scrnshot of quote in particular layout -->
 
@@ -149,16 +148,16 @@ You can also add fonts to your templates.
 Use `?font=FONT_NAME` parameter as shown below
 
 ```md
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?font=Redressed)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?font=Redressed)
 ```
 
 #### Font 1 (Default)
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
 
 #### Font 2 (Redressed)
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark&font=Redressed)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&font=Redressed)
 
 <!-- Scrnshot of quote in different fonts -->
 
@@ -175,13 +174,13 @@ You can also add animations to your templates.
 Use `?animation=ANIMATION` paramater as shown below
 
 ```md
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark&animation=grow_out_in)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&animation=grow_out_in)
 ```
 <!-- Gif of quote in animation -->
 
 #### Animation 1
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?theme=dark&animation=grow_out_in)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&animation=grow_out_in)
 
 You can explore different animations [here](./src/animations/README.md).
 
@@ -199,10 +198,12 @@ You can also provide a file with the list of quotes and a random quote will be g
 - Use `?quotesUrl=URL` as shown below
 
    ```
-   ![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
+
+
+   ![Quote](https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
     ```
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
 
 ---
 
@@ -222,10 +223,12 @@ You can also provide a category to fetch the list of quotes based on certain cat
   - Use `quoteCategory=categoryName` as shown below
 
    ```
-    ![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?quoteCategory=motivational)
+
+
+    ![Quote](https://github-readme-quotes-bay.vercel.app/quote?quoteCategory=motivational)
     ```
 
-![Quote](https://https://github-readme-quotes-bay.vercel.app/quote?quoteCategory=motivational)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?quoteCategory=motivational)
 
 <b>Feel free to contribute different quotes to different categories.</b>
 

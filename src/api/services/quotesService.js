@@ -31,10 +31,12 @@ const getQuote = async (quoteObj) => {
     else if (quoteCategory) {
       apiResponse = quoteFromCategory[quoteCategory];
       apiResponse = apiResponse[Math.floor(Math.random() * apiResponse.length)];
+      isCustomQuote = true;
     }
     else {
       apiResponse = await requestApi(url);
     }
+    console.log(apiResponse)
 
     const template = new Template();
     template.setTheme(theme);
