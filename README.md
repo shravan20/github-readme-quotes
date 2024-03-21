@@ -26,6 +26,11 @@ Your contributions and involvement in the project are welcome.
 
 ---
 
+<div>
+    <img align="center" src="assets/ThankYouVercel.png" alt="Shoutout to Vercel">
+    <p align="center">Big shoutout to Vercel for their amazing hosting service! [@vercel](https://github.com/vercel)</p>
+</div>
+
 <p align="center">
   <h1 align="center">
     Featuring on <a href="https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=276934&theme=light" alt="Dynamic GitHub Profile Readme Quotes - Everlasting Poetic Touch to GitHub Profiles for everyone | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" align="center"/></a>
