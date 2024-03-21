@@ -70,7 +70,7 @@ Check the existing [layouts](./src/layouts/layout.js) for a better understanding
 - Get the link of the file. 
 - Use `?quotesUrl=URL` as shown below
   - ```
-    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
+    ![Quote](https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://github.com/ShubhKotnala/github-readme-quotes/blob/custom-quotes/customQuotes/quotes.json)
     ```
 
 <br>
@@ -84,7 +84,7 @@ You can also provide a category to fetch the list of quotes based on certain cat
 - If the category you want doesn't exist, feel free to add the category in this [file](./customQuotes/category.json) and add the quotes.
 - Use `quoteCategory=categoryName` as shown below
   - ```
-    ![Quote](https://github-readme-quotes.herokuapp.com/quote?quoteCategory=motivational)
+    ![Quote](https://github-readme-quotes-bay.vercel.app/quote?quoteCategory=motivational)
     ```
 
 <br>
@@ -107,7 +107,7 @@ You can provide fonts data to show the quotes in the font.
   
 - Use `font=FONT_NAME` as shown below
   - ```
-    ![Quote](https://github-readme-quotes.herokuapp.com/quote?font=FONT_NAME)
+    ![Quote](https://github-readme-quotes-bay.vercel.app/quote?font=FONT_NAME)
     ```
 ##### Frontend
 
