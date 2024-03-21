@@ -213,14 +213,13 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 #### Available Categories
 
-- motivational
-- fun
-- life
-- general
-- programming
-- success..etc.
+|            |            |            |            |
+|------------|------------|------------|------------|
+| general    | life       | success    | motivational|
+| fun        | programming| dream      | failure    |
+| gaming     | birthday   | Humorous   | Travel     |
 
-  - Use `quoteCategory=categoryName` as shown below
+- Use `quoteCategory=categoryName` as shown below
 
    ```
 
