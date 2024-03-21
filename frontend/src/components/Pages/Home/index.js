@@ -16,8 +16,15 @@ const Home = () => {
 
     return (
         <React.Fragment>
+
+            <marquee style={{ padding: '10px', borderRadius: '10px', width: '80%', margin: 'auto', textAlign: 'center' }}>
+                <Typography variant='h6' align='center' component='h4' style={{ margin: '20px', padding: '25px', color: '#6e45e2', fontFamily: 'Arial, sans-serif' }}>
+                    🚀 After migrating to Vercel, our application now has separate UI and server deployments for PRODUCTION, while still maintaining server-side rendering locally for DEVELOPMENT. 🚀
+                </Typography>
+            </marquee>
+
             <Typography variant='h5' align='center' component='h2' style={{ margin: '20px', padding: '25px' }}>Make your own personalised style for the Quotes</Typography>
-            
+
             <Grid
                 container
                 alignItems="center"
@@ -87,7 +94,7 @@ const Home = () => {
                         style={{ width: 300 }}
                         onChange={(_event, newValue) => {
                             if (newValue != null)
-                              setFontColor(newValue)
+                                setFontColor(newValue)
                         }}
                         renderInput={(params) => <TextField {...params} label="Font color" placeholder="Select a color" variant="outlined" />}
                     />
@@ -100,7 +107,7 @@ const Home = () => {
                         style={{ width: 300 }}
                         onChange={(_event, newValue) => {
                             if (newValue != null)
-                              setBgColor(newValue)
+                                setBgColor(newValue)
                         }}
                         renderInput={(params) => <TextField {...params} label="Background color" placeholder="Select a color" variant="outlined" />}
                     />
@@ -119,13 +126,13 @@ const Home = () => {
                     layouts.filter((item) => item !== layout).map((restLayout) => {
                         return (
                             <Grid key={restLayout} item xs={12} sm={12} md={6}>
-                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor}/>
+                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor} />
                             </Grid>
                         )
                     })
                 }
             </Grid>
-            <ContributorsCard  />
+            <ContributorsCard />
         </React.Fragment>
     )
 }
