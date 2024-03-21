@@ -13,17 +13,16 @@
 
 <br><br>
 
-```
-- Project Status: Migrated to Custom Cloud, Ongoing Code Improvement, Feature Development, and Maintenance
+## Current status
 
-- Project Deployment Status: I have moved it from Heroku to custom cloud now.
-Please access the content from `http://34.168.217.81:3004/quote`
+- [x] Project Status: Migrated to Vercel Cloud
 
-- Self-Hosting and Contributions: If you wish to host the project on your own,
+- [x] Project Deployment Status: I have moved it from Heroku to Vercel Cloud now. Please access the content from UI on **[https://github-readme-quotes-returns.vercel.app](https://github-readme-quotes-returns.vercel.app)** and utility on **[https://github-readme-quotes-bay.vercel.app/quote](https://github-readme-quotes-bay.vercel.app/quote)**
+
+- [x] Self-Hosting and Contributions: If you wish to host the project on your own,
 you can fork the repository and deploy it according to your needs. Feel free to reach
 out to me if you require any assistance or have inquiries about the project.
 Your contributions and involvement in the project are welcome.
-```
 
 ---
 
