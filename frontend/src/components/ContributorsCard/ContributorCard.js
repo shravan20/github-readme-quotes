@@ -13,8 +13,7 @@ const useStyles = makeStyles({
     // minWidth: 275,
     maxWidth: 400,
     padding: 10,
-    margin: 10,
-    border:'10px'
+    margin: 10
   },
   bullet: {
     display: "inline-block",
@@ -37,9 +36,10 @@ const ContributorsCard = () => {
       .then((data)=>{
         setListOfContributors(data);
       })
+      .catch((error) => {
+        console.error('Error fetching contributors:', error);
+      });
   },[]);
-
-  
 
   const classes = useStyles();
   return (
@@ -71,8 +71,7 @@ const ContributorsCard = () => {
           {
               listOfContributors.slice(0,Math.min(listOfContributors.length,7)).map((contributor)=>{
                   return(
-                      <Avatar  style={{marginRight:'5px',MarginLeft:'5px'}} alt={contributor.login} src={contributor.avatar_url} />
-
+                    <Avatar key={contributor.id} style={{marginRight:'5px', marginLeft:'5px'}} alt={contributor.login} src={contributor.avatar_url} />
                   )
               })
           }

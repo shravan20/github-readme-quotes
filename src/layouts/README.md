@@ -5,24 +5,24 @@ You can change the layout of your quotes without any manual customization.
 Use `?layout=LAYOUT` parameter like so :-
 
 ```md
-![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=socrates)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?layout=socrates)
 ```
 ### Layouts
 
 - default <br>
-  ![Quote](https://github-readme-quotes.herokuapp.com/quote)
+  ![Quote](https://github-readme-quotes-bay.vercel.app/quote)
   
 - socrates <br>
-  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=socrates)
+  ![Quote](https://github-readme-quotes-bay.vercel.app/quote?layout=socrates)
   
 - churchill <br>
-  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=churchill&theme=merko)
+  ![Quote](https://github-readme-quotes-bay.vercel.app/quote?layout=churchill&theme=merko)
   
 - samuel <br>
-  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=samuel)
+  ![Quote](https://github-readme-quotes-bay.vercel.app/quote?layout=samuel)
 
 - zues (<b>Note</b>: This layout does not have theme customization.) <br>
-  ![Quote](https://github-readme-quotes.herokuapp.com/quote?layout=zues)
+  ![Quote](https://github-readme-quotes-bay.vercel.app/quote?layout=zues)
   
 
 Wanted to add a new layout? Consider reading the [contribution guidelines](../CONTRIBUTING.md#themes-contribution) :D
