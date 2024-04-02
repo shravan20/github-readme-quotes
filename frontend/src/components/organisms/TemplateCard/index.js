@@ -14,45 +14,54 @@ import mainLayouts from "../../../util/layouts";
 import mainAnimations from "../../../util/animation";
 import mainThemes from "../../../util/themes";
 import mainFonts from "../../../util/fonts";
-
+import { serverUrl } from "../../Constants/urlConfig";
 const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [isImageLoaded, setImageLoaded] = useState(false);
+  const originUrl = serverUrl; // Note: PORT 3004 since in server is served via that port. Frontend independently served on port 3000
 
   const template = new Template();
   const data = {
     quote: "This is going to be the Github quote for your README",
     author: "Open Source",
   };
-  template.setTheme(mainThemes[props.theme]);
+
+  const theme = mainThemes[props.theme];
+  if (props.fontColor) {
+    theme.quote_color = props.fontColor;
+  }
+  if (props.bgColor) {
+    theme.bg_color = props.bgColor;
+  }
+
+  template.setTheme(theme);
   template.setData(data);
   template.setFont(mainFonts[props.font]);
   template.setAnimation(mainAnimations[props.animation]);
   template.setLayout(mainLayouts[props.layout]);
-
   const file = new Blob([getTemplate(template)], { type: "image/svg+xml" });
   const url = URL.createObjectURL(file);
 
   const copyToClipboard = () => {
-    if(navigator.clipboard)
-    navigator.clipboard
-      .writeText("![Quote](" + quoteUrl + ")")
-      .then(() => {
-        setSnackbarMessage("Copied to Clipboard!");
-        setShowSnackbar(true);
-      })
-      .catch(() => {
-        setSnackbarMessage("Unable to copy");
-        setShowSnackbar(true);
-      });
+    if (navigator.clipboard)
+      navigator.clipboard
+        .writeText("![Quote](" + quoteUrl + ")")
+        .then(() => {
+          setSnackbarMessage("Copied to Clipboard!");
+          setShowSnackbar(true);
+        })
+        .catch(() => {
+          setSnackbarMessage("Unable to copy");
+          setShowSnackbar(true);
+        });
   };
 
   const handleSnackbarClose = () => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `https://github-readme-quotes.herokuapp.com/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}`;
+  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&fontColor=${props.fontColor}&bgColor=${props.bgColor}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;
@@ -63,7 +72,7 @@ const TemplateCard = (props) => {
   }, [quoteUrl]);
 
   return (
-    <Paper style={{ padding: "10px" ,width: "100%", height: "100%"}}>
+    <Paper style={{ padding: "10px", width: "100%", height: "100%" }}>
       <div style={{ textAlign: "center" }}>
         <img
           src={url}

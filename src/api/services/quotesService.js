@@ -31,6 +31,7 @@ const getQuote = async (quoteObj) => {
     else if (quoteCategory) {
       apiResponse = quoteFromCategory[quoteCategory];
       apiResponse = apiResponse[Math.floor(Math.random() * apiResponse.length)];
+      isCustomQuote = true;
     }
     else {
       apiResponse = await requestApi(url);

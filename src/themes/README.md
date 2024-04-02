@@ -7,11 +7,10 @@ You can display your quote in different themes without any manual customization.
 Use `?theme=THEME_NAME` parameter like so :-
 
 ```md
-![Quote](https://github-readme-quotes.herokuapp.com/quote?theme=dark)
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark)
 ```
 
 ## Themes
-
 
 | | | |
 | :--: | :--: | :--: |
@@ -31,55 +30,50 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `yeblu` ![yeblu][yeblu] | `blueberry` ![blueberry][blueberry] | `slateorange` ![slateorange][slateorange] |
 | `kacho_ga` ![kacho_ga][kacho_ga] | `soft-green` ![soft-green][soft-green] |  |
 
-
-
-
-[default]: https://github-readme-quotes.herokuapp.com/quote?theme=default
-[default_repocard]: https://github-readme-quotes.herokuapp.com/quote?theme=default_repocard
-[dark]: https://github-readme-quotes.herokuapp.com/quote?theme=dark
-[radical]: https://github-readme-quotes.herokuapp.com/quote?theme=radical
-[merko]: https://github-readme-quotes.herokuapp.com/quote?theme=merko
-[gruvbox]: https://github-readme-quotes.herokuapp.com/quote?theme=gruvbox
-[tokyonight]: https://github-readme-quotes.herokuapp.com/quote?theme=tokyonight
-[onedark]: https://github-readme-quotes.herokuapp.com/quote?theme=onedark
-[cobalt]: https://github-readme-quotes.herokuapp.com/quote?theme=cobalt
-[synthwave]: https://github-readme-quotes.herokuapp.com/quote?theme=synthwave
-[highcontrast]: https://github-readme-quotes.herokuapp.com/quote?theme=highcontrast
-[dracula]: https://github-readme-quotes.herokuapp.com/quote?theme=dracula
-[prussian]: https://github-readme-quotes.herokuapp.com/quote?theme=prussian
-[monokai]: https://github-readme-quotes.herokuapp.com/quote?theme=monokai
-[vue]: https://github-readme-quotes.herokuapp.com/quote?theme=vue
-[vue-dark]: https://github-readme-quotes.herokuapp.com/quote?theme=vue-dark
-[shades-of-purple]: https://github-readme-quotes.herokuapp.com/quote?theme=shades-of-purple
-[nightowl]: https://github-readme-quotes.herokuapp.com/quote?theme=nightowl
-[buefy]: https://github-readme-quotes.herokuapp.com/quote?theme=buefy
-[blue-green]: https://github-readme-quotes.herokuapp.com/quote?theme=blue-green
-[algolia]: https://github-readme-quotes.herokuapp.com/quote?theme=algolia
-[great-gatsby]: https://github-readme-quotes.herokuapp.com/quote?theme=great-gatsby
-[darcula]: https://github-readme-quotes.herokuapp.com/quote?theme=darcula
-[bear]: https://github-readme-quotes.herokuapp.com/quote?theme=bear
-[solarized-dark]: https://github-readme-quotes.herokuapp.com/quote?theme=solarized-dark
-[solarized-light]: https://github-readme-quotes.herokuapp.com/quote?theme=solarized-light
-[chartreuse-dark]: https://github-readme-quotes.herokuapp.com/quote?theme=chartreuse-dark
-[nord]: https://github-readme-quotes.herokuapp.com/quote?theme=nord
-[gotham]:https://github-readme-quotes.herokuapp.com/quote?theme=gotham
-[material-palenight]:https://github-readme-quotes.herokuapp.com/quote?theme=material-palenight
-[graywhite]: https://github-readme-quotes.herokuapp.com/quote?theme=graywhite
-[vision-friendly-dark]: https://github-readme-quotes.herokuapp.com/quote?theme=vision-friendly-dark
-[ayu-mirage]: https://github-readme-quotes.herokuapp.com/quote?theme=ayu-mirage
-[midnight-purple]: https://github-readme-quotes.herokuapp.com/quote?theme=midnight-purple
-[calm]: https://github-readme-quotes.herokuapp.com/quote?theme=calm
-[flag-india]: https://github-readme-quotes.herokuapp.com/quote?theme=flag-india
-[omni]: https://github-readme-quotes.herokuapp.com/quote?theme=omni
-[react]: https://github-readme-quotes.herokuapp.com/quote?theme=react
-[jolly]: https://github-readme-quotes.herokuapp.com/quote?theme=jolly
-[maroongold]:https://github-readme-quotes.herokuapp.com/quote?theme=maroongold
-[yeblu]: https://github-readme-quotes.herokuapp.com/quote?theme=yeblu
-[blueberry]: https://github-readme-quotes.herokuapp.com/quote?theme=blueberry
-[slateorange]: https://github-readme-quotes.herokuapp.com/quote?theme=slateorange
-[kacho_ga]: https://github-readme-quotes.herokuapp.com/quote?theme=kacho_ga
-[soft-green]: https://github-readme-quotes.herokuapp.com/quote?theme=soft-green
-
+[default]: https://github-readme-quotes-bay.vercel.app/quote?theme=default
+[dark]: https://github-readme-quotes-bay.vercel.app/quote?theme=dark
+[radical]: https://github-readme-quotes-bay.vercel.app/quote?theme=radical
+[merko]: https://github-readme-quotes-bay.vercel.app/quote?theme=merko
+[gruvbox]: https://github-readme-quotes-bay.vercel.app/quote?theme=gruvbox
+[tokyonight]: https://github-readme-quotes-bay.vercel.app/quote?theme=tokyonight
+[onedark]: https://github-readme-quotes-bay.vercel.app/quote?theme=onedark
+[cobalt]: https://github-readme-quotes-bay.vercel.app/quote?theme=cobalt
+[synthwave]: https://github-readme-quotes-bay.vercel.app/quote?theme=synthwave
+[highcontrast]: https://github-readme-quotes-bay.vercel.app/quote?theme=highcontrast
+[dracula]: https://github-readme-quotes-bay.vercel.app/quote?theme=dracula
+[prussian]: https://github-readme-quotes-bay.vercel.app/quote?theme=prussian
+[monokai]: https://github-readme-quotes-bay.vercel.app/quote?theme=monokai
+[vue]: https://github-readme-quotes-bay.vercel.app/quote?theme=vue
+[vue-dark]: https://github-readme-quotes-bay.vercel.app/quote?theme=vue-dark
+[shades-of-purple]: https://github-readme-quotes-bay.vercel.app/quote?theme=shades-of-purple
+[nightowl]: https://github-readme-quotes-bay.vercel.app/quote?theme=nightowl
+[buefy]: https://github-readme-quotes-bay.vercel.app/quote?theme=buefy
+[blue-green]: https://github-readme-quotes-bay.vercel.app/quote?theme=blue-green
+[algolia]: https://github-readme-quotes-bay.vercel.app/quote?theme=algolia
+[great-gatsby]: https://github-readme-quotes-bay.vercel.app/quote?theme=great-gatsby
+[darcula]: https://github-readme-quotes-bay.vercel.app/quote?theme=darcula
+[bear]: https://github-readme-quotes-bay.vercel.app/quote?theme=bear
+[solarized-dark]: https://github-readme-quotes-bay.vercel.app/quote?theme=solarized-dark
+[solarized-light]: https://github-readme-quotes-bay.vercel.app/quote?theme=solarized-light
+[chartreuse-dark]: https://github-readme-quotes-bay.vercel.app/quote?theme=chartreuse-dark
+[nord]: https://github-readme-quotes-bay.vercel.app/quote?theme=nord
+[gotham]:https://github-readme-quotes-bay.vercel.app/quote?theme=gotham
+[material-palenight]:https://github-readme-quotes-bay.vercel.app/quote?theme=material-palenight
+[graywhite]: https://github-readme-quotes-bay.vercel.app/quote?theme=graywhite
+[vision-friendly-dark]: https://github-readme-quotes-bay.vercel.app/quote?theme=vision-friendly-dark
+[ayu-mirage]: https://github-readme-quotes-bay.vercel.app/quote?theme=ayu-mirage
+[midnight-purple]: https://github-readme-quotes-bay.vercel.app/quote?theme=midnight-purple
+[calm]: https://github-readme-quotes-bay.vercel.app/quote?theme=calm
+[flag-india]: https://github-readme-quotes-bay.vercel.app/quote?theme=flag-india
+[omni]: https://github-readme-quotes-bay.vercel.app/quote?theme=omni
+[react]: https://github-readme-quotes-bay.vercel.app/quote?theme=react
+[jolly]: https://github-readme-quotes-bay.vercel.app/quote?theme=jolly
+[maroongold]:https://github-readme-quotes-bay.vercel.app/quote?theme=maroongold
+[yeblu]: https://github-readme-quotes-bay.vercel.app/quote?theme=yeblu
+[blueberry]: https://github-readme-quotes-bay.vercel.app/quote?theme=blueberry
+[slateorange]: https://github-readme-quotes-bay.vercel.app/quote?theme=slateorange
+[kacho_ga]: https://github-readme-quotes-bay.vercel.app/quote?theme=kacho_ga
+[soft-green]: https://github-readme-quotes-bay.vercel.app/quote?theme=soft-green
 
 Wanted to add a new theme? Consider reading the [contribution guidelines](../../CONTRIBUTING.md#themes-contribution) :D
 

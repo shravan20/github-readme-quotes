@@ -6,14 +6,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Container from '@material-ui/core/Container';
 import { IconButton, Paper } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { dashConstants } from '../../config/constants';
 import { LightTheme, DarkTheme } from '../../util/themes/GlobalThemes';
 import { getAppBarStyles } from '../../util/styles/componentStyles';
 import MoonIcon from '../../assets/moon.svg';
 import LightIcon from '../../assets/sun.svg';
 import Home from '../Pages/Home';
-
+import DiscordButton from './discord';
 function ElevationScroll(props) {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -33,8 +33,8 @@ function ElevationScroll(props) {
 function Dashboard(props) {
     const [isDark, setIsDark] = useState(false);
     const theme = isDark
-        ? createMuiTheme(DarkTheme)
-        : createMuiTheme(LightTheme);
+        ? createTheme(DarkTheme)
+        : createTheme(LightTheme);
     const classes = getAppBarStyles();
 
     function handleThemeChange() {
@@ -54,6 +54,7 @@ function Dashboard(props) {
                                 >
                                     {dashConstants.APP_NAME}
                                 </Typography>
+                                <DiscordButton />
                                 <IconButton>
                                     <a
                                         href='https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes'
