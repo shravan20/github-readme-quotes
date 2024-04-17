@@ -225,7 +225,7 @@ const layouts = {
                     template.author === "Unknown"
                       ? "Anonymous"
                       : template.author
-                    }</span>
+                  }</span>
                 </div>
                 <div class="quote-container">
                   <blockquote>
@@ -235,7 +235,7 @@ const layouts = {
                   </blockquote>
                 </div>
               </div>`;
-        },
+    },
   },
   samuel: {
     style: (template) => {
@@ -291,7 +291,7 @@ const layouts = {
                         template.author === "Unknown"
                           ? "Anonymous"
                           : template.author
-                    }</cite>
+                      }</cite>
                     </blockquote>
                   </div>
                 </div>`;
@@ -414,6 +414,79 @@ const layouts = {
             </div>
         </div>
         `;
+    },
+  },
+  neon: {
+    style: (template) => {
+      return `
+      * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      ${template.animation.animation}
+    }
+    ${template.animation.keyframes}
+      .quote-container {
+        display: flex;
+        min-width: 600px;
+        background: ${template.theme.bg_color};
+        justify-content: center;
+        padding: 25px;
+      }
+    
+      .text-container {
+        width: 1000px;
+        border-radius: 35px;
+        border-right: 5px solid;
+        border-top: 3px solid;
+        border-color: ${template.theme.quote_color};
+        padding: 25px;
+        padding-left: 10%;
+        box-shadow: 7px 5px 7px lightblue;
+      }
+    
+      .quote-container h3 {
+        color: ${template.theme.quote_color};
+        font-weight: 900;
+        padding-top: 50px;
+        padding-left: 90px;
+        font-family: "Kumbh Sans", sans-serif;
+      }
+    
+      .quote-container p {
+        color: ${template.theme.quote_color};
+        font-family: "Kumbh Sans", sans-serif;
+        padding-top: 30px;
+        font-weight: 400;
+      }
+    
+      .quote-container h1 {
+        color: ${template.theme.quote_color};
+        font-family: "Catamaran", sans-serif;
+      }
+      .overlay {
+        position: absolute;
+        z-index: 100;
+        opacity: 0.3;
+        font-size: 15em;
+        top: 0px;
+      }
+    `;
+    },
+    structure: (template) => {
+      return `
+      <div class="quote-container">
+        <div class="text-container">
+          <h1 class="overlay">"</h1>
+          <h3>
+            ${template.quote}
+          </h3>
+            <p>${
+              template.author === "Unknown" ? "Anonymous" : template.author
+            }</p>
+        </div>
+      </div>
+      `;
     },
   },
 };
