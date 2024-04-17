@@ -423,17 +423,18 @@ const layouts = {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      ${template.animation.animation}
     }
-    ${template.animation.keyframes}
+    
       .quote-container {
         display: flex;
         min-width: 600px;
         background: ${template.theme.bg_color};
         justify-content: center;
         padding: 25px;
+        ${template.animation.animation};
       }
-    
+      ${template.animation.keyframes}
+
       .text-container {
         width: 1000px;
         border-radius: 35px;
