@@ -451,19 +451,16 @@ const layouts = {
         font-weight: 900;
         padding-top: 50px;
         padding-left: 90px;
-        font-family: "Kumbh Sans", sans-serif;
       }
     
       .quote-container p {
         color: ${template.theme.quote_color};
-        font-family: "Kumbh Sans", sans-serif;
         padding-top: 30px;
         font-weight: 400;
       }
     
       .quote-container h1 {
         color: ${template.theme.quote_color};
-        font-family: "Catamaran", sans-serif;
       }
       .overlay {
         position: absolute;
