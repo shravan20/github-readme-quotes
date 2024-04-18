@@ -419,71 +419,72 @@ const layouts = {
   neon: {
     style: (template) => {
       return `
-      * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-    
-      .quote-container {
-        display: flex;
-        min-width: 600px;
-        background: ${template.theme.bg_color};
-        justify-content: center;
-        padding: 25px;
-        ${template.animation.animation};
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
       }
-      ${template.animation.keyframes}
 
-      .text-container {
-        width: 1000px;
-        border-radius: 35px;
-        border-right: 5px solid;
-        border-top: 3px solid;
-        border-color: ${template.theme.quote_color};
-        padding: 25px;
-        padding-left: 10%;
-        box-shadow: 7px 5px 7px lightblue;
-      }
-    
-      .quote-container h3 {
-        color: ${template.theme.quote_color};
-        font-weight: 900;
-        padding-top: 50px;
-        padding-left: 90px;
-      }
-    
-      .quote-container p {
-        color: ${template.theme.quote_color};
-        padding-top: 30px;
-        font-weight: 400;
-      }
-    
-      .quote-container h1 {
-        color: ${template.theme.quote_color};
-      }
-      .overlay {
-        position: absolute;
-        z-index: 100;
-        opacity: 0.3;
-        font-size: 15em;
-        top: 0px;
-      }
+        .quote-container {
+          display: flex;
+          width: 100%;
+          background: ${template.theme.bg_color}
+          justify-content: center;
+          border-radius: 35px;
+          border-right: 5px solid;
+          border-top: 3px solid;
+          border-color: ${template.theme.quote_color};
+          padding: 25px;
+          box-shadow: 7px 7px 7px lightblue;
+          ${template.animation.animation};
+        }
+        ${template.animation.keyframes}
+      
+        .quote-container h3 {
+          color: ${template.theme.quote_color};
+          font-weight: 900;
+          padding-top: 50px;
+        }
+      
+        .quote-container p {
+          color: ${template.theme.quote_color};
+          padding-top: 20px;
+          font-weight: 400;
+          padding-bottom: 20px;
+        }
+      
+        .quote-container h1 {
+          color: ${template.theme.quote_color};
+        }
+
+        .overlay {
+          position: absolute;
+          z-index: 100;
+          opacity: 0.3;
+          font-size: 15em;
+          top: 0px;
+        }
+
+        @media only screen and (max-width: 600px){
+          .quote-container {
+            width: 100%;
+          }
+        }
     `;
     },
     structure: (template) => {
       return `
-      <div class="quote-container">
-        <div class="text-container">
-          <h1 class="overlay">"</h1>
-          <h3>
-            ${template.quote}
-          </h3>
+        <div class="quote-container">
+          <div>
+            <h1 class="overlay">"</h1>
+            <h3>
+              ${template.quote}
+            </h3>
             <p>${
               template.author === "Unknown" ? "Anonymous" : template.author
             }</p>
+          </div>
         </div>
-      </div>
       `;
     },
   },
