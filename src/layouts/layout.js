@@ -419,73 +419,89 @@ const layouts = {
   neon: {
     style: (template) => {
       return `
-        * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+      * {
+        box-sizing: 
       }
 
+      .main-container {
+        position: relative;
+        display: flex;
+        justify-content-center;
+        margin: 1em;
+        border-radius: 35px;
+        border-top: 5px solid;
+        border-right: 5px solid;
+        border-color: aliceblue;
+        box-shadow: 7px 7px 7px #ff319b;
+        ${template.animation.animation};
+      }
+      ${template.animation.keyframes}
+
+      .quote-container {
+        background: ${template.theme.bg_color};
+        border-radius: 35px;
+      }
+
+      .quote-container h3 {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 35px;
+        font-weight: 900;
+        color: ${template.theme.quote_color};
+        animation: neon 1s ease-in-out infinite
+        alternate;
+      }
+      
+      .quote-container p {
+        display: block;
+        padding-left: 20px;
+        color: ${template.theme.author_color};
+        font-weight: 400;
+        animation: neon 1s ease-in-out infinite
+        alternate;
+      }
+
+      @keyframes neon {
+        from {
+          text-shadow: 
+          0 0 4px #fff,
+          0 0 10px #fff,
+          0 0 30px #ff319b,
+          0 0 50px #ff319b,
+          0 0 70px #ff319b,
+          0 0 90px #ff319b;
+        }
+        to {
+          text-shadow: 
+          0 0 2px #fff,
+          0 0 5px #fff,
+          0 0 15px #ff319b,
+          0 0 25px #ff319b,
+          0 0 35px #ff319b,
+          0 0 45px #ff319b;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
         .quote-container {
-          display: flex;
           width: 100%;
-          background: ${template.theme.bg_color}
-          justify-content: center;
-          border-radius: 35px;
-          border-right: 5px solid;
-          border-top: 3px solid;
-          border-color: ${template.theme.quote_color};
-          padding: 25px;
-          box-shadow: 7px 7px 7px lightblue;
-          ${template.animation.animation};
         }
-        ${template.animation.keyframes}
-      
-        .quote-container h3 {
-          color: ${template.theme.quote_color};
-          font-weight: 900;
-          padding-top: 50px;
-        }
-      
-        .quote-container p {
-          color: ${template.theme.quote_color};
-          padding-top: 20px;
-          font-weight: 400;
-          padding-bottom: 20px;
-        }
-      
-        .quote-container h1 {
-          color: ${template.theme.quote_color};
-        }
-
-        .overlay {
-          position: absolute;
-          z-index: 100;
-          opacity: 0.3;
-          font-size: 15em;
-          top: 0px;
-        }
-
-        @media only screen and (max-width: 600px){
-          .quote-container {
-            width: 100%;
-          }
-        }
-    `;
+      }
+      `;
+      ;
     },
     structure: (template) => {
-      return `
-        <div class="quote-container">
-          <div>
-            <h1 class="overlay">"</h1>
-            <h3>
-              ${template.quote}
-            </h3>
-            <p>${
-              template.author === "Unknown" ? "Anonymous" : template.author
-            }</p>
-          </div>
-        </div>
-      `;
+      return `<div class="main-container">
+                  <div class="quote-container">
+                      <h3>${template.quote}</h3>
+                      <p>${
+                        template.author === "Unknown"
+                          ? "Anonymous"
+                          : template.author
+                      }</p>
+                  </div>
+                </div>` 
+      ;
     },
   },
 };
