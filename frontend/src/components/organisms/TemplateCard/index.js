@@ -43,19 +43,22 @@ const TemplateCard = (props) => {
   const file = new Blob([getTemplate(template)], { type: "image/svg+xml" });
   const url = URL.createObjectURL(file);
 
-  const copyToClipboard = () => {
-    if (navigator.clipboard)
-      navigator.clipboard
-        .writeText("![Quote](" + quoteUrl + ")")
-        .then(() => {
-          setSnackbarMessage("Copied to Clipboard!");
-          setShowSnackbar(true);
-        })
-        .catch(() => {
-          setSnackbarMessage("Unable to copy");
-          setShowSnackbar(true);
-        });
+  const copyToClipboard = async () => {
+    try {
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText("![Quote](" + quoteUrl + ")");
+        setSnackbarMessage("Copied to Clipboard!");
+        setShowSnackbar(true);
+      } else {
+        throw new Error("Clipboard API not available");
+      }
+    } catch (error) {
+      console.error("Error copying to clipboard:", error);
+      setSnackbarMessage("Unable to copy");
+      setShowSnackbar(true);
+    }
   };
+  
 
   const handleSnackbarClose = () => {
     setShowSnackbar(false);

@@ -30,18 +30,28 @@ const useStyles = makeStyles({
 
 const ContributorsCard = () => {
   const [listOfContributors,setListOfContributors] = useState([]);
+
   useEffect(()=>{
-      fetch(contributorsUrl)
-      .then((res)=>res.json())
-      .then((data)=>{
-        setListOfContributors(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching contributors:', error);
-      });
+    fetchContributors();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
+  const fetchContributors = async () => {
+    try {
+      const res = await fetch(contributorsUrl);
+      if (!res.ok) {
+        throw new Error('Failed to fetch contributors');
+      }
+      const data = await res.json();
+      setListOfContributors(data);
+      console.log(listOfContributors);
+    } catch (error) {
+      console.error('Error fetching contributors:', error);
+    }
+  };
+
   const classes = useStyles();
+
   return (
     <div
       style={{
@@ -63,7 +73,7 @@ const ContributorsCard = () => {
           <Typography className={classes.pos} color="textSecondary">
             To our {listOfContributors.length} contributors for helping in
             <br />
-            bringing this project to life            
+            bringing this project to life              
           </Typography>
 
           <div style={{display:'flex',alignItems:'center'}}>

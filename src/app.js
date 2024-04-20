@@ -7,7 +7,7 @@ const path = require("path");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
-const initiateServer = () => {
+const initiateServer = async() => {
 
     const app = express();
 
@@ -46,7 +46,8 @@ const initiateServer = () => {
 
     // Serve SwaggerUi docs
     
-    const specs = swaggerJsdoc(options);
+    const specs = await swaggerJsdoc(options);
+    
     app.use(
       "/api-docs",
       swaggerUi.serve,
