@@ -22,6 +22,6 @@ Use `?font=FONT_NAME` parameter like so :-
 
 ![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&font=Redressed)
 
-- AlbertSans <br>
+- Architect <br>
 
 ![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&font=Architect)
