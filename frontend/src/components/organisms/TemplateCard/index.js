@@ -45,20 +45,20 @@ const TemplateCard = (props) => {
 
   const copyToClipboard = async () => {
     try {
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText("![Quote](" + quoteUrl + ")");
-        setSnackbarMessage("Copied to Clipboard!");
-        setShowSnackbar(true);
-      } else {
+      if (!navigator.clipboard) {
         throw new Error("Clipboard API not available");
       }
+
+      await navigator.clipboard.writeText("![Quote](" + quoteUrl + ")");
+      setSnackbarMessage("Copied to Clipboard!");
+      setShowSnackbar(true);
     } catch (error) {
       console.error("Error copying to clipboard:", error);
       setSnackbarMessage("Unable to copy");
       setShowSnackbar(true);
     }
   };
-  
+
 
   const handleSnackbarClose = () => {
     setShowSnackbar(false);

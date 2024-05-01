@@ -44,7 +44,6 @@ const ContributorsCard = () => {
       }
       const data = await res.json();
       setListOfContributors(data);
-      console.log(listOfContributors);
     } catch (error) {
       console.error('Error fetching contributors:', error);
     }
