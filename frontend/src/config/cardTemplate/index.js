@@ -52,6 +52,7 @@ export const fonts = [
   'Gabrielle',
   'Redressed',
   'Calligraffitti',
+  'Architect'
 ];
 export const colorValues = [
   "red",
