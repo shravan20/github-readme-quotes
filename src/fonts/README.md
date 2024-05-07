@@ -21,3 +21,7 @@ Use `?font=FONT_NAME` parameter like so :-
 - Redressed <br>
 
 ![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&font=Redressed)
+
+- Architect <br>
+
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?theme=dark&font=Architect)
