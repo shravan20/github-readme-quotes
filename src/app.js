@@ -57,12 +57,22 @@ async function swaggerDocs(app) {
     apis: ["./src/api/routes/quotes-router.js"],
   };
 
+  // Define custom CSS and JavaScript URLs for Swagger UI
+  const customCssUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css';
+  const customJsUrls = [
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js',
+  ];
+
   const specs = await swaggerJsdoc(options);
 
   app.use(
     "/api-docs",
     swaggerUi.serve,
-    swaggerUi.setup(specs)
+    swaggerUi.setup(specs, {
+      customCssUrl,
+      customJs: customJsUrls,
+    })
   );
 }
 
