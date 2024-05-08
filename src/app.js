@@ -21,6 +21,7 @@ const initiateServer = async () => {
 
   // Serve SwaggerUi docs
   await swaggerDocs(app);
+  app.use(express.static(__dirname));
 
   app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "../", "frontend", "/", "build", "index.html"));
@@ -36,7 +37,7 @@ async function swaggerDocs(app) {
       openapi: "3.0.0",
       info: {
         title: "GitHub Readme Quotes",
-        version: "0.1.0",
+        version: "1.9.0",
         description: "Dynamic quote generator for your GitHub readmes | Give a poetic touch to readmes",
         license: {
           name: "MIT"
@@ -45,7 +46,12 @@ async function swaggerDocs(app) {
       servers: [
         {
           url: "https://github-readme-quotes-bay.vercel.app/",
+          description: "Production server"
         },
+        {
+          url: `http://localhost:${port}/`,
+          description: "Local development server"
+        }
       ],
     },
     apis: ["./src/api/routes/quotes-router.js"],
