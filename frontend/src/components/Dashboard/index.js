@@ -14,7 +14,8 @@ import MoonIcon from '../../assets/moon.svg';
 import LightIcon from '../../assets/sun.svg';
 import Home from '../Pages/Home';
 import DiscordButton from './discord';
-function ElevationScroll(props) {
+
+const ElevationScroll = (props) => {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
     // will default to window.
@@ -30,7 +31,7 @@ function ElevationScroll(props) {
     });
 }
 
-function Dashboard(props) {
+const Dashboard = (props) => {
     const [isDark, setIsDark] = useState(false);
     const theme = isDark
         ? createTheme(DarkTheme)
