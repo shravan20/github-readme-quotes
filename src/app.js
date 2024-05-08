@@ -64,15 +64,15 @@ async function swaggerDocs(app) {
     'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js',
   ];
 
-  const specs = await swaggerJsdoc(options, {
-    customCssUrl,
-    customJs: customJsUrls,
-  });
+  const specs = await swaggerJsdoc(options);
 
   app.use(
     "/api-docs",
     swaggerUi.serve,
-    swaggerUi.setup(specs)
+    swaggerUi.setup(specs, {
+      customCssUrl,
+      customJs: customJsUrls,
+    })
   );
 }
 
