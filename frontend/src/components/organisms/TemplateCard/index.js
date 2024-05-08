@@ -14,12 +14,12 @@ import mainLayouts from "../../../util/layouts";
 import mainAnimations from "../../../util/animation";
 import mainThemes from "../../../util/themes";
 import mainFonts from "../../../util/fonts";
-
+import { serverUrl } from "../../Constants/urlConfig";
 const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [isImageLoaded, setImageLoaded] = useState(false);
-  const originUrl = window.location.origin;
+  const originUrl = serverUrl; // Note: PORT 3004 since in server is served via that port. Frontend independently served on port 3000
 
   const template = new Template();
   const data = {
@@ -43,19 +43,22 @@ const TemplateCard = (props) => {
   const file = new Blob([getTemplate(template)], { type: "image/svg+xml" });
   const url = URL.createObjectURL(file);
 
-  const copyToClipboard = () => {
-    if(navigator.clipboard)
-    navigator.clipboard
-      .writeText("![Quote](" + quoteUrl + ")")
-      .then(() => {
-        setSnackbarMessage("Copied to Clipboard!");
-        setShowSnackbar(true);
-      })
-      .catch(() => {
-        setSnackbarMessage("Unable to copy");
-        setShowSnackbar(true);
-      });
+  const copyToClipboard = async () => {
+    try {
+      if (!navigator.clipboard) {
+        throw new Error("Clipboard API not available");
+      }
+
+      await navigator.clipboard.writeText("![Quote](" + quoteUrl + ")");
+      setSnackbarMessage("Copied to Clipboard!");
+      setShowSnackbar(true);
+    } catch (error) {
+      console.error("Error copying to clipboard:", error);
+      setSnackbarMessage("Unable to copy");
+      setShowSnackbar(true);
+    }
   };
+
 
   const handleSnackbarClose = () => {
     setShowSnackbar(false);
@@ -72,7 +75,7 @@ const TemplateCard = (props) => {
   }, [quoteUrl]);
 
   return (
-    <Paper style={{ padding: "10px" ,width: "100%", height: "100%"}}>
+    <Paper style={{ padding: "10px", width: "100%", height: "100%" }}>
       <div style={{ textAlign: "center" }}>
         <img
           src={url}
