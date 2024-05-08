@@ -21,6 +21,7 @@ const initiateServer = async () => {
 
   // Serve SwaggerUi docs
   await swaggerDocs(app);
+  app.use(express.static(__dirname));
 
   app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "../", "frontend", "/", "build", "index.html"));
@@ -48,7 +49,7 @@ async function swaggerDocs(app) {
           description: "Production server"
         },
         {
-          url: `http://localhost:${port}/"`,
+          url: `http://localhost:${port}/`,
           description: "Local development server"
         }
       ],
