@@ -11,7 +11,7 @@ import {
 import getTemplate from "../../../util/template/getTemplate";
 import Template from "../../../util/template/Template";
 import mainLayouts from "../../../util/layouts";
-import mainAnimations from "../../../util/animation";
+import mainAnimations from "../../../../../util/animation/animation";
 import mainThemes from "../../../util/themes";
 import mainFonts from "../../../util/fonts";
 import { serverUrl } from "../../Constants/urlConfig";
