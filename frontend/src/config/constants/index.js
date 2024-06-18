@@ -1,3 +1,3 @@
 export const dashConstants = {
-    APP_NAME : 'Github Dynamic Quotes for Readme'
+  APP_NAME: "Github Dynamic Quotes for Readme",
 };
