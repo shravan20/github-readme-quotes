@@ -86,3 +86,4 @@ export const colorValues = [
   "skyblue",
   "mintgreen"
 ];
+export const quoteTypes = ['random', 'quote-for-the-day'];
