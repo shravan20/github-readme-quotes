@@ -15,6 +15,7 @@ import mainAnimations from "../../../util/animation";
 import mainThemes from "../../../util/themes";
 import mainFonts from "../../../util/fonts";
 import { serverUrl } from "../../Constants/urlConfig";
+
 const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -64,7 +65,7 @@ const TemplateCard = (props) => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&fontColor=${props.fontColor}&bgColor=${props.bgColor}`;
+  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&fontColor=${props.fontColor}&bgColor=${props.bgColor}&quoteType=${props.quoteType}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;

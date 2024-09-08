@@ -50,6 +50,12 @@
  *         - general
  *         - programming
  *         - success
+ *     quoteType:
+ *       type: string
+ *       default: random
+ *       enum:
+ *         - random
+ *         - quote-for-the-day
  */
 
 
@@ -92,6 +98,11 @@
  *           schema:
  *             $ref: "#/components/schemas/quoteCategory"
  *           description: Chooses a quote from the specified category.
+ *         - name: quoteType
+ *           in: query
+ *           schema:
+ *             $ref: "#/components/schemas/quoteType"
+ *           description: Chooses a quote type from the specified category.
  *       responses:
  *         200:
  *           description: Successful response
