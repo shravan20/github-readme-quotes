@@ -65,7 +65,12 @@ const TemplateCard = (props) => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&fontColor=${props.fontColor}&bgColor=${props.bgColor}&quoteType=${props.quoteType}`;
+  let quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&quoteType=${props.quoteType}`;
+  if (props.bgColor) {
+    quoteUrl += `&bgColor=${props.bgColor}`
+  } if (props.fontColor) {
+    quoteUrl += `&fontColor=${props.fontColor}`
+  }
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;
