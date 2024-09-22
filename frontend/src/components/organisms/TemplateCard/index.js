@@ -28,7 +28,7 @@ const TemplateCard = (props) => {
     author: "Open Source",
   };
 
-  const theme = mainThemes[props.theme];
+  const theme = { ...mainThemes[props.theme] };
   if (props.fontColor) {
     theme.quote_color = props.fontColor;
   }
