@@ -65,12 +65,16 @@ const TemplateCard = (props) => {
     setShowSnackbar(false);
   };
 
-  let quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&quoteType=${props.quoteType}`;
-  if (props.bgColor) {
-    quoteUrl += `&bgColor=${props.bgColor}`
-  } if (props.fontColor) {
-    quoteUrl += `&fontColor=${props.fontColor}`
-  }
+  const params = new URLSearchParams({
+    theme: props.theme,
+    animation: props.animation,
+    layout: props.layout,
+    font: props.font,
+    quoteType: props.quoteType,
+    ...(props.bgColor && { bgColor: props.bgColor }),
+    ...(props.fontColor && { fontColor: props.fontColor })
+  });
+  const quoteUrl = `${originUrl}/quote?${params.toString()}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;

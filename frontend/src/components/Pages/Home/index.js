@@ -11,8 +11,8 @@ const Home = () => {
     const [animation, setAnimation] = useState(animations[0]);
     const [layout, setLayout] = useState(layouts[0]);
     const [font, setFont] = useState(fonts[0]);
-    const [fontColor, setFontColor] = useState();
-    const [bgColor, setBgColor] = useState();
+    const [fontColor, setFontColor] = useState(null);
+    const [bgColor, setBgColor] = useState(null);
     const [quoteType, setQuoteType] = useState("random");
 
     return (
