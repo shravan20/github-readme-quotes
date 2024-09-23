@@ -11,8 +11,8 @@ const Home = () => {
     const [animation, setAnimation] = useState(animations[0]);
     const [layout, setLayout] = useState(layouts[0]);
     const [font, setFont] = useState(fonts[0]);
-    const [fontColor, setFontColor] = useState("white");
-    const [bgColor, setBgColor] = useState("black");
+    const [fontColor, setFontColor] = useState(null);
+    const [bgColor, setBgColor] = useState(null);
     const [quoteType, setQuoteType] = useState("random");
 
     return (
@@ -94,8 +94,7 @@ const Home = () => {
                         value={fontColor}
                         style={{ width: 300 }}
                         onChange={(_event, newValue) => {
-                            if (newValue != null)
-                                setFontColor(newValue)
+                            setFontColor(newValue)
                         }}
                         renderInput={(params) => <TextField {...params} label="Font color" placeholder="Select a color" variant="outlined" />}
                     />
@@ -107,8 +106,7 @@ const Home = () => {
                         value={bgColor}
                         style={{ width: 300 }}
                         onChange={(_event, newValue) => {
-                            if (newValue != null)
-                                setBgColor(newValue)
+                            setBgColor(newValue)
                         }}
                         renderInput={(params) => <TextField {...params} label="Background color" placeholder="Select a color" variant="outlined" />}
                     />
