@@ -28,7 +28,7 @@ const TemplateCard = (props) => {
     author: "Open Source",
   };
 
-  const theme = mainThemes[props.theme];
+  const theme = { ...mainThemes[props.theme] };
   if (props.fontColor) {
     theme.quote_color = props.fontColor;
   }
@@ -65,7 +65,16 @@ const TemplateCard = (props) => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&fontColor=${props.fontColor}&bgColor=${props.bgColor}&quoteType=${props.quoteType}`;
+  const params = new URLSearchParams({
+    theme: props.theme,
+    animation: props.animation,
+    layout: props.layout,
+    font: props.font,
+    quoteType: props.quoteType,
+    ...(props.bgColor && { bgColor: props.bgColor }),
+    ...(props.fontColor && { fontColor: props.fontColor })
+  });
+  const quoteUrl = `${originUrl}/quote?${params.toString()}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;
