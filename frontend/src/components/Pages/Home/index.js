@@ -5,6 +5,7 @@ import { themes, animations, layouts, fonts, colorValues, quoteTypes } from '../
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import ContributorsCard from '../../ContributorsCard/ContributorCard'
+import Footer from '../../Footer/Footer';
 const Home = () => {
 
     const [theme, setTheme] = useState(themes[0]);
@@ -146,6 +147,7 @@ const Home = () => {
                 }
             </Grid>
             <ContributorsCard />
+            <Footer/>
         </React.Fragment>
     )
 }
