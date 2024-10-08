@@ -9,6 +9,10 @@ import Paper from '@material-ui/core/Paper';
 import { useForm } from '@formspree/react';
 import ResponseSuccess from "./ResponseSuccess";
 
+
+const GITHUB_REPO_URL = process.env.REACT_APP_GITHUB_REPO_URL || 'https://github.com/shravan20/github-readme-quotes';
+const CONTACT_EMAIL = process.env.REACT_APP_CONTACT_EMAIL || 'shravan@ohmyscript.com';
+
 const Footer = () => {
     const [state, handleSubmitFormspree] = useForm(process.env.REACT_APP_FORMSPREE_FORM_CODE);
     return (
@@ -34,9 +38,8 @@ const Footer = () => {
                             <Grid item xs={12}>
                                 <TextField id="message" label="Message" variant="outlined" name="message" fullWidth multiline required style={{ marginBottom: '10px' }} />
                             </Grid>
-                            {state.succeeded && <Typography style={{ color: 'green' }}>Your response has been recorded successfully!</Typography>}
                             <Grid item xs={12}>
-                                <Button type="submit" disabled={false} variant="contained" color="primary" size="large" fullWidth>
+                                <Button type="submit" disabled={state.submitting} variant="contained" color="primary" size="large" fullWidth>
                                     SEND US A MESSAGE
                                 </Button>
                             </Grid>
@@ -51,13 +54,13 @@ const Footer = () => {
                             Sitemap
                         </Box>
                     </Typography>
-                    <Link href="https://github.com/shravan20/github-readme-quotes" display="block" style={{ marginBottom: '10px' }} color="textSecondary">
+                    <Link href={`${GITHUB_REPO_URL}`} display="block" style={{ marginBottom: '10px' }} color="textSecondary">
                         About Us
                     </Link>
-                    <Link href="mailto:shravan@ohmyscript.com" display="block" style={{ marginBottom: '10px' }} color="textSecondary">
+                    <Link href={`mailto:${CONTACT_EMAIL}`} display="block" style={{ marginBottom: '10px' }} color="textSecondary">
                         Contact Us
                     </Link>
-                    <Link href="https://github.com/shravan20/github-readme-quotes/blob/main/LICENSE" display="block" style={{ marginBottom: '10px' }} color="textSecondary">
+                    <Link href={`${GITHUB_REPO_URL}/blob/main/LICENSE`} display="block" style={{ marginBottom: '10px' }} color="textSecondary">
                         Terms and Conditions
                     </Link>
                 </Paper>
