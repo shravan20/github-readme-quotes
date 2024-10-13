@@ -26,13 +26,10 @@ const getQuote = async (quoteObj) => {
 
       if (apiResponse.length > 0) {
         apiResponse = apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))];
-        if (!apiResponse.quote && !apiResponse.author) {
-          apiResponse = await requestApi(url);
-        } else {
+        
+        if (apiResponse.quote && apiResponse.author) {
           isCustomQuote = true;
         }
-      } else {
-        apiResponse = await requestApi(url);
       }
     }
     else if (quoteCategory) {
@@ -40,13 +37,15 @@ const getQuote = async (quoteObj) => {
       apiResponse = apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))];
       isCustomQuote = true;
     }
-    else {
+    
+    if(!isCustomQuote) {
       apiResponse = await requestApi(url);
+      apiResponse = apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))];
     }
 
     const template = new Template();
     template.setTheme(theme);
-    template.setData(isCustomQuote ? apiResponse : apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))]);
+    template.setData(apiResponse);
     template.setFont(font);
     template.setAnimation(animation);
     template.setBorderColor(borderColor);
