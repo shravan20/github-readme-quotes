@@ -21,11 +21,12 @@ const TemplateCard = (props) => {
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [isImageLoaded, setImageLoaded] = useState(false);
   const originUrl = serverUrl; // Note: PORT 3004 since in server is served via that port. Frontend independently served on port 3000
+  const author = "Open Source";
 
   const template = new Template();
   const data = {
     quote: "This is going to be the Github quote for your README",
-    author: "Open Source",
+    author: props.quoteAuthor ?? author,
   };
 
   const theme = { ...mainThemes[props.theme] };
@@ -72,7 +73,8 @@ const TemplateCard = (props) => {
     font: props.font,
     quoteType: props.quoteType,
     ...(props.bgColor && { bgColor: props.bgColor }),
-    ...(props.fontColor && { fontColor: props.fontColor })
+    ...(props.fontColor && { fontColor: props.fontColor }),
+    ...(props.quoteAuthor && { author: props.quoteAuthor })
   });
   const quoteUrl = `${originUrl}/quote?${params.toString()}`;
 
