@@ -12,10 +12,16 @@ getQuoteIndex = (apiResponseLength, quoteType) => {
   return (quoteType === "quote-for-the-day" ? epoch % apiResponseLength : Math.random() * apiResponseLength);
 }
 
+const filterQuotesByAuthor = (quotes, author) => {
+  const quotesFiltered = quotes.filter((quote) => quote?.author?.toString().toLowerCase().trim() === author.toString().toLowerCase().trim());
+
+  return quotesFiltered.length > 0 ? quotesFiltered : quotes;
+}
+
 const getQuote = async (quoteObj) => {
 
   try {
-    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType, borderColor } = quoteObj;
+    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType, borderColor, author } = quoteObj;
     let apiResponse;
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
     let isCustomQuote = false;
@@ -23,6 +29,10 @@ const getQuote = async (quoteObj) => {
     if (isValidUrl) {
       //url from params is valid, proceed to verfiy the data
       apiResponse = await requestApi(customQuotesUrl);
+
+      if (author) {
+        apiResponse = filterQuotesByAuthor(apiResponse, author);
+      }
 
       if (apiResponse.length > 0) {
         apiResponse = apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))];
@@ -34,12 +44,23 @@ const getQuote = async (quoteObj) => {
     }
     else if (quoteCategory) {
       apiResponse = quoteFromCategory[quoteCategory];
+
+      if (author) {
+        apiResponse = filterQuotesByAuthor(apiResponse, author);
+      }
+
       apiResponse = apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))];
+      
       isCustomQuote = true;
     }
     
     if(!isCustomQuote) {
       apiResponse = await requestApi(url);
+
+      if (author) {
+        apiResponse = filterQuotesByAuthor(apiResponse, author);
+      }
+
       apiResponse = apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))];
     }
 
