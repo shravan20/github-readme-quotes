@@ -116,11 +116,15 @@
 
 
 const controllers = require('../controllers/quotesController');
+const authorsController = require('../controllers/authorsController');
 
 const defineRoutes = (app) => {
 
     // get a quote
     app.get('/quote', controllers.quoteController);
+
+    // get authors
+    app.get('/authors', authorsController.authorsController);
 
 }
 
