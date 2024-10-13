@@ -79,6 +79,46 @@ const getQuote = async (quoteObj) => {
   }
 };
 
+const getAuthors = async (quoteObj) => {
+  try {
+    let {quotesUrl, quoteCategory} = quoteObj;
+    let apiResponse;
+    let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
+    let isCustomQuote = false;
+
+    if (isValidUrl) {
+      //url from params is valid, proceed to verfiy the data
+      apiResponse = await requestApi(customQuotesUrl);
+
+      if (apiResponse.length > 0) {
+        if (apiResponse[0].author) {
+          isCustomQuote = true;
+        }
+      }
+    }
+    else if (quoteCategory) {
+      apiResponse = quoteFromCategory[quoteCategory];
+      isCustomQuote = true;
+    }
+    
+    if(!isCustomQuote) {
+      apiResponse = await requestApi(url);
+    }
+
+    if (!apiResponse || apiResponse.length === 0) {
+      return [];
+    } 
+
+    // Get array of authors in alphabetical order and without duplicates
+    const authors = [...new Set(apiResponse.map(quote => quote.author).sort())];
+
+    return authors;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   getQuote,
+  getAuthors
 };
