@@ -5,6 +5,8 @@ import { themes, animations, layouts, fonts, colorValues, quoteTypes } from '../
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import ContributorsCard from '../../ContributorsCard/ContributorCard'
+import useQuoteAuthors from '../../../util/authors';
+
 const Home = () => {
 
     const [theme, setTheme] = useState(themes[0]);
@@ -14,6 +16,9 @@ const Home = () => {
     const [fontColor, setFontColor] = useState(null);
     const [bgColor, setBgColor] = useState(null);
     const [quoteType, setQuoteType] = useState("random");
+    const [quoteAuthor, setQuoteAuthor] = useState(null);
+
+    const { quoteAuthors, loadingQuoteAuthors } = useQuoteAuthors();
 
     return (
         <React.Fragment>
@@ -126,11 +131,25 @@ const Home = () => {
                     />
                 </Grid>
 
+                <Grid item xs={12} sm={6} lg={3}>
+                    <Autocomplete
+                        id="author"
+                        options={quoteAuthors}
+                        value={quoteAuthor}
+                        style={{ width: 300 }}
+                        loading={loadingQuoteAuthors}
+                        onChange={(_event, newValue) => {
+                            setQuoteAuthor(newValue)
+                        }}
+                        renderInput={(params) => <TextField {...params} label="Author" placeholder="Select an author" variant="outlined" />}
+                    />
+                </Grid>
+
             </Grid>
 
             <Grid container spacing={4}>
                 <Grid item xs={12} style={{ margin: '20px' }}>
-                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} quoteType={quoteType} />
+                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} quoteType={quoteType} quoteAuthor={quoteAuthor}/>
                 </Grid>
                 <Grid item xs={12}>
                     <Typography align="center">Other layouts</Typography>
@@ -139,7 +158,7 @@ const Home = () => {
                     layouts.filter((item) => item !== layout).map((restLayout) => {
                         return (
                             <Grid key={restLayout} item xs={12} sm={12} md={6}>
-                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor} quoteType={quoteType} />
+                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor} quoteType={quoteType} quoteAuthor={quoteAuthor}/>
                             </Grid>
                         )
                     })
