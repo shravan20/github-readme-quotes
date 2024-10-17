@@ -37,7 +37,7 @@ const Home = () => {
                         id="theme"
                         options={themes}
                         value={theme}
-                        style={{ width: 300 }}
+                        style={{ width: 300, margin: '0 auto' }}
                         onChange={(_event, newValue) => {
                             if (newValue != null)
                                 setTheme(newValue)
@@ -54,7 +54,7 @@ const Home = () => {
                             if (newValue != null)
                                 setLayout(newValue)
                         }}
-                        style={{ width: 300 }}
+                        style={{ width: 300, margin: '0 auto' }}
                         renderInput={(params) => <TextField {...params} label="Layout" variant="outlined" />}
                     />
                 </Grid>
@@ -67,7 +67,7 @@ const Home = () => {
                             if (newValue != null)
                                 setAnimation(newValue)
                         }}
-                        style={{ width: 300 }}
+                        style={{ width: 300, margin: '0 auto' }}
                         renderInput={(params) => <TextField {...params} label="Animation" variant="outlined" />}
                     />
 
@@ -78,7 +78,7 @@ const Home = () => {
                         id="font"
                         options={fonts}
                         value={font}
-                        style={{ width: 300 }}
+                        style={{ width: 300, margin: '0 auto' }}
                         onChange={(_event, newValue) => {
                             if (newValue != null)
                                 setFont(newValue)
@@ -92,7 +92,7 @@ const Home = () => {
                         id="font-color"
                         options={colorValues}
                         value={fontColor}
-                        style={{ width: 300 }}
+                        style={{ width: 300, margin: '0 auto' }}
                         onChange={(_event, newValue) => {
                             setFontColor(newValue)
                         }}
@@ -104,7 +104,7 @@ const Home = () => {
                         id="bg-color"
                         options={colorValues}
                         value={bgColor}
-                        style={{ width: 300 }}
+                        style={{ width: 300, margin: '0 auto' }}
                         onChange={(_event, newValue) => {
                             setBgColor(newValue)
                         }}
@@ -117,7 +117,7 @@ const Home = () => {
                         id="quote-type"
                         options={quoteTypes}
                         value={quoteType}
-                        style={{ width: 300 }}
+                        style={{ width: 300, margin: '0 auto' }}
                         onChange={(_event, newValue) => {
                             if (newValue != null)
                                 setQuoteType(newValue)
@@ -129,7 +129,7 @@ const Home = () => {
             </Grid>
 
             <Grid container spacing={4}>
-                <Grid item xs={12} style={{ margin: '20px' }}>
+                <Grid item xs={12} style={{ marginTop: '20px' }}>
                     <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} quoteType={quoteType} />
                 </Grid>
                 <Grid item xs={12}>
