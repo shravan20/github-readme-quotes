@@ -18,6 +18,8 @@ const quoteController = async (req, res, next) => {
       theme.bg_color = bgColor;
     }
 
+    let borderColor = req.query.borderColor || 'rgba(0, 0, 0, 0.2)';
+
     let animation = animations[req.query.animation] ? animations[req.query.animation]
       : animations["default"];
 
@@ -39,9 +41,9 @@ const quoteController = async (req, res, next) => {
       quotesUrl,
       quoteCategory,
       font,
-      quoteType
+      quoteType,
+      borderColor
     }
-
 
     let svgResponse = await quoteService.getQuote(quoteObject);
 
