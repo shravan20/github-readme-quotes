@@ -243,6 +243,20 @@ You can also provide a category to fetch the list of quotes based on certain cat
 
 ---
 
+- ### Border Color
+
+You can customize the border color of your templates. Please note that this feature is available only with the Default layout.
+
+Use `?borderColor=COLOR` paramater as shown below
+
+```md
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?borderColor=green)
+```
+
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?borderColor=green)
+
+---
+
 ## Swagger Docs
 
 To view Swagger docs, run `npm start` and open ![localhost:3002/api-docs](localhost:3002/api-docs).
