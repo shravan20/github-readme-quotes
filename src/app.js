@@ -7,57 +7,76 @@ const path = require("path");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
-const initiateServer = () => {
+const initiateServer = async () => {
 
-    const app = express();
+  const app = express();
 
-    // Serve SwaggerUi docs
-    const swaggerUi = require('swagger-ui-express');
-    const swaggerDocument = require('./swagger.json');
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: false }))
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: false }))
 
-    app.use(morgan('dev'));
-    app.use(express.static(path.join(__dirname, "../","frontend", "/", "build")));
-    routes(app);
+  app.use(morgan('dev'));
+  app.use(express.static(path.join(__dirname, "../", "frontend", "/", "build")));
+  routes(app);
 
-    app.get("/*", (req, res) => {
-        res.sendFile(path.join(__dirname, "../","frontend", "/", "build", "index.html"));
-    });
+  // Serve SwaggerUi docs
+  await swaggerDocs(app);
+  app.use(express.static(__dirname));
 
-    const options = {
-      definition: {
-        openapi: "3.0.0",
-        info: {
-          title: "GitHub Readme Quotes",
-          version: "0.1.0",
-          description:
-            "Dynamic quote generator for your GitHub readmes | Give a poetic touch to readmes",
-          license: {
-            name: "MIT"
-          }
-        },
-        servers: [
-          {
-            url: "https://github-readme-quotes.herokuap.com/v1",
-          },
-        ],
-      },
-      apis: ["./src/api/routes/quotes-router.js"],
-    };
+  app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../", "frontend", "/", "build", "index.html"));
+  });
 
-    const specs = swaggerJsdoc(options);
-    app.use(
-      "/api-docs",
-      swaggerUi.serve,
-      swaggerUi.setup(specs)
-    );
-    app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
+  app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
 
 }
 
+async function swaggerDocs(app) {
+  const options = {
+    definition: {
+      openapi: "3.0.0",
+      info: {
+        title: "GitHub Readme Quotes",
+        version: "1.9.0",
+        description: "Dynamic quote generator for your GitHub readmes | Give a poetic touch to readmes",
+        license: {
+          name: "MIT"
+        }
+      },
+      servers: [
+        {
+          url: "https://github-readme-quotes-bay.vercel.app/",
+          description: "Production server"
+        },
+        {
+          url: `http://localhost:${port}/`,
+          description: "Local development server"
+        }
+      ],
+    },
+    apis: ["./src/api/routes/quotes-router.js"],
+  };
+
+  // Define custom CSS and JavaScript URLs for Swagger UI
+  const customCssUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css';
+  const customJsUrls = [
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js',
+  ];
+
+  const specs = await swaggerJsdoc(options);
+
+  app.use(
+    "/api-docs",
+    swaggerUi.serve,
+    swaggerUi.setup(specs, {
+      customCssUrl,
+      customJs: customJsUrls,
+    })
+  );
+}
+
+
 module.exports = {
-    initiateServer
+  initiateServer
 };

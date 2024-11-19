@@ -52,4 +52,38 @@ export const fonts = [
   'Gabrielle',
   'Redressed',
   'Calligraffitti',
+  'Architect'
 ];
+export const colorValues = [
+  "red",
+  "blue",
+  "green",
+  "yellow",
+  "purple",
+  "orange",
+  "black",
+  "white",
+  "pink",
+  "brown",
+  "gray",
+  "cyan",
+  "magenta",
+  "indigo",
+  "teal",
+  "lavender",
+  "maroon",
+  "coral",
+  "gold",
+  "silver",
+  "lime",
+  "olive",
+  "turquoise",
+  "violet",
+  "beige",
+  "navy",
+  "plum",
+  "salmon",
+  "skyblue",
+  "mintgreen"
+];
+export const quoteTypes = ['random', 'quote-for-the-day'];

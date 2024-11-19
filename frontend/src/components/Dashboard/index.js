@@ -6,15 +6,17 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Container from '@material-ui/core/Container';
 import { IconButton, Paper } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { dashConstants } from '../../config/constants';
 import { LightTheme, DarkTheme } from '../../util/themes/GlobalThemes';
 import { getAppBarStyles } from '../../util/styles/componentStyles';
 import MoonIcon from '../../assets/moon.svg';
 import LightIcon from '../../assets/sun.svg';
 import Home from '../Pages/Home';
-
-function ElevationScroll(props) {
+import DiscordButton from './discord';
+import styleNav from '../../styles/styleNav.css'
+import { FaProductHunt } from "react-icons/fa";
+const ElevationScroll = (props) => {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
     // will default to window.
@@ -30,11 +32,11 @@ function ElevationScroll(props) {
     });
 }
 
-function Dashboard(props) {
+const Dashboard = (props) => {
     const [isDark, setIsDark] = useState(false);
     const theme = isDark
-        ? createMuiTheme(DarkTheme)
-        : createMuiTheme(LightTheme);
+        ? createTheme(DarkTheme)
+        : createTheme(LightTheme);
     const classes = getAppBarStyles();
 
     function handleThemeChange() {
@@ -52,26 +54,30 @@ function Dashboard(props) {
                                     variant='h6'
                                     className={classes.title}
                                 >
-                                    {dashConstants.APP_NAME}
+                                    <div className='text'>
+                                        {dashConstants.APP_NAME}
+                                    </div>
                                 </Typography>
-                                <IconButton>
-                                    <a
-                                        href='https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes'
-                                        target='_blank'
-                                        rel='noreferrer'
-                                    >
-                                        <img
-                                            src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=276934&theme=light'
-                                            alt='Dynamic GitHub Profile Readme Quotes - Everlasting Poetic Touch to GitHub Profiles for everyone | Product Hunt'
-                                            style={{
-                                                width: ' 250px',
-                                                height: '54px',
-                                            }}
-                                            width='250'
-                                            height='54'
-                                        />
-                                    </a>
-                                </IconButton>
+                                <div className='center'>
+                                    <DiscordButton />
+                                    
+                                        <a className='p'
+                                            href='https://www.producthunt.com/posts/dynamic-github-profile-readme-quotes?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-dynamic-github-profile-readme-quotes'
+                                            target='_blank'
+                                            rel='noreferrer'
+                                        >
+                                            <FaProductHunt className='product-sm'/>
+                                            <img
+                                                className='product'
+                                                src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=276934&theme=light'
+                                                alt='Dynamic GitHub Profile Readme Quotes - Everlasting Poetic Touch to GitHub Profiles for everyone | Product Hunt'
+                                               
+                                            />
+
+                                        </a>
+                                   
+
+                                </div>
                                 <IconButton
                                     className={classes.themeIcon}
                                     onClick={handleThemeChange}

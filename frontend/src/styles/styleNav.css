@@ -1,0 +1,39 @@
+.center{
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.p{
+    padding-top: 6px;
+}
+.discord-sm{
+    font-size: 30px;
+}
+.product-sm{
+    font-size: 30px;
+    color: #FF6154;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+@media (min-width:820px) {
+    .discord-sm{
+        display: none;
+    }
+    .product-sm{
+        display: none;
+    }
+}
+@media (max-width:820px){
+    .discord{
+        display: none;
+    }
+    .product{
+        display: none;
+    }
+    .text{
+        font-size:15px;
+    }
+}
