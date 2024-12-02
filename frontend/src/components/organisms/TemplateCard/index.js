@@ -98,18 +98,16 @@ const TemplateCard = (props) => {
           style={{ display: isImageLoaded ? "none" : "" }}
         />
       </div>
-      <Grid container alignContent="center" style={{ margin: "20px" }}>
-        <Grid item sm={8} xs={12}>
-          <TextField fullWidth value={"![Quote](" + quoteUrl + ")"}></TextField>
+      <Grid container spacing={2} alignContent="center" justifyContent="center">
+        <Grid item style={{ flexGrow: 1 }}>
+          <TextField fullWidth value={"![Quote](" + quoteUrl + ")"} />
         </Grid>
-        <Grid item sm={4} xs={12} style={{ textAlign: "center" }}>
+        <Grid item>
           <Button
             variant="contained"
             color="primary"
             disableElevation
-            onClick={() => {
-              copyToClipboard();
-            }}
+            onClick={copyToClipboard}
           >
             Copy Text
           </Button>
