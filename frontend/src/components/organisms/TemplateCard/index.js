@@ -36,10 +36,14 @@ const TemplateCard = (props) => {
     theme.bg_color = props.bgColor;
   }
 
+  const isLayoutDefault = props.layout === 'default';
+  const borderColor = isLayoutDefault && props.borderColor ? props.borderColor : 'rgba(0, 0, 0, 0.2)';
+
   template.setTheme(theme);
   template.setData(data);
   template.setFont(mainFonts[props.font]);
   template.setAnimation(mainAnimations[props.animation]);
+  template.setBorderColor(borderColor);
   template.setLayout(mainLayouts[props.layout]);
   const file = new Blob([getTemplate(template)], { type: "image/svg+xml" });
   const url = URL.createObjectURL(file);
@@ -72,7 +76,8 @@ const TemplateCard = (props) => {
     font: props.font,
     quoteType: props.quoteType,
     ...(props.bgColor && { bgColor: props.bgColor }),
-    ...(props.fontColor && { fontColor: props.fontColor })
+    ...(props.fontColor && { fontColor: props.fontColor }),
+    ...(isLayoutDefault && props.borderColor && { borderColor }),
   });
   const quoteUrl = `${originUrl}/quote?${params.toString()}`;
 
