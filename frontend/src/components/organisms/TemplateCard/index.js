@@ -15,6 +15,7 @@ import mainAnimations from "../../../util/animation";
 import mainThemes from "../../../util/themes";
 import mainFonts from "../../../util/fonts";
 import { serverUrl } from "../../Constants/urlConfig";
+
 const TemplateCard = (props) => {
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -27,7 +28,7 @@ const TemplateCard = (props) => {
     author: "Open Source",
   };
 
-  const theme = mainThemes[props.theme];
+  const theme = { ...mainThemes[props.theme] };
   if (props.fontColor) {
     theme.quote_color = props.fontColor;
   }
@@ -35,33 +36,50 @@ const TemplateCard = (props) => {
     theme.bg_color = props.bgColor;
   }
 
+  const isLayoutDefault = props.layout === 'default';
+  const borderColor = isLayoutDefault && props.borderColor ? props.borderColor : 'rgba(0, 0, 0, 0.2)';
+
   template.setTheme(theme);
   template.setData(data);
   template.setFont(mainFonts[props.font]);
   template.setAnimation(mainAnimations[props.animation]);
+  template.setBorderColor(borderColor);
   template.setLayout(mainLayouts[props.layout]);
   const file = new Blob([getTemplate(template)], { type: "image/svg+xml" });
   const url = URL.createObjectURL(file);
 
-  const copyToClipboard = () => {
-    if (navigator.clipboard)
-      navigator.clipboard
-        .writeText("![Quote](" + quoteUrl + ")")
-        .then(() => {
-          setSnackbarMessage("Copied to Clipboard!");
-          setShowSnackbar(true);
-        })
-        .catch(() => {
-          setSnackbarMessage("Unable to copy");
-          setShowSnackbar(true);
-        });
+  const copyToClipboard = async () => {
+    try {
+      if (!navigator.clipboard) {
+        throw new Error("Clipboard API not available");
+      }
+
+      await navigator.clipboard.writeText("![Quote](" + quoteUrl + ")");
+      setSnackbarMessage("Copied to Clipboard!");
+      setShowSnackbar(true);
+    } catch (error) {
+      console.error("Error copying to clipboard:", error);
+      setSnackbarMessage("Unable to copy");
+      setShowSnackbar(true);
+    }
   };
+
 
   const handleSnackbarClose = () => {
     setShowSnackbar(false);
   };
 
-  const quoteUrl = `${originUrl}/quote?theme=${props.theme}&animation=${props.animation}&layout=${props.layout}&font=${props.font}&fontColor=${props.fontColor}&bgColor=${props.bgColor}`;
+  const params = new URLSearchParams({
+    theme: props.theme,
+    animation: props.animation,
+    layout: props.layout,
+    font: props.font,
+    quoteType: props.quoteType,
+    ...(props.bgColor && { bgColor: props.bgColor }),
+    ...(props.fontColor && { fontColor: props.fontColor }),
+    ...(isLayoutDefault && props.borderColor && { borderColor }),
+  });
+  const quoteUrl = `${originUrl}/quote?${params.toString()}`;
 
   function SlideTransition(prop) {
     return <Slide {...prop} direction="up" />;
@@ -85,18 +103,16 @@ const TemplateCard = (props) => {
           style={{ display: isImageLoaded ? "none" : "" }}
         />
       </div>
-      <Grid container alignContent="center" style={{ margin: "20px" }}>
-        <Grid item sm={8} xs={12}>
-          <TextField fullWidth value={"![Quote](" + quoteUrl + ")"}></TextField>
+      <Grid container spacing={2} alignContent="center" justifyContent="center">
+        <Grid item style={{ flexGrow: 1 }}>
+          <TextField fullWidth value={"![Quote](" + quoteUrl + ")"} />
         </Grid>
-        <Grid item sm={4} xs={12} style={{ textAlign: "center" }}>
+        <Grid item>
           <Button
             variant="contained"
             color="primary"
             disableElevation
-            onClick={() => {
-              copyToClipboard();
-            }}
+            onClick={copyToClipboard}
           >
             Copy Text
           </Button>

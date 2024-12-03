@@ -1,7 +1,12 @@
 const getTemplate = require("../common/getTemplate");
 
-const generateTemplate = (template) => {
-  return getTemplate(template);
+const generateTemplate = async (template) => {
+  try {
+    return await getTemplate(template);
+  } catch (error) {
+    console.error("Error generating template:", error);
+    throw error; 
+  }
 };
 
 module.exports = {

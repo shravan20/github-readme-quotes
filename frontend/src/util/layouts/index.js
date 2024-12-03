@@ -11,7 +11,7 @@ const layouts = {
                   padding: 40px 20px;
                   min-width: 600px;
                   background-color: ${template.theme.bg_color};
-                  border: 1px solid rgba(0, 0, 0, 0.2);
+                  border: 1px solid ${template.borderColor};
                   border-radius: 5px;
                   ${template.animation.animation};
                   }
@@ -43,8 +43,8 @@ const layouts = {
         },
         structure: (template) => {
             return `<div class="container">
-                  <h3 style="color: ${template.theme.quote_color}"> ${template.quote} </h3>
-                  <p style="color: ${template.theme.quote_color}">- ${template.author === "Unknown" ? "Anonymous" : template.author
+                  <h3 > ${template.quote} </h3>
+                  <p >- ${template.author === "Unknown" ? "Anonymous" : template.author
                 } </p>
               </div>`;
         },
@@ -100,7 +100,7 @@ const layouts = {
         structure: (template) => {
             return `<div class="square-brackets-quote">
                           <blockquote>
-                              <p style="color: ${template.theme.quote_color}">${template.quote}</p>
+                              <p >${template.quote}</p>
                               <cite>${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
@@ -215,12 +215,12 @@ const layouts = {
                     <div id="borderRight"></div>
                     <div id="borderBottom"></div>
                     <div id="borderTop"></div>
-                    <span style="color: ${template.theme.quote_color}">${template.author === "Unknown"
+                    <span >${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</span>
                     <blockquote>
-                      <p style="color: ${template.theme.quote_color}"><i>${template.quote}</i></p>
+                      <p ><i>${template.quote}</i></p>
                     </blockquote>
                   </div>`;
         },
@@ -277,8 +277,8 @@ const layouts = {
         structure: (template) => {
             return `<div class="quote">
                     <blockquote>
-                      <p style="color: ${template.theme.quote_color}">${template.quote}</p>
-                      <cite style="color: ${template.theme.quote_color}">${template.author === "Unknown"
+                      <p >${template.quote}</p>
+                      <cite >${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</cite>
@@ -392,8 +392,8 @@ const layouts = {
           <div class="container">
               <div class="quote4">
                     <div class="border"></div>
-                    <div class="txt" style="color: ${template.theme.quote_color}">${template.quote}</div>
-                    <div class="from" style="color: ${template.theme.quote_color}">${template.author === "Unknown"
+                    <div class="txt" >${template.quote}</div>
+                    <div class="from" >${template.author === "Unknown"
                     ? "Anonymous"
                     : template.author
                 }</div>

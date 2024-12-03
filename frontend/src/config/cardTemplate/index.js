@@ -52,6 +52,8 @@ export const fonts = [
   'Gabrielle',
   'Redressed',
   'Calligraffitti',
+  'Architect',
+  'PixelifySans'
 ];
 export const colorValues = [
   "red",
@@ -85,3 +87,4 @@ export const colorValues = [
   "skyblue",
   "mintgreen"
 ];
+export const quoteTypes = ['random', 'quote-for-the-day'];
