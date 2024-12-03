@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Typography, Grid, Tooltip } from '@material-ui/core';
 import TemplateCard from '../../organisms/TemplateCard';
 import { themes, animations, layouts, fonts, colorValues, quoteTypes } from '../../../config/cardTemplate';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import ContributorsCard from '../../ContributorsCard/ContributorCard'
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+    customTooltip: {
+      fontSize: '16px',
+      fontWeight: 'bold'
+    },
+  });
+
 const Home = () => {
 
     const [theme, setTheme] = useState(themes[0]);
@@ -13,7 +22,10 @@ const Home = () => {
     const [font, setFont] = useState(fonts[0]);
     const [fontColor, setFontColor] = useState(null);
     const [bgColor, setBgColor] = useState(null);
+    const [borderColor, setBorderColor] = useState(null);
     const [quoteType, setQuoteType] = useState("random");
+
+    const classes = useStyles();
 
     return (
         <React.Fragment>
@@ -113,6 +125,26 @@ const Home = () => {
                 </Grid>
 
                 <Grid item xs={12} sm={6} lg={3}>
+                    <Tooltip 
+                        title="This option only works with the default layout." 
+                        placement="top" 
+                        arrow 
+                        classes={{ tooltip: classes.customTooltip }}
+                    >
+                        <Autocomplete
+                            id="border-color"
+                            options={colorValues}
+                            value={borderColor}
+                            style={{ width: 300 }}
+                            onChange={(_event, newValue) => {
+                                setBorderColor(newValue)
+                            }}
+                            renderInput={(params) => <TextField {...params} label="Border color" placeholder="Select a color" variant="outlined" />}
+                        />
+                    </Tooltip>
+                </Grid>
+
+                <Grid item xs={12} sm={6} lg={3}>
                     <Autocomplete
                         id="quote-type"
                         options={quoteTypes}
@@ -130,7 +162,7 @@ const Home = () => {
 
             <Grid container spacing={4}>
                 <Grid item xs={12} style={{ marginTop: '20px' }}>
-                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} quoteType={quoteType} />
+                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} borderColor={borderColor} quoteType={quoteType} />
                 </Grid>
                 <Grid item xs={12}>
                     <Typography align="center">Other layouts</Typography>
@@ -139,7 +171,7 @@ const Home = () => {
                     layouts.filter((item) => item !== layout).map((restLayout) => {
                         return (
                             <Grid key={restLayout} item xs={12} sm={12} md={6}>
-                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor} quoteType={quoteType} />
+                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor} borderColor={borderColor} quoteType={quoteType} />
                             </Grid>
                         )
                     })

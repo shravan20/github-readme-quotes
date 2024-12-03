@@ -11,7 +11,7 @@ const layouts = {
                 padding: 40px 20px;
                 min-width: 600px;
                 background: ${template.theme.bg_color};
-                border: 1px solid rgba(0, 0, 0, 0.2);
+                border: 1px solid ${template.borderColor};
                 border-radius: 5px;
                 ${template.animation.animation};
                 }
