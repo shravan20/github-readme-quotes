@@ -52,7 +52,8 @@ export const fonts = [
   'Gabrielle',
   'Redressed',
   'Calligraffitti',
-  'Architect'
+  'Architect',
+  'PixelifySans'
 ];
 export const colorValues = [
   "red",

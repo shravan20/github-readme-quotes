@@ -15,7 +15,7 @@ getQuoteIndex = (apiResponseLength, quoteType) => {
 const getQuote = async (quoteObj) => {
 
   try {
-    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType } = quoteObj;
+    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType, borderColor } = quoteObj;
     let apiResponse;
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
     let isCustomQuote = false;
@@ -49,6 +49,7 @@ const getQuote = async (quoteObj) => {
     template.setData(isCustomQuote ? apiResponse : apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))]);
     template.setFont(font);
     template.setAnimation(animation);
+    template.setBorderColor(borderColor);
     template.setLayout(layout);
 
     let svg = cardTemplate.generateTemplate(template);

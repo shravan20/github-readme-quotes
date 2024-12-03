@@ -22,6 +22,11 @@ class Template {
     this.setStructure(layout.structure);
     this.calculateHeight(this.quote.length);
   }
+
+  setBorderColor(borderColor) {
+    this.borderColor = borderColor;
+  }
+
   setStyle(style) {
     this.css = style(this);
   }
