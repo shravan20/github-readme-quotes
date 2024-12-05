@@ -34,6 +34,8 @@ const quoteController = async (req, res, next) => {
 
     let quoteType = req.query.quoteType || '';
 
+    let author = req.query.author || undefined;
+
     let quoteObject = {
       theme,
       animation,
@@ -42,6 +44,7 @@ const quoteController = async (req, res, next) => {
       quoteCategory,
       font,
       quoteType,
+      author,
       borderColor
     }
 
