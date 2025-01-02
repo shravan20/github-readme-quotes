@@ -241,5 +241,4 @@ const themes = {
     }
   };
   
-
-  export default themes;
+module.exports = themes;
