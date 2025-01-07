@@ -1,4 +1,4 @@
-import themes from '../../../../../src/themes/themes';
+import themes from '@/themes/themes';
 
 export const animations = ['default', 'grow_out_in'];
 export const layouts = ['default', 'samuel', 'churchill', 'socrates', 'zues'];
