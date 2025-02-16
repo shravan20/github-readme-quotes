@@ -80,11 +80,7 @@ async function getUnsplashImage(query) {
 
   try {
     const response = await requestApi(unsplashUrl);
-    if (response && response.urls && response.urls.regular) {
-      return response.urls.regular;
-    } else {
-      return '';
-    }
+    return response?.urls?.regular ?? '';
   } catch (err) {
     console.error('Error fetching Unsplash image:', err);
     return '';
