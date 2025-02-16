@@ -14,7 +14,10 @@ const quoteController = async (req, res, next) => {
       theme.quote_color = fontColor;
     }
     const bgColor = req.query.bgColor;
-    if (bgColor) {
+    const bgSource = req.query.bgSource || '';
+    if (bgSource === 'unsplash') {
+      theme.bg_color = 'transparent';
+    } else if (bgColor) {
       theme.bg_color = bgColor;
     }
 
@@ -33,7 +36,6 @@ const quoteController = async (req, res, next) => {
     let font = fonts[req.query.font] ? fonts[req.query.font] : fonts['default'];
 
     let quoteType = req.query.quoteType || '';
-    let bgSource = req.query.bgSource || '';
     let unsplashQuery = req.query.unsplashQuery || '';
 
     let quoteObject = {

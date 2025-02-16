@@ -56,6 +56,7 @@ const getQuote = async (quoteObj) => {
     template.setAnimation(animation);
     template.setBorderColor(borderColor);
     template.setLayout(layout);
+    template.bgImage = bgImageUrl;
 
     let svg = cardTemplate.generateTemplate(template);
     return svg;
