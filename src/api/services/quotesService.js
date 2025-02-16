@@ -15,7 +15,7 @@ getQuoteIndex = (apiResponseLength, quoteType) => {
 const getQuote = async (quoteObj) => {
 
   try {
-    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType, borderColor } = quoteObj;
+    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType, borderColor, bgSource, unsplashQuery } = quoteObj;
     let apiResponse;
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
     let isCustomQuote = false;
@@ -44,6 +44,11 @@ const getQuote = async (quoteObj) => {
       apiResponse = await requestApi(url);
     }
 
+    let bgImageUrl = "";
+    if (bgSource === "unsplash") {
+      bgImageUrl = await getUnsplashImage(unsplashQuery || 'random');
+    }
+
     const template = new Template();
     template.setTheme(theme);
     template.setData(isCustomQuote ? apiResponse : apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))]);
@@ -62,3 +67,20 @@ const getQuote = async (quoteObj) => {
 module.exports = {
   getQuote,
 };
+
+async function getUnsplashImage(query) {
+  const accessKey = process.env.UNSPLASH_ACCESS_KEY;
+  const unsplashUrl = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&client_id=${accessKey}`;
+
+  try {
+    const response = await requestApi(unsplashUrl);
+    if (response && response.urls && response.urls.regular) {
+      return response.urls.regular;
+    } else {
+      return '';
+    }
+  } catch (err) {
+    console.error('Error fetching Unsplash image:', err);
+    return '';
+  }
+}
