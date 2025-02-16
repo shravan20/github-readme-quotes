@@ -71,6 +71,11 @@ module.exports = {
 
 async function getUnsplashImage(query) {
   const accessKey = process.env.UNSPLASH_ACCESS_KEY;
+  if (!accessKey) {
+    console.error('Unsplash access key not configured');
+    return '';
+  }
+
   const unsplashUrl = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&client_id=${accessKey}`;
 
   try {
