@@ -24,6 +24,9 @@ const Home = () => {
     const [bgColor, setBgColor] = useState(null);
     const [borderColor, setBorderColor] = useState(null);
     const [quoteType, setQuoteType] = useState("random");
+    const [bgSource, setBgSource] = useState(null);
+    const [unsplashQuery, setUnsplashQuery] = useState("");
+
 
     const classes = useStyles();
 
@@ -158,11 +161,35 @@ const Home = () => {
                     />
                 </Grid>
 
+                <Grid item xs={12} sm={6} lg={3}>
+                    <Autocomplete
+                        id="bg-source"
+                        options={['unsplash']}
+                        value={bgSource}
+                        style={{ width: 300, margin: '0 auto' }}
+                        onChange={(_event, newValue) => {
+                            setBgSource(newValue);
+                        }}
+                        renderInput={(params) => <TextField {...params} label="Background Source" placeholder="Select 'unsplash' or leave empty" variant="outlined" />}
+                    />
+                </Grid>
+
+                <Grid item xs={12} sm={6} lg={3}>
+                    <TextField
+                        label="Unsplash query"
+                        variant="outlined"
+                        value={unsplashQuery}
+                        style={{ width: 300, margin: '0 auto' }}
+                        onChange={(event) => setUnsplashQuery(event.target.value)}
+                        disabled={bgSource !== 'unsplash'}
+                    />
+                </Grid>
+
             </Grid>
 
             <Grid container spacing={4}>
                 <Grid item xs={12} style={{ marginTop: '20px' }}>
-                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} borderColor={borderColor} quoteType={quoteType} />
+                    <TemplateCard theme={theme} animation={animation} layout={layout} font={font} fontColor={fontColor} bgColor={bgColor} borderColor={borderColor} quoteType={quoteType} bgSource={bgSource} unsplashQuery={unsplashQuery} />
                 </Grid>
                 <Grid item xs={12}>
                     <Typography align="center">Other layouts</Typography>
@@ -171,7 +198,7 @@ const Home = () => {
                     layouts.filter((item) => item !== layout).map((restLayout) => {
                         return (
                             <Grid key={restLayout} item xs={12} sm={12} md={6}>
-                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor} borderColor={borderColor} quoteType={quoteType} />
+                                <TemplateCard theme={theme} animation={animation} layout={restLayout} font={font} fontColor={fontColor} bgColor={bgColor} borderColor={borderColor} quoteType={quoteType} bgSource={bgSource} unsplashQuery={unsplashQuery} />
                             </Grid>
                         )
                     })
