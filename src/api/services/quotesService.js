@@ -69,7 +69,24 @@ module.exports = {
   getQuote,
 };
 
+const unsplashCache = new Map();
+
 async function getUnsplashImage(query) {
+  const now = Date.now();
+  // 10-minute cache (details: PR #336#issuecomment-2662258916)
+  const CACHE_DURATION = 10 * 60 * 1000;
+
+  const cached = unsplashCache.get(query);
+  if (cached && (now - cached.timestamp < CACHE_DURATION)) {
+    return cached.data;
+  }
+
+  const imageUrl = await fetchUnsplash(query);
+  unsplashCache.set(query, { data: imageUrl, timestamp: now });
+  return imageUrl;
+}
+
+async function fetchUnsplash(query) {
   const accessKey = process.env.UNSPLASH_ACCESS_KEY;
   if (!accessKey) {
     console.error('Unsplash access key not configured');
