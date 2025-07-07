@@ -43,7 +43,7 @@ class Template {
     let lines;
     if (this.layout !== layouts["zues"]) {
       lines = Math.floor(length / 64);
-      this.height = lines > 2 ? (lines - 2) * 22 + 173 : 173;
+      this.height = lines > 2 ? (lines - 2) * 25 + 195 : 195;
     } else {
       lines = Math.floor(length / 62);
       this.height = lines * 18 + 198;
