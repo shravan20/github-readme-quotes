@@ -78,6 +78,8 @@ const TemplateCard = (props) => {
     ...(props.bgColor && { bgColor: props.bgColor }),
     ...(props.fontColor && { fontColor: props.fontColor }),
     ...(isLayoutDefault && props.borderColor && { borderColor }),
+    ...(props.bgSource === 'unsplash' && { bgSource: 'unsplash' }),
+    ...(props.bgSource === 'unsplash' && props.unsplashQuery && { unsplashQuery: props.unsplashQuery }),
   });
   const quoteUrl = `${originUrl}/quote?${params.toString()}`;
 

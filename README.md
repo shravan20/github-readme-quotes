@@ -257,6 +257,20 @@ Use `?borderColor=COLOR` paramater as shown below
 
 ---
 
+- ### Unsplash Background
+You can fetch random background images from [Unsplash](https://unsplash.com/) by specifying two parameters:
+
+1. `bgSource=unsplash`
+2. `unsplashQuery=ANY_KEYWORD` (optional)
+
+```md
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?bgSource=unsplash&unsplashQuery=nature)
+```
+
+![Quote](https://github-readme-quotes-bay.vercel.app/quote?bgSource=unsplash&unsplashQuery=nature)
+
+---
+
 ## Swagger Docs
 
 To view Swagger docs, run `npm start` and open ![localhost:3002/api-docs](localhost:3002/api-docs).

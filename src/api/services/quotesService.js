@@ -15,7 +15,7 @@ getQuoteIndex = (apiResponseLength, quoteType) => {
 const getQuote = async (quoteObj) => {
 
   try {
-    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType, borderColor } = quoteObj;
+    let { theme, animation, layout, quotesUrl, quoteCategory, font, quoteType, borderColor, bgSource, unsplashQuery } = quoteObj;
     let apiResponse;
     let { customQuotesUrl, isValidUrl } = await getValidUrl(quotesUrl);
     let isCustomQuote = false;
@@ -44,6 +44,11 @@ const getQuote = async (quoteObj) => {
       apiResponse = await requestApi(url);
     }
 
+    let bgImageUrl = "";
+    if (bgSource === "unsplash") {
+      bgImageUrl = await getUnsplashImage(unsplashQuery || 'random');
+    }
+
     const template = new Template();
     template.setTheme(theme);
     template.setData(isCustomQuote ? apiResponse : apiResponse[Math.floor(getQuoteIndex(apiResponse.length, quoteType))]);
@@ -51,6 +56,7 @@ const getQuote = async (quoteObj) => {
     template.setAnimation(animation);
     template.setBorderColor(borderColor);
     template.setLayout(layout);
+    template.bgImage = bgImageUrl;
 
     let svg = cardTemplate.generateTemplate(template);
     return svg;
@@ -62,3 +68,38 @@ const getQuote = async (quoteObj) => {
 module.exports = {
   getQuote,
 };
+
+const unsplashCache = new Map();
+
+async function getUnsplashImage(query) {
+  const now = Date.now();
+  // 10-minute cache (details: PR #336#issuecomment-2662258916)
+  const CACHE_DURATION = 10 * 60 * 1000;
+
+  const cached = unsplashCache.get(query);
+  if (cached && (now - cached.timestamp < CACHE_DURATION)) {
+    return cached.data;
+  }
+
+  const imageUrl = await fetchUnsplash(query);
+  unsplashCache.set(query, { data: imageUrl, timestamp: now });
+  return imageUrl;
+}
+
+async function fetchUnsplash(query) {
+  const accessKey = process.env.UNSPLASH_ACCESS_KEY;
+  if (!accessKey) {
+    console.error('Unsplash access key not configured');
+    return '';
+  }
+
+  const unsplashUrl = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&client_id=${accessKey}`;
+
+  try {
+    const response = await requestApi(unsplashUrl);
+    return response?.urls?.regular ?? '';
+  } catch (err) {
+    console.error('Error fetching Unsplash image:', err);
+    return '';
+  }
+}
