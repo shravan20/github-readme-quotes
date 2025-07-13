@@ -8,27 +8,29 @@ const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
 const initiateServer = async () => {
+  try {
+    const app = express();
 
-  const app = express();
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
 
+    app.use(morgan('dev'));
+    app.use(express.static(path.join(__dirname, "../", "frontend", "/", "build")));
+    routes(app);
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: false }))
+    // Serve SwaggerUi docs
+    await swaggerDocs(app);
+    app.use(express.static(__dirname));
 
-  app.use(morgan('dev'));
-  app.use(express.static(path.join(__dirname, "../", "frontend", "/", "build")));
-  routes(app);
+    app.get("/*", (req, res) => {
+      res.sendFile(path.join(__dirname, "../", "frontend", "/", "build", "index.html"));
+    });
 
-  // Serve SwaggerUi docs
-  await swaggerDocs(app);
-  app.use(express.static(__dirname));
-
-  app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../", "frontend", "/", "build", "index.html"));
-  });
-
-  app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
-
+    app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
+  } catch (error) {
+    console.error("Failed to start server:", error);
+    process.exit(1);
+  }
 }
 
 async function swaggerDocs(app) {
