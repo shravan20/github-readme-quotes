@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MODE: dev
+    command: npm run start-dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:${PORT}"
+    env_file:
+      - .env
+    environment:
+      - MODE=dev
+      - NODE_ENV=DEVELOPMENT
