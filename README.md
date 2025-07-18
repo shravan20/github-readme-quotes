@@ -304,13 +304,13 @@ To view Swagger docs, run `npm start` and open ![localhost:3002/api-docs](localh
 <strong>Run in Development</strong>
 
 ```md
-docker-compose --env-file .env.development up --build
+docker-compose -f docker-compose.yml up
 ```
 
 <strong>Run in Production</strong>
 
 ```md
-docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f docker-compose.prod.yml up
 ```
 
 <hr>

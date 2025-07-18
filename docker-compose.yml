@@ -5,14 +5,13 @@ services:
       dockerfile: Dockerfile
       args:
         MODE: dev
-    command: npm run start-dev
     volumes:
       - .:/app
+      - /app/frontend/node_modules
       - /app/node_modules
     ports:
-      - "3000:${PORT}"
-    env_file:
-      - .env
+      - "3004:3004"
+      - "5173:5173"
     environment:
       - MODE=dev
       - NODE_ENV=DEVELOPMENT
