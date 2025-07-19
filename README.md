@@ -58,7 +58,7 @@
 
 | Sl No |                    Feature Name                    |                                   Description                                    |
 | :---: | :------------------------------------------------: | :------------------------------------------------------------------------------: |
-|   1   |     [Dynamic Quotes](#github-readme-quotes-1)      |        Different quotes every time its rendered for GitHub Profile Readme        |
+|   1   |      [Dynamic Quotes](#github-readme-quotes)       |        Different quotes every time its rendered for GitHub Profile Readme        |
 |   2   |             [Colorful Themes](#themes)             |                   Various colorful themes available for cards                    |
 |   3   |             [Design Layouts](#layouts)             |                   Different Layout design cards are available                    |
 |   4   |              [Animation](#animations)              |                       Animations available for quote cards                       |
@@ -304,25 +304,25 @@ To view Swagger docs, run `npm start` and open ![localhost:3002/api-docs](localh
 <strong>Run in Development</strong>
 
 ```bash
-docker-compose -f docker-compose.yml up
+docker compose -f docker-compose.yml up --build
 ```
 
-### Access the app:
+### Access the app
 
 [http://localhost:3004](http://localhost:3004)
 
-If the port is changed, please check the `PORT` arg in the Dockerfile to fix the problem.
+If the port is changed, please make sure the `PORT` environment variable and Dockerfile EXPOSE line match accordingly.
 
 <strong>Run in Production</strong>
 
 ```bash
-docker-compose -f docker-compose.prod.yml up
+docker compose -f docker-compose.prod.yml up --build -d
 ```
 
-#### Access the app:
+#### Access the app
 
 [http://localhost:3000](http://localhost:3000)
 
-If the port is changed, please check the `PORT` arg in the Dockerfile to fix the problem.
+If the port is changed, please make sure the `PORT` environment variable and Dockerfile EXPOSE line match accordingly.
 
 <hr>
