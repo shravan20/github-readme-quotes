@@ -303,14 +303,26 @@ To view Swagger docs, run `npm start` and open ![localhost:3002/api-docs](localh
 
 <strong>Run in Development</strong>
 
-```md
+```bash
 docker-compose -f docker-compose.yml up
 ```
 
+### Access the app:
+
+[http://localhost:3004](http://localhost:3004)
+
+If the port is changed, please check the `PORT` arg in the Dockerfile to fix the problem.
+
 <strong>Run in Production</strong>
 
-```md
+```bash
 docker-compose -f docker-compose.prod.yml up
 ```
+
+#### Access the app:
+
+[http://localhost:3000](http://localhost:3000)
+
+If the port is changed, please check the `PORT` arg in the Dockerfile to fix the problem.
 
 <hr>
