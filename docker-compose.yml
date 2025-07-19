@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MODE: dev
+    volumes:
+      - .:/app
+      - /app/frontend/node_modules
+      - /app/node_modules
+    ports:
+      - "3004:3004"
+      - "5173:5173"
+    environment:
+      - MODE=dev
+      - NODE_ENV=DEVELOPMENT
